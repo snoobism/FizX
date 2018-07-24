@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fizica</title>
+    <link type="text/css" rel="stylesheet" href="putere.css">
+</head>
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="jquery-3.1.1.min.js"></script>
+<script src="putere.js"></script>
+
+<ul id="lista">
+    <li><a class='link' href="acasa.html">Acasa</a></li>
+    <li><a class='link' href="materie.html">Materie</a></li>
+    <li><a class='link' href="subiecte.html">subiecte</a></li>
+    <li><a class='link' href="test.html">test</a></li>
+    <li class="imagine"></li>
+
+</ul>
+<div id="buddy_cont">
+    <div id="buddy_imagine">
+        <div id="buddy_corp" class="imagine"></div>
+        <div id="buddy_ochi"></div> 
+    </div>
+    <div id="buddy_chat">
+        <a class="buddy_optiune" href="curent.html">Curentul electric</a>
+        <a class="buddy_optiune" href="ohmkir.html">Legea lui Ohm. Legile lui Kirchoff</a>
+        <a class="buddy_optiune" href="grupare.html">Gruparea rezistoarelor si a genratoarelor</a>
+        <a class="buddy_optiune" href="putere.html">Energia si puterea electrica</a>
+
+    </div>
+    <div id="buddy_arrow" onclick="schimba()"></div>
+
+</div>
+<div id="energie_anim" class="resizeText0">ENERGIE</div>
+<div id="putere_anim" class="resizeText1">PUTERE</div>
+<div id="titlu" class="imagine"></div>
+<div id="subtitlu" class="resizeText2">-două mărimi inseparabile-</div>
+<div class="bara"></div>
+<div id="energie_cont">
+    <div id="energie_def_cont" style="display:inline-table; "><div id="energie_def" class='resizeText3'><yellow>Energia curentului electric</yellow>(W) măsoară <orange>lucrul mecanic</orange> necesar pentru a transporta o <yellow>sarcină electrică</yellow> <orange>q</orange> printr-o secţiune din circuit într-un <yellow>interval de timp</yellow> <orange>Δt</orange>, formula fiind:
+        </div></div>
+    <img id="energie_si" src="imagini/energie_si.png"/>
+</div>
+<div id="energie_formula" class="imagine"></div>
+<div id="term_cont">
+    <div id="term_titlu" class="titlu resizeText4">EFECTUL TERMIC</div>
+    <div id="term_desc_cont" class="text">
+        <div style="display:table"><div id="term_desc" class="text resizeText5"><strong>Efectul termic</strong> al curentului electric (denumit și efectul <orange>Joule-Lentz</orange>) este reprezentat de <strong>disiparea căldurii</strong> într-un <strong>element conductor</strong> traversat de un curent electric. Efectul Joule se manifesta atata timp cat mediul conducator are o anumita <strong>rezistenta electrica</strong>. Din efect rezultă egalitatea:</div></div>
+        <div id="term_img" class="imagine"></div>
+    </div>
+</div>
+<div id="putere_cont">
+    <img id="putere_si" src="imagini/putere_si.png"/>
+    <div id="putere_def_cont" style="display:inline-table; ">       <div id="putere_def" class='resizeText6'>
+        <yellow>Puterea electrică</yellow> măsoară <orange>energia electrică</orange> furnizată sau consumată într-un <yellow>interval de timp</yellow> <orange>Δt</orange>. <red>Observație</red>: A nu se confunda notația <yellow>energiei electrice</yellow> <orange >(W)</orange> cu cea a <yellow>unității de măsura a puterii</yellow> <orange>(Watt-ul)</orange>. Formula puterii electrice fiind:
+        </div>
+    </div>
+    
+</div>
+<div id="putere_formula" class="imagine"></div>
+<div id="formula_cont" class="resizeText7">ținând cont de <yellow>legea lui Ohm</yellow>, putem rescrie formula în mai multe moduri:</div>
+<div id="putere_formula2" class="imagine"></div>
+<div id="putere_max_titlu" class="titlu resizeText8">Puterea în circuit</div>
+<div style="display:table" id="putere_max_desc_cont">
+    <div id="putere_max_desc" class="text resizeText9">Un <yellow>generator electric</yellow> este caracterizat de o <yellow>tensiune electromotoare</yellow> <orange>(E)</orange>, dar şi de o <yellow>rezistenţă electrică internă</yellow> <orange>(r)</orange>. <red>Puterea</red> pe care o furnizează <yellow>generatorul electric</yellow>, către un <red>circuit exterior</red> este astfel influenţată şi de <red>rezistenţa internă</red> <orange>(r)</orange> cât şi de <red>rezistenţa externă</red> <orange>(R)</orange>. Tinând cont de formula puterii avem:</div>
+    </div>
+<div id="imagini_cont">
+    <div id="img1" class="pimg imagine"></div>
+    <div id="img2" class="pimg imagine"></div>
+    <div id="img3" class="pimg imagine"></div>
+</div>
+<div id="conditie_pmax" class="text resizeText10">
+    <red>Condiţia</red> ca un <yellow>generator</yellow> să aibă un <red>transfer optim de putere</red>, este ca cele două rezistenţe ( <yellow>rezistenţa internă</yellow> şi <yellow>rezistenţa circuitului exterior</yellow>) să fie <yellow>egale</yellow> <orange>(R = r)</orange>, adică:
+</div>
+<divi id="imagini_cont2">
+    <div id="img4" class="pimg2 imagine"></div>
+    <div id="img5" class="pimg2 imagine"></div>
+</divi>
+<div id="randament_titlu" class="titlu resizeText11">
+    Randamentul
+</div>
+<div id="randament_text" class="text resizeText12">
+    <strong>Randamentul unui generator</strong> se referă la <yellow>energia utilă</yellow> furnizată consumatorului extern şi reprezintă raportul dintre dintre <yellow>energia externă</yellow> şi <yellow>energia consumată intern</yellow>.
+</div>
+<div id="randament_formula" class="imagine"></div>
+<div id="filler"></div>

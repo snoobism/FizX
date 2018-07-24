@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fizica</title>
+    <link type="text/css" rel="stylesheet" href="procese.css">
+</head>
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="jquery-3.1.1.min.js"></script>
+<script src="procese.js"></script>
+<ul id="lista">
+    <li><a class='link' href="acasa.html">Acasa</a></li>
+    <li><a class='link' href="materie.html">Materie</a></li>
+    <li><a class='link' href="subiecte.html">subiecte</a></li>
+    <li><a class='link' href="test.html">test</a></li>
+    <li class="imagine"></li>
+
+</ul>
+<div id="buddy_cont">
+    <div id="buddy_imagine">
+        <div id="buddy_corp" class="imagine"></div>
+        <div id="buddy_ochi"></div> 
+    </div>
+    <div id="buddy_chat">
+        <a class="buddy_optiune" href="notiuni.html">Notiuni termodinamice de baza</a>
+        <a class="buddy_optiune" href="principii_termo.html">Principiile termodinamicii</a>
+        <a class="buddy_optiune" href="procese.html">Transformarile gazului ideal</a>
+        <a class="buddy_optiune" href="motoare.html">Motoare termice</a>
+
+    </div>
+    <div id="buddy_arrow" onclick="schimba()"></div>
+
+</div>
+<div id="intro1" class='imagine'></div>
+<div id="intro2" class="imagine"></div>
+<div id="ec_term_header" class="header">ECUAȚIA TERMICĂ DE STARE</div>
+<div id="bara0" class="bara"></div>
+<div id="stare_cont">
+    <div id="gaz_ideal_cont">
+        <div id="gaz_ideal_titlu" class="titlu resizeText0">GAZUL IDEAL</div>
+        <div id="gaz_ideal_desc" class="text resizeText1"><red>Gazul ideal</red> este un <red>model teoretic</red> de gaz ce aproximează pe un domeniu larg al parametrilor <red>comportarea gazelor</red> în timpul <red>transformărilor</red> termodinamice.</div>
+    </div>
+    <div id="gaz_ideal_img">
+        <div id="gaz_ideal_formula" class="imagine"></div>
+        <div id="gaz_ideal_legenda" class="imagine">
+        </div>
+    </div>
+</div>
+<div id="izoterm_header" class="header">TRANSFORMAREA IZOTERMĂ</div>
+<div id="bara1" class="bara"></div>
+<div id="izoterma_start" class="imagine"></div>
+<div id="izoterma_cont">
+    <div id="izoterma_desc">
+        <div id="izoterma_titlu" class="titlu resizeText2">LEGEA BOYLE-MARIOTTE</div>
+        <div id="izoterma_text" class="text resizeText3">La <red>masă</red> și <red>temperatură constantă</red>, <red>volumul</red> unui gaz variază <red>invers proporțional</red> cu creșterea <red>presiunii</red>.</div>
+        <div id="izoterma_const" class="imagine"></div>
+        <div id="izoterma_expl" class="text resizeText4">și pentru o transformarea <red>1→ 2</red> reprezentată în <red>graficele</red> de lângă:</div>
+        <div id="izoterma_ec" class="imagine"></div>
+    </div>
+    <div id="izoterma_graf">
+        <div id="izoterma_pv" class="imagine"></div>
+        <div>
+            <div id="izoterma_pt" class="imagine"></div>
+            <div id="izoterma_vt" class="imagine"></div>
+        </div>
+        <div id="graf_header1" class="header">GRAFICE</div>
+    </div>
+    <div id="marimi_proces1" class="header">-MĂRIMI DE PROCES-</div>
+    <div id="izoterma_u" class="imagine"></div>
+    <div id="izoterma_q" class="imagine"></div>
+</div>
+
+<div id="izobara_header" class="header">TRANSFORMAREA IZOBARĂ</div>
+<div id="bara2" class="bara"></div>
+<div id="izobara_start" class="imagine"></div>
+
+<div id="izobara_cont">
+    <div id="izobara_desc">
+        <div id="izobara_titlu" class="titlu resizeText5">LEGEA GAY-LUSAC</div>
+        <div id="izobara_text" class="text resizeText6">Dacă <red>presiunea</red> și <red>masa</red> gazului rămân constante în timp, variația relativă a <red>volumului</red> este <red>direct proporțională</red> cu <red>temperatura</red></div>
+        <div id="izobara_const" class="imagine"></div>
+        <div id="izobara_expl" class="text resizeText7">și pentru o transformarea <red>1→ 2</red> reprezentată în <red>graficele</red> de lângă:</div>
+        <div id="izobara_ec" class="imagine"></div>
+    </div>
+    <div id="izobara_graf">
+        <div id="izobara_pv" class="imagine"></div>
+        <div>
+            <div id="izobara_pt" class="imagine"></div>
+            <div id="izobara_vt" class="imagine"></div>
+        </div>
+        <div id="graf_header2" class="header">GRAFICE</div>
+    </div>
+    <div id="marimi_proces2" class="header">-MĂRIMI DE PROCES-</div>
+    <div id="izobara_q" class="imagine"></div>
+    <div id="izobara_l" class="imagine"></div>
+    <div id="izobara_u" class="imagine"></div>
+</div>
+
+<div id="izocora_header" class="header">TRANSFORMAREA izocoră</div>
+<div id="bara3" class="bara"></div>
+<div id="izocora_start" class="imagine"></div>
+
+<div id="izocora_cont">
+    <div id="izocora_desc">
+        <div id="izocora_titlu" class="titlu resizeText8">LEGEA LUI CHARLES</div>
+        <div id="izocora_text" class="text resizeText9">Dacă <red>volumul</red> și <red>masa</red> gazului rămân constante în timp, variația relativă a <red>presiunii</red> este <red>direct proporțională</red> cu <red>temperatura</red></div>
+        <div id="izocora_const" class="imagine"></div>
+        <div id="izocora_expl" class="text resizeText10">și pentru o transformarea <red>1→ 2</red> reprezentată în <red>graficele</red> de lângă:</div>
+        <div id="izocora_ec" class="imagine"></div>
+    </div>
+    <div id="izocora_graf">
+        <div id="izocora_pv" class="imagine"></div>
+        <div>
+            <div id="izocora_pt" class="imagine"></div>
+            <div id="izocora_vt" class="imagine"></div>
+        </div>
+        <div id="graf_header3" class="header">GRAFICE</div>
+    </div>
+    <div id="marimi_proces3" class="header">-MĂRIMI DE PROCES-</div>
+    <div id="izocora_l" class="imagine"></div>
+    <div id="izocora_q" class="imagine"></div>
+</div>
+<div id="adiabatica_header" class="header">TRANSFORMAREA ADIABATICĂ</div>
+<div id="bara4" class="bara"></div>
+<div id="adiabatica_start" class="imagine"></div> 
+<div id="adiabatica_cont">
+    <div id="adiabatica_desc">
+        <div id="adiabatica_titlu" class="titlu resizeText11">PROCES ADIABATIC</div>
+        <div id="adiabatica_expl" class="text resizeText12">În termodinamică, un <red>proces adiabatic</red> este o transformare care se petrece într-un sistem ce <red>nu efectuează schimb de căldură</red> cu exteriorul.</div>
+        <div id="adiabatica_q" class="imagine"></div>
+        <div id="adiabatica_ec" class="text resizeText13">unde relația următoare este <red>constantă în timp</red>:</div>
+        <div id="adiabatica_ecuatii" class="imagine"></div>
+        <div id="adiabatica_expl2" class="text resizeText14">iar <red>γ</red> se numește <red>exponent adiabatic</red> și este egal cu:</div>
+        <div id="adiabatica_gamma" class="imagine"></div>
+    </div>
+    <div id="adiabatica_graf" class="imagine"></div>
+</div>
+<div style="padding:5px"></div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

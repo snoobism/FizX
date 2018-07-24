@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fizica</title>
+    <link type="text/css" rel="stylesheet" href="ohmkir.css">
+</head>
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="jquery-3.1.1.min.js"></script>
+<script src="ohmkir.js"></script>
+
+<ul id="lista">
+    <li><a class='link' href="acasa.html">Acasa</a></li>
+    <li><a class='link' href="materie.html">Materie</a></li>
+    <li><a class='link' href="subiecte.html">subiecte</a></li>
+    <li><a class='link' href="test.html">test</a></li>
+    <li class="imagine"></li>
+
+</ul>
+<div id="buddy_cont">
+    <div id="buddy_imagine">
+        <div id="buddy_corp" class="imagine"></div>
+        <div id="buddy_ochi"></div> 
+    </div>
+    <div id="buddy_chat">
+        <a class="buddy_optiune" href="curent.html">Curentul electric</a>
+        <a class="buddy_optiune" href="ohmkir.html">Legea lui Ohm. Legile lui Kirchoff</a>
+        <a class="buddy_optiune" href="grupare.html">Gruparea rezistoarelor si a genratoarelor</a>
+        <a class="buddy_optiune" href="putere.html">Energia si puterea electrica</a>
+
+    </div>
+    <div id="buddy_arrow" onclick="schimba()"></div>
+
+</div>
+<div id="ohmtitlu" class="resizeText0">LEGEA LUI OHM</div>
+<div id="kirtitlu" class="resizeText1">LEGILE LUI KIRCHOFF</div>
+<div id="ohmtitlu_real" class="resizeText2">LEGEA LUI OHM</div>
+<div id="bara"></div>
+<div id="ohm_desc">
+    
+    <div id="ohm_desc_text" class='resizeText4'><strong>Legea lui Ohm</strong> spune că într-un circuit <strong>intensitatea (I)</strong> curentului electric este <yel>direct proporțională</yel> cu <b>tensiunea aplicată(U)</b> și <red>invers proporțională</red> cu <red>rezistența (R)</red> din circuit.</div>
+    <div id="ohm_desc_titlu" class='resizeText3'>Ce este legea lui OHM?</div>
+</div>
+<div id="formula_ohm">
+    <div id="formula_ohm_titlu" class="resizeText5">FORMuLĂ</div>
+    <div id="formula_ohm_poza"></div>
+</div>
+<div id="georg">
+    <div id="georg_ohm_poza"></div>
+    <div id="georg_ohm_titlu" class="resizeText6">Georg Ohm</div>
+
+</div>
+<div id="elemente_titlu" class="resizeText7">TENSIUNEA ELEMENTELOR GRUPATE</div>
+<div id="bara2"></div>
+<div id="elemente_cont">
+    <div id="serie_par">
+        <div id="serie" class="resizeText8" onclick="serie()">SERIE</div>
+        <div id="paralel" class="resizeText9" onclick="paralel()">paralel</div>
+    </div>
+    <div id="exemplu_cont">
+        <div id="exemplu"></div>
+        <div id="exemplu_titlu" class="resizeText10">o grupare de rezistoare</div>
+    </div>
+    <div id="definitie_cont">
+        <div id="definitie_titlu" class="resizeText11">Scriere matematică</div>
+        <div id="definitie"></div>
+    </div>
+    
+    <div id="elemente_retea_titlu" class="resizeText17">Elemente de rețea</div>
+    <div id="bara4"></div>
+    <div id="elemente_retea_cont">
+        <div class="elemente_retea">
+            <div id="nod_titlu" class="titlu resizeText18">Nod</div>
+            <div id="nod_poza"></div>
+            <div id="nod_text" class="text resizeText19">-punctul de intersecție a cel puțin 3 conductoare</div>
+        </div>
+        <div class="elemente_retea">
+            <div id="latura_titlu" class="titlu resizeText20">Latură</div>
+            <div id="latura_poza"></div>
+            <div id="latura_text" class="text resizeText21">
+            -porțiunea de circuit aflată între 2 noduri vecine</div>
+        </div>
+        <div class="elemente_retea">
+            <div id="ochi_titlu" class="titlu resizeText22">Ochi</div>
+            <div id="ochi_poza"></div>
+            <div id="ochi_text" class="text resizeText23">-un contur poligonal închis care are drept laturi laturi ale circuitului</div>
+        </div> 
+    </div>
+    <div id="kirtitlu_real" class="resizeText12">LEGILE LUI KIRCHHOFF</div>
+    <div id="bara3"></div>
+    <div id="legea1_cont">
+        <div id="legea1_titlu" class="titlu resizeText13">LEGEA I</div>
+        <div id="legea1_text" class="text resizeText14">Suma algebrică a intesității curenților care se întâlnesc într-un nod este egală cu 0
+        </div>
+        <div id="legea1_poza"></div>
+    </div>
+    <div id="legea2_cont">
+        <div id="legea2_titlu" class="titlu resizeText15">LEGEA  a II-a</div>
+        <div id="legea2_text" class="text resizeText16">De-a lungul oricărui ochi de rețea, suma algebrică a tensiunii electromotoare a surselor este egală cu suma algebrică dintre intensiteatea și rezistențele aflate pe latură</div>
+        <div id="legea2_poza"></div>
+    </div>
+    <div id="rezolvare_cont">
+        <div id="rezolvare_titlu" class="titlu resizeText24">Algoritm de rezolvare a problemelor</div>
+        
+    </div>
+    
+</div>
+    </body>    
+    
+    
+    
+    
+    

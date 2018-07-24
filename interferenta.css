@@ -1,0 +1,390 @@
+body{
+
+    margin:0 auto;
+    background-image: url(imagini/transp.png),url(imagini/transp.png),linear-gradient(to right, #000000, #16193B, #000000);
+    background-size:0%,0%,cover;
+	background-repeat:repeat-y,repeat-y,repeat-y;
+	background-position:5%,95%,0%;
+    background-attachment:auto,auto,fixed;
+	transition:1s ease-in-out;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+#background{
+    top:0;
+    opacity:0;
+	transition:0.5s ease-in-out;
+    position: absolute;
+    background-image:url(imagini/bg_interferenta.jpg);
+    background-size:fill;
+}
+@font-face{
+	font-family:geometria;
+	src:url(fonts/geometria.woff)
+}
+@font-face{
+	font-family:museo;
+	src:url(fonts/museo500.woff)
+}
+@font-face{
+	font-family:bebasthin;
+	src:url(fonts/BebasNeue-Thin.woff)
+}
+@font-face{
+	font-family:bebasbook;
+	src:url(fonts/BebasNeue-Book.woff)
+}
+@font-face{
+	font-family:bebasbold;
+	src:url(fonts/BebasNeue-Bold.woff)
+}
+@font-face{
+	font-family:bebaslight;
+	src:url(fonts/BebasNeue-Light.woff)
+}
+@font-face{
+	font-family:bebasregular;
+	src:url(fonts/BebasNeue-Regular.woff)
+}
+@font-face {
+    font-family:hattori_hanzolight;
+    src:url(fonts/Hattori_Hanzo-webfont.woff)
+
+}
+#buddy_cont{
+    position:fixed;
+    left:-97vh;
+    top:20%;
+    z-index: 100;
+    opacity: 1;
+    transition:0.5s all;
+}
+
+#buddy_imagine{
+    opacity:1;
+    display:inline-block;
+    vertical-align: middle;
+    height: 25vh;
+    width:25vh;
+    transition:1s all;
+    
+}
+#buddy_corp{
+    position:absolute;
+    background-color:rgba(0,0,0,0);    
+    background-image:url(imagini/buddy_corp.png); 
+    height: inherit;
+    width: inherit;
+}
+#buddy_ochi{
+    position:relative;
+    height: 20%;
+    width: 20%;
+    border-radius:50%;
+    background-color:red;
+    top:50%;
+    transform:translateY(-50%) scale(1,1);
+    margin-left:40%;
+    box-shadow:0px 0px 10px black;
+    transition:0.3s all;
+}
+#buddy_chat{
+    display:inline-block;
+    vertical-align: middle;
+    width:70vh;
+    background-size:cover;
+    background-image:url(imagini/buddy_chat.png);
+    box-shadow:0px 0px 15px black;
+    border-radius:10%;
+    padding-top:5vh;
+    padding-bottom: 5vh;
+}
+#buddy_arrow{
+    display:inline-block;
+    vertical-align: middle;
+    height:20vh;
+    width:20vh;
+    background-size:contain;
+    background-image:url(imagini/buddy_arrow.png);
+    border-radius:50%;
+    cursor:pointer;
+    opacity:0;
+    transition:0.3s all;
+}
+.buddy_optiune{
+    display:block;
+    color:white;
+    font-family: greenscreen;
+    text-decoration: none;
+    text-align: center;
+    font-size:5vh;
+    margin:1vh;
+    transition:0.5s all;
+}
+.buddy_optiune:hover{
+    color:cyan;
+    background-color:rgba(0,0,0,0.5);
+}
+@font-face{
+	font-family:greenscreen;
+	src:url(fonts/greenscreen.woff)
+}
+ul{	position:fixed;
+	width:100%;
+	background:#16193B;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top:0;
+	font-family:bebasregular;
+	box-shadow:0 0px 3px #9DDFF7;
+	z-index:5;
+	white-space: nowrap;	
+	border-bottom:3px solid #9DDFF7;
+	opacity:0;
+	display:block;
+	list-style-type: none;
+    transition:1s all;
+}
+li{	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:20px;
+	padding-right:20px;
+    display: inline-block;
+     text-align: center;
+	color:#16193B;
+	transition:0.3s;
+	float:left;
+}
+li:hover{
+	background-color:#9DDFF7;
+	cursor:pointer;
+    color:white;
+}
+li:nth-child(2){
+		background-color:#9DDFF7;
+        color:white;
+}
+li:nth-child(5){
+    background-image: url(imagini/FIZ_X2.png);
+    background-color:Rgba(0,0,0,0);
+    float:right;
+    margin-right: 25px;
+    vertical-align: middle;
+ }
+.link{
+	text-decoration: none;
+	color:#9DDFF7;
+    transition:0.3s;
+}
+.link:hover{
+        
+        color:white;
+}
+.link:nth-child(2){
+		background-color:#16193B;
+        color:#16193B;
+}
+.header{
+    color:#9DDFF7;
+    font-family: bebasbold;
+    position:relative;
+    transition:1s ease-out;
+    opacity:1;
+    margin-left: auto;
+    text-align: center;
+}
+.bara{
+    top:3px;
+    width:60%;
+    margin:0 auto;
+    border:1px solid #9DDFF7;
+    opacity:1;
+    transition:1s all;
+}
+.titlu{
+    position:relative;
+    display:block;
+    margin:0 auto;
+    text-align: center;
+    font-family: bebasbold;
+    color:black;
+    background:linear-gradient(to bottom, #9DDFF7 0%,#4AA7F7 100%);
+    box-shadow:0px 0px 15px black;
+
+}
+.text{
+    display:block;
+    color:white;
+    font-family: geometria;
+    text-shadow:0px 0px 5px black;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    margin: 0 auto;
+}
+.imagine{
+    position:relative;
+    background-color:rgba(0,0,0,0.5);
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+strong{
+    color:#9DDFF7;
+    text-shadow:0px 0px 3px #9DDFF7;
+}
+
+blue{
+    color:#00fff0;
+    text-shadow:0px 0px 3px #00fff0;
+
+}
+green{
+    color:#00ff00;
+    text-shadow:0px 0px 3px #00ff00;
+
+}
+red{
+    color:#ff0000;
+    text-shadow:0px 0px 3px #ff0000;
+
+}
+magenta{
+    color:magenta;
+    text-shadow:0px 0px 3px magenta;  
+}
+yellow{
+    color:yellow;
+    text-shadow:0px 0px 3px yellow;  
+}
+.titlu_litera{
+    background-color:rgba(0,0,0,0);
+    vertical-align: middle;
+    font-family: bebasbold;
+    display:inline-block;
+    opacity:0;
+    transition:0.3s all;
+    text-shadow: 0px 0px 25px black;
+}
+#titlu_cont{
+    position:absolute;
+    text-align: center;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+#interferenta_cont{
+    display:inline-block;
+    position:relative;
+    vertical-align: middle;
+}
+#interf_poza_cont{
+    display:inline-block;
+    position:relative;
+    vertical-align: middle;
+}
+#interf_poza{
+    background-image:url(imagini/interf_poza.jpg);
+}
+#coer_cont{
+    display:inline-block;
+    position:relative;
+    vertical-align: middle;
+}
+#young_cont{
+    display:inline-block;
+    position:relative;
+    vertical-align: middle;
+}
+#young_img_cont{
+    display:inline-block;
+    position:relative;
+    vertical-align: middle;
+}
+#young_img{
+    background-image:url(imagini/youngex.png);
+}
+#schita_cont{
+    background-color:rgba(0,0,0,0.7);
+}
+#schita_img{
+    background-image:url(imagini/schita_young.png);
+    vertical-align: middle;
+    display:inline-block;
+    background-color:rgba(0,0,0,0);
+}
+#schita_notatii{
+    vertical-align: middle;
+    display:inline-block;
+}
+#schita_desc{
+    background-color:rgba(0,0,0,0.8);
+}
+.notatie{
+    font-family: hattori_hanzolight;
+    text-shadow:0px 0px 5px black;
+    color:white;
+}
+#continuare{
+    background-color:rgba(0,0,0,0);
+    text-align: center;
+    font-weight: 900;
+    text-shadow:0px 0px 5px black;
+}
+#ecuatii1{
+    background-color:rgba(0,0,0,0);
+    background-image:url(imagini/young_ec1.png);
+}
+#continuare2{
+    background-color:rgba(0,0,0,0);
+    text-align: center;
+    font-weight: 900;
+    text-shadow:0px 0px 5px black;
+}
+#ecuatii2{
+    background-color:rgba(0,0,0,0);
+    background-image:url(imagini/coord_young.png);
+}
+#continuare3{
+    background-color:rgba(0,0,0,0);
+    text-align: center;
+    font-weight: 900;
+    text-shadow:0px 0px 5px black;
+}
+#ecuatii3{
+    background-color:rgba(0,0,0,0);
+    background-image:url(imagini/young_ec2.png);
+}
+#continuare4{
+    background-color:rgba(0,0,0,0);
+    text-align: center;
+    font-weight: 900;
+    text-shadow:0px 0px 5px black;
+}
+#ecuatii4{
+    background-color:rgba(0,0,0,0);
+    background-image:url(imagini/young_ec3.png);
+}
+#interferenta_header{
+    opacity:0;
+    transition:0.5s all;
+}
+#bara{
+    opacity:0;
+    transition:0.5s all;
+
+}
+#interferenta_cont{
+    opacity:0;
+    transition:0.5s all;
+
+}
+#interf_poza_cont{
+    opacity:0;
+    transition:0.5s all;
+
+}#coer_cont{
+    opacity:0;
+    transition:0.5s all;
+
+}

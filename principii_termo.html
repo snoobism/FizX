@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fizica</title>
+    <link type="text/css" rel="stylesheet" href="principii_termo.css">
+</head>
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="jquery-3.1.1.min.js"></script>
+<script src="principii_termo.js"></script>
+<ul id="lista">
+    <li><a class='link' href="acasa.html">Acasa</a></li>
+    <li><a class='link' href="materie.html">Materie</a></li>
+    <li><a class='link' href="subiecte.html">subiecte</a></li>
+    <li><a class='link' href="test.html">test</a></li>
+
+</ul>
+<div id="buddy_cont">
+    <div id="buddy_imagine">
+        <div id="buddy_corp" class="imagine"></div>
+        <div id="buddy_ochi"></div> 
+    </div>
+    <div id="buddy_chat">
+        <a class="buddy_optiune" href="notiuni.html">Notiuni termodinamice de baza</a>
+        <a class="buddy_optiune" href="principii_termo.html">Principiile termodinamicii</a>
+        <a class="buddy_optiune" href="procese.html">Transformarile gazului ideal</a>
+        <a class="buddy_optiune" href="motoare.html">Motoare termice</a>
+
+    </div>
+    <div id="buddy_arrow" onclick="schimba()"></div>
+
+</div>
+<div id="intro_cont" class="imagine">
+    <div id="filler1"></div>
+    <div id="filler2"></div>
+</div>
+<div id="intro_cont2" class="imagine"></div>
+<div id="titlu_cont" class="resizeText0">PRINCIPIILE TERMODINAMICII</div>
+<div id="princ1_header" class="header">Principiul 0</div>
+<div id="bara0" class="bara"></div>
+<div id="princ1_titlu" class="imagine"></div>
+<div id="princ1_cont">
+    <div id="princ1_pre" class="text resizeText1">AMBELE ENUNȚURI SUNT ECHIVALENTE</div>
+    <div id="princ1_desc_cont">
+        <div id="princ1_text1" class="text resizeText2">Dacă un <red>sistem termodinamic A</red> e în <red>echilibru termic</red> cu un <red>sistem termodinamic B</red>, iar <red>B</red> e în <red>echilibru termic cu C</red>, atunci <red>A va fi în echilibru termic cu C</red>.</div>
+        <div id="princ1_text2" class="text resizeText3">
+        Există o <red>interacțiune universală</red> denumită <red>interacțiune termică</red> în raport cu care <red>echilibrul</red> se realizează prin <red>egalitatea între cele 2 sisteme termodinamice</red> a unui singur parametru, numit <red>temperatură</red>.
+        </div>
+    </div>
+    <div id="princ1_img" class="imagine"></div>
+</div>
+<div id="princ2_header" class="header">Principiul I</div>
+<div id="bara1" class="bara"></div>
+<div id="princ2_titlu" class="imagine"></div>
+<div id="princ2_cont">
+    <div id="princ2_desc_cont">
+        <div id="princ2_text" class="text resizeText4">
+            Pentru orice sistem termodinamic există o <red>funcție de stare</red> definită pe <red>mulțimea stărilor de echilibru termic</red>, denumită <red>energie internă</red>(<red>U</red>), a cărei variație, în orice proces, este egală cu diferența dintre <red>căldură</red>(<red>Q</red>) și <red>lucrul mecanic</red>(<red>L</red>).
+        </div>
+    </div> 
+    <div id="princ2_img_cont">
+        <div id="princ2_img1" class="imagine"></div>
+        <div id="princ2_img2" class="imagine"></div>
+    </div>
+    <div id="princ2_img_cont2">
+        <div id="princ2_img3" class="imagine"></div>
+        <div id="princ2_img4" class="imagine"></div>
+
+    </div>
+</div>
+<div id="coef_header" class="header">Coeficienți calorici</div>
+<div id="bara2" class="bara"></div>
+<div id="expl" class="text resizeText5">Mărimile ce stabilesc o legătură cantitativă între căldura (Q) primită sau cedată de un corp și variația temperaturii sale (∆T) se numesc coeficienți calorici.</div>
+<div id="cont1">
+    <div id="c1_desc" class="text resizeText6">Se numește <linie><red>capacitate calorică</red></linie> mărimea fizică numeric egală cu <red>căldura necesară</red> pentru a <red>varia temperatura</red> unui corp cu un grad</div>
+    <div id="c1_formula" class="imagine"></div>
+    <div id="c1_si" class="imagine"></div>
+</div>
+<div id="cont2">
+    <div id="c2_desc" class="text resizeText7">Se numește <linie><red>căldura specifică</red></linie> mărimea fizică numeric egală cu <red>căldura necesară</red> pentru a <red>varia temperatura unității de masă</red> dintr-un corp cu un grad.</div>
+    <div id="c2_formula" class="imagine"></div>
+    <div id="c2_si" class="imagine"></div>
+</div>
+<div id="cont3">
+    <div id="c3_desc" class="text resizeText8">Se numește <linie><red>căldură molară</red></linie> mărimea fizică numeric egală cu <red>căldura necesară</red> pentru a <red>varia temperatura unui mol</red> dintr-o substanță cu un grad.</div>
+    <div id="c3_formula" class="imagine"></div>
+    <div id="c3_si" class="imagine"></div>
+</div>
+<div id="princ3_header" class="header">Principiul II</div>
+<div id="bara3" class="bara"></div>
+<div id="princ3_titlu" class="imagine"></div>
+<div id="princ3_cont">
+    <div id="princ3_desc_cont">
+        <div id="princ3_text" class="text resizeText9">
+            <red>Nu există</red> niciun proces termodinamic în care <red>căldura</red> să treacă <red>de la sine</red> de la un corp mai <red>rece</red> la unul mai <red>cald</red>.
+        </div>
+    </div> 
+    
+</div>
+<div style="padding:50px"></div>
+</body>

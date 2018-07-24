@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fizica</title>
+    <link type="text/css" rel="stylesheet" href="notiuni.css">
+</head>
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="jquery-3.1.1.min.js"></script>
+<script src="notiuni.js"></script>
+<ul id="lista">
+    <li><a class='link' href="acasa.html">Acasa</a></li>
+    <li><a class='link' href="materie.html">Materie</a></li>
+    <li><a class='link' href="subiecte.html">subiecte</a></li>
+    <li><a class='link' href="test.html">test</a></li>
+    <li class="imagine"></li>
+
+</ul>
+<div id="buddy_cont">
+    <div id="buddy_imagine">
+        <div id="buddy_corp" class="imagine"></div>
+        <div id="buddy_ochi"></div> 
+    </div>
+    <div id="buddy_chat">
+        <a class="buddy_optiune" href="notiuni.html">Notiuni termodinamice de baza</a>
+        <a class="buddy_optiune" href="principii_termo.html">Principiile termodinamicii</a>
+        <a class="buddy_optiune" href="procese.html">Transformarile gazului ideal</a>
+        <a class="buddy_optiune" href="motoare.html">Motoare termice</a>
+
+    </div>
+    <div id="buddy_arrow" onclick="schimba()"></div>
+
+</div>
+<div id="intro_cont">
+    <div class="text_intro">
+        <div class="litera resizeText0">N</div>
+        <div class="litera resizeText1">O</div>
+        <div class="litera resizeText2">Ț</div>
+        <div class="litera resizeText3">I</div>
+        <div class="litera resizeText4">U</div>
+        <div class="litera resizeText5">N</div>
+        <div class="litera resizeText6">I</div>
+
+    </div>
+    <div class="text_intro">
+        <div class="litera resizeText7">D</div>
+        <div class="litera resizeText8">E</div>
+
+    </div>
+    <div class="text_intro">
+        <div class="litera resizeText9">B</div>
+        <div class="litera resizeText10">A</div>
+        <div class="litera resizeText11">Z</div>
+        <div class="litera resizeText12">Ă</div>
+
+    </div>
+</div>
+<div id="structura_header" class="header">NOȚIUNI DE INTRODUCERE</div>
+<div id="bara0" class="bara"></div>
+<div id="structura_cont">
+    <div id="structura_desc_cont">
+        <div id="structura_titlu" class="titlu resizeText13">STRUCTURA SUBSTANȚEI</div>
+        <div id="structura_desc" class="text resizeText14"><red>Fenomenele termice</red> au sens doar dacă se admite că substanțele au o <red>structură corpusculară</red> fiind formate din <red>particule</red> (molecule/atomi)</div>
+    </div>
+    <div id="structura_particule">
+        <div id="structura_atom">
+            <div id="structura_atom_img" class="imagine"></div>
+            <div id="structura_atom_desc" class="text resizeText15">Un <red>atom</red> este cea mai mică unitate constitutivă a materiei comune care are <red>proprietățile</red> unui <red>element chimic</red>.</div>
+        </div>
+        <div id="structura_molecula">
+            <div id="structura_molecula_desc" class="text resizeText16">
+            <red>Molecula</red> e cea mai mică parte dintr-o substanță care <red>păstrează compoziția</red> procentuală și toate <red>proprietățile chimice</red> ale acelei substanțe. O moleculă este formată din <red>cel puțin doi atomi</red>.
+            </div>
+            <div id="structura_molecula_img" class="imagine"></div>
+        </div>
+    </div>
+</div>
+<div id="agitatie_cont">
+    <img id="agitatie_img" src="imagini/agitatie.gif">
+    <div id="agitatie_desc_cont">
+        <div id="agitatie_titlu" class="titlu resizeText17">AGITAȚIA TERMICĂ</div>
+        <div id="agitatie_desc" class="text resizeText18"><red>Agitația termică</red> reprezintă <red>mișcarea permanentă</red>, <red>dezordonată</red> a moleculelor oricărei substanțe, indiferent de starea ei de agregare. Această mișcare <red>se intensifică</red> o dată cu <red>creșterea temperaturii</red>.</div>
+    </div>
+</div>
+<div id="subst_cont">
+    <div id="subst_text" class="text resizeText19"><red>Cantitatea de substanță</red> este mărimea fizică fundamentală ce măsoară <red>numărul de particule</red> aflate într-un <red>sistem fizic</red>.</div>
+    <div id="subst_img" class="imagine"></div>
+</div>
+<div id="mol_cont">
+    <div id="mol_img" class="imagine"></div>
+    <div id="mol_text" class="text resizeText20"><red>Molul</red> este <red>cantitatea de substanță</red> dintr-un sistem care conține un număr de <red>entități elementare</red> egal cu <red>numărul de atomi</red> din <red>12 grame de carbon</red>.</div>
+</div>
+<div id="masamol_cont">
+    <div id="masamol_formula" class="imagine"></div>
+    <div id="masamol_desc" class="text resizeText21"><red>Masa molară</red> reprezintă <red>masa</red> unui <red>singur mol</red></div>
+    <div id="masamol_si" class="imagine"></div>
+</div>
+<div id="avo_cont">
+    <div id="avo_formula" class="imagine"></div>
+    <div id="avo_desc" class="text resizeText22"><red>Numărul lui Avogadro</red> reprezintă <red>numărul de molecule/atomi</red> (<red>N</red>) dintr-un <red>mol de substanță</red>.</div>
+    <div id="avo_si" class="imagine"></div>
+</div>
+<div id="avo_val" class="imagine"></div>
+<div id="termo_header" class="header">NOȚIUNI TERMODINAMICE DE BAZĂ</div>
+<div id="bara1" class="bara"></div>
+<div id="termo_cont">
+    <div id="termo_def_cont">
+        <div id="termo_def_titlu" class="titlu resizeText23">TERMODINAMICA</div>
+        <div id="termo_def_desc" class="text resizeText24"><red>Termodinamica</red> se ocupă cu <red>studiul macroscopic</red> al fenomenelor, de orice natură, în care are loc un <red>transfer de energie</red> sub forma de <red>căldură</red> și <red>lucru mecanic</red>.</div>
+    </div>
+    <div id="sist_termo_cont">
+        <div id="sist_termo_desc" class="text resizeText25"><red>Sistemul termodinamic</red> este orice <red>corp macroscopic</red> sau <red>ansamblu de corpuri microscopice</red> (atomi, molecule) <red>bine delimitat</red>. <red>Corpurile exterioare</red>, care nu  fac parte din sistemul termodinamic  considerat, definesc <red>mediul exterior</red>.</div>
+        <div id="sist_termo_titlu" class="resizeText26 titlu">SISTEM TERMODINAMIC</div>
+    </div>
+</div>
+<div id="sisteme_termo" class="imagine"></div>
+<div id="param_termo_cont">
+    <div id="param_termo_desc">
+        <div id="param_termo_titlu" class="titlu resizeText27">Starea sistemului</div>
+        <div id="param_termo_text" class="text resizeText28"><red>Starea sistemului termodinamic</red> reprezintă totalitatea <red>proprietăților</red> lui la un moment dat. Ansamblul <red>mărimilor fizice</red> măsurabile, care <red>caracterizează sistemul</red> termodinamic și a relațiilor dintre acestea și sistemele înconjurătoare, constituie <red>parametrii termodinamici</red> ai sistemului.</div>
+    </div>
+    <div id="param_termo_img" class="imagine"></div>
+</div>
+<div id="ech_term_cont">
+    <div id="ech_term_desc">
+        <div id="ech_term_titlu" class="titlu resizeText29">STAREA DE ECHILIBRU</div>
+        <div id="ech_term_text" class="text resizeText30"><red>Starea de echilibru termodinamic</red> este acea stare în care <red>parametrii sistemului nu variază</red> în timp și trebuie ca nici <red>condițiile exterioare să nu varieze</red> în timp.</div>
+    </div>
+    <div id="postulat_cont">
+        <div id="postulat_text" class="text resizeText31">
+            <red>Orice sistem termodinamic</red> izolat ajunge după un timp <red>într-o stare</red> din care <red>nu mai poate ieși de la sine</red>.
+        </div>
+        <div id="postulat_titlu" class="titlu resizeText32">
+            Postulatul general al termodinamicii
+        </div>
+    </div>
+</div>
+<div id="proces_header" class="header">Procese termodinamice</div>
+<div id="bara2" class="bara"></div>
+<div id="expl" class="text resizeText33">Un proces termodinamic reprezintă procesul de trecere a sistemului dintr-o stare în alta</div>
+<div id="proces1" class="imagine"></div>
+<div id="proces2" class="imagine"></div>
+<div id="proces3" class="imagine"></div>
+<div style="padding:50px"></div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fizica</title>
+    <link type="text/css" rel="stylesheet" href="reflexie_refractie.css">
+</head>
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="jquery-3.1.1.min.js"></script>
+<script src="reflexie_refractie.js"></script>
+
+<ul id="lista">
+    <li><a class='link' href="acasa.html">Acasa</a></li>
+    <li><a class='link' href="materie.html">Materie</a></li>
+    <li><a class='link' href="subiecte.html">subiecte</a></li>
+    <li><a class='link' href="test.html">test</a></li>
+    <li class="imagine"></li>
+</ul>
+<div id="buddy_cont">
+    <div id="buddy_imagine">
+        <div id="buddy_corp" class="imagine"></div>
+        <div id="buddy_ochi"></div> 
+    </div>
+    <div id="buddy_chat">
+        <a class="buddy_optiune" href="reflexie_refractie.html">Reflexia si refractia</a>
+        <a class="buddy_optiune" href="lentile.html">Lentile subtiri</a>
+        <a class="buddy_optiune" href="interferenta.html">Interferenta</a>
+        <a class="buddy_optiune" href="efect_fotoelectric.html">Efectul fotoelectric</a>
+
+    </div>
+    <div id="buddy_arrow" onclick="schimba()"></div>
+
+</div>   
+<div id="intro" class="imagine"></div>   
+<div id="reflexie_titlu" class="header">REFLEXIA LUMINII</div>
+<div id="bara" class="bara"></div>
+<div id="definitie_cont">
+    <div id="definitie_titlu" class="titlu resizeText0">Definiție</div>
+    <div id="definitie_desc" class="text resizeText1">
+        <strong>Reflexia</strong> reprezintă <blue>fenomenul de întoarcere</blue> a luminii în mediul din care provine atunci când întâlnește <blue>suprafața de separare</blue> a două medii.
+    </div>
+</div>
+<div id="exemplu_cont">
+    <div id="exemplu_desc" class="imagine">  </div>
+    <div id="exemplu_titlu" class="titlu resizeText2">Reflexia în apă</div>     
+</div>
+<div style="display:inline-block;">
+<div id="legi_titlu" class="titlu resizeText3">Legile reflexiei</div>
+<div id="legi_cont">
+    <div id="legea1" class="text resizeText4"><strong>Legea 1</strong>: Raza <blue>incidentă</blue>, raza <green>reflectată</green> precum și <red>normala</red> în punctul de incidență sunt <blue>coplanare</blue>.</div>
+    <div id="legea2" class="text resizeText5"><strong>Legea 2</strong>: Unghiul de <blue>incidență</blue> este <strong>egal</strong> cu unghiul de <green>reflexie</green>.</div>
+
+</div>
+</div>
+<div style="display:inline-block;">
+<div id="refl_imag" class="imagine"></div>
+<div id="refl_titlu" class="titlu resizeText6">interpretare geometrică</div>
+</div>
+<div id="refractie_titlu" class="header">Refracția LUMINII</div>
+<div id="bara2" class="bara"></div>
+<div id="definitie_cont_refr">
+<div id="definitie_titlu_refr" class="titlu resizeText7">Definiție</div>
+    <div id="definitie_desc_refr" class="text resizeText8">
+        <strong>Refracția</strong> reprezintă <blue>fenomenul de modificare a direcției de propagare</blue> a luminii atunci când traversează <blue>suprafața de separare</blue> a două medii.
+    </div>
+</div>
+<div id="exemplu_cont_refr">
+    <div id="exemplu_desc_refr" class="imagine">  </div>
+    <div id="exemplu_titlu_refr" class="titlu resizeText9">Refracția în apă</div>     
+</div>
+<div style="display:inline-block; vertical-align: middle;">
+<div id="legi_titlu_refr" class="titlu resizeText10">Legile refracției</div>
+<div id="legi_cont_refr">
+    <div id="legea1_refr" class="text resizeText11"><strong>Legea 1</strong>: Raza <blue>incidentă</blue>, raza <green>refractată</green> precum și <red>normala</red> în punctul de incidență sunt <blue>coplanare</blue>.</div>
+    <div id="legea2_refr" class="text resizeText12"><strong>Legea 2</strong>: Raportul dintre <blue>sin i</blue> și <green>sin r</green> este egal cu <strong>indicele de refracție</strong> relativ al unui mediu față de celălalt.</div>
+
+</div>
+</div>
+<div style="display:inline-block; vertical-align: middle;">
+<div id="refr_imag" class="imagine"></div>
+<div id="refr_titlu" class="titlu resizeText13">interpretare geometrică</div>
+</div>
+<div id="reflt_titlu" class="titlu resizeText14">REFLEXIA TOTALĂ</div>
+    <div id="reflt_desc" class="text resizeText15"><strong>Reflexia totală</strong> este fenomenul optic de reflexie a luminii atunci сând <blue>n1</blue>><green>n2</green>, iar <blue>unghiul de incidență</blue> este atât de mare încât <green>refracția</green> nu mai poate avea loc. Dacă <green>unghiul de refracție</green> ajunge la <strong>90°</strong>, <blue>unghiul de incidență</blue> corespunzător este <red>unghi limită(l)</red>.</div>
+<div style="position:relative; text-align: center;">
+    <div id="cutie">       
+            <canvas id="canvas"></canvas>
+    </div>
+    <div id="simulare_cont">
+        <div id="simulare_titlu" class="titlu resizeText16">SIMULARE</div>
+    <div id="simulare_desc">
+        <div class="cont_input">
+            <div style="display:inline-block; vertical-align: middle;" id="n1" class="text resizeText23">n1</div>
+            <input style="display:inline-block; vertical-align: middle;" id="n1_value" type="number" value="1.5" min="0.1" oninput="check(this)">
+        </div>
+        <div class="cont_input">
+            <div style="display:inline-block; vertical-align: middle;" id="n2" class="text resizeText17">n2</div>
+            <input style="display:inline-block; vertical-align: middle;" id="n2_value" type="number" value="1" min="0.1"  oninput="check(this)">
+        </div>
+        <div class="cont_input">
+            <div style="display:inline-block; vertical-align: middle;" id="i" class="text resizeText18">i</div>
+            <input style="display:inline-block; vertical-align: middle;" id="i_value" type="number" value="30" oninput="check(this)">
+        </div>
+        <div class="cont_input">
+            <div style="display:inline-block; vertical-align: middle;" id="r" class="text resizeText19">r</div>
+            <input style="display:inline-block; vertical-align: middle;" id="r_value" type="number" value=""  disabled>
+        </div>
+        <div class="cont_input">
+            <div style="display:inline-block; vertical-align: middle;" id="l" class="text resizeText21">l</div>
+            <input style="display:inline-block; vertical-align: middle;" id="l_value" type="number" value="" disabled>
+        </div>
+    </div>
+    <div id="t1" class="text resizeText24">← → modifică i cu 0.1°</div>
+    <div id="t2" class="text resizeText25">← → + SHIFT modifică i cu 0.01°</div>
+    <div id="t3" class="text resizeText26">← → + SHIFT + Z modifică i cu 0.001°</div>
+    </div>
+</div>
+<div id="filler"></div>

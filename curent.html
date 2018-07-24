@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fizica</title>
+    <link type="text/css" rel="stylesheet" href="curent.css">
+</head>
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="jquery-3.1.1.min.js"></script>
+<script src="curent.js"></script>
+
+<ul id="lista">
+    <li><a class='link' href="acasa.html">Acasa</a></li>
+    <li><a class='link' href="materie.html">Materie</a></li>
+    <li><a class='link' href="subiecte.html">subiecte</a></li>
+    <li><a class='link' href="test.html">test</a></li>
+    <li class="imagine"></li>
+
+</ul>
+<div id="buddy_cont">
+    <div id="buddy_imagine">
+        <div id="buddy_corp" class="imagine"></div>
+        <div id="buddy_ochi"></div> 
+    </div>
+    <div id="buddy_chat">
+        <a class="buddy_optiune" href="curent.html">Curentul electric</a>
+        <a class="buddy_optiune" href="ohmkir.html">Legea lui Ohm. Legile lui Kirchoff</a>
+        <a class="buddy_optiune" href="grupare.html">Gruparea rezistoarelor si a genratoarelor</a>
+        <a class="buddy_optiune" href="putere.html">Energia si puterea electrica</a>
+
+    </div>
+    <div id="buddy_arrow" onclick="schimba()"></div>
+
+</div>
+<!--
+    <div id="titlu" class='resizeText0'>
+    <span class="spanz">C</span><span class="spanz">U</span><span class="spanz">R</span><span class="spanz">E</span><span class="spanz">N</span><span class="spanz">T</span><span class="spanz">U</span><span class="spanz">L</span> <span class="spanz">E</span><span class="spanz">L</span><span class="spanz">E</span><span class="spanz">C</span><span class="spanz">T</span><span class="spanz">R</span><span class="spanz">I</span><span class="spanz">C</span>
+    </div>
+-->
+    <div id="titlu" class='resizeText0'>
+    curentul electric
+    </div>
+    <div id="descriere_cont">
+        <div id="descriere_titlu" class='resizeText1'>Ce este curentul electric?</div>
+        <div id="descriere_text" class='resizeText2'><strong>CURENTUL ELECTRIC CONTINUU</strong> este deplasarea ordonată în <strong>același sens</strong> a purtătorilor de sarcină prin conductoare datorită câmpului generat de sursa electrică. Spre deosebire de curentul continuu, deplasarea <abc>curentului alternativ</abc> e în <abc>ambele sensuri</abc></div>
+    </div>
+    <div id="curent_img_cont">
+        <div id="curent_img_poza"></div>
+        <div id="curent_img_titlu" class='resizeText3'>Descărcare electrică</div>
+    </div>
+    <div id="curent_gif_cont">
+        <canvas id="curent_gif"></canvas>
+        <div id="curent_gif_titlu" class='resizeText4'>Electroni în curent continuu</div>
+    </div>
+    <div id="titlu_notiuni">NOȚiuni de bază</div>
+    <div class="bara"></div>
+    <div id="intensitate_cont">
+        <div id="intensitate_def" class='resizeText5'><strong>Intensitatea curentului electric</strong> este definită ca fiind sarcina electrică ce trece prin unitatea de suprafaţă în unitatea de timp. Într-un circuit de curent continuu, sensul convenţional al curentului este stabilit ca fiind de la borna <red>pozitivă (+)</red> la borna <blue>negativă (-)</blue> a sursei de alimentare.</div>
+        <img id="intensitate_si" src="imagini/intensitate_si.png"/>
+    </div>
+    <div id="filler"></div>
+    <div id="tensiune_cont">
+        <img id="tensiune_si" src="imagini/tensiune_si.png"/>
+        <div id="tensiune_def" class='resizeText6'><strong>Tensiunea electrică</strong> reprezintă mărimea fizică scalară egală cu raportul dintre lucrul total efectuat de câmpul electric pentru a transporta sarcina electrică pe o porțiune de circuit și mărimea sarcinii electrice.</div>
+    </div>
+    <div id="rezistenta_cont">
+        <div id="rezistenta_def" class='resizeText7'><strong>Rezistența electrică</strong> este o mărime fizică prin care se exprimă proprietatea unui conductor electric de a se opune trecerii prin el a curentului electric.</div>
+        <img id="rezistenta_si" src="imagini/rezistenta_si.png"/>
+    </div>
+    
+    <div id="rezistivitate_cont" class="resizeText18">
+        Rezistenţa electrică caracterizează orice consumator electric şi depinde de elementele constructive ale acestuia:
+    </div>
+    
+    <div id="rezistenta_img" class='imagine'></div>
+    
+    <div id="explicatie" class='resizeText19'>
+        unde <yellow>ρ</yellow> caracterizează materialul din care este confecţionat consumatorul şi se numeşte <yellow>rezistivitate electrică</yellow>, <yellow>l</yellow> este <yellow>lungimea consumatorului</yellow> și <yellow>S</yellow> este <yellow>suprafața transversală</yellow>. Atât <yellow>ρ</yellow> cât și <yellow>R</yellow> depind de <red>temperatura</red> conductorului:
+    </div>
+    
+    <div id="poza1" class="imagine"></div>
+    <div id="poza2" class="imagine"></div>
+    
+    <div id="explicatie2" class="resizeText20">unde <yellow>ρ0</yellow> și <yellow>R0</yellow> sunt rezistivitatea și rezistența la <yellow>0°C</yellow>, iar <red>α</red> este <red>coeficientul termic</red> al rezistivităţii.</div>
+    
+    <div id="titlu_el">Elemente de circuit</div>
+    <div class="bara"></div>
+    
+    <div id="elemente_cont">
+        
+        <div class="element resizeText8">Generator</div>
+        <div class="element resizeText9">Rezistor</div>
+        <div class="element resizeText10">Ampermetru</div>
+        <div class="element resizeText11">Voltmetru</div>
+        <div class="element resizeText12">Consumator</div>
+        <div class="element resizeText13">Întrerupător</div>
+
+    </div>
+    
+    <div id="detalii_cont">
+        
+        <div id="element_desc_cont">
+            <div class="titlu_e resizeText14">Descriere</div>
+            <div id="element_desc" class="resizeText17"><strong>Generatorul electric</strong> este un dispozitiv care transformă o formă de energie: chimică, mecanică, optică, termică etc. în energie electrică. Astfel, ele se numesc: pile, dinamuri, alternatoare, celule fotoelectrice.</div>
+        </div>
+        <div id="element_simbol_cont">
+            <div id="element_simbol"></div>
+            <div class="titlu_e resizeText15">Simbol</div>
+        </div>
+        <div id="element_poza_cont">
+            <div class="titlu_e resizeText16">exemplu</div>
+            <div id="element_poza"></div>
+        </div>
+    
+    </div>
+    
+    
+    <div style="padding:50px"></div>
+    </body>
+    
+

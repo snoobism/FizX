@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fizica</title>
+    <link type="text/css" rel="stylesheet" href="forte.css">
+</head>
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="jquery-3.1.1.min.js"></script>
+<script src="forte.js"></script>
+
+<ul id="lista">
+    <li><a class='link' href="acasa.html">Acasa</a></li>
+    <li><a class='link' href="materie.html">Materie</a></li>
+    <li><a class='link' href="subiecte.html">subiecte</a></li>
+    <li><a class='link' href="test.html">test</a></li>
+    <li class="imagine"></li>
+
+</ul>
+<div id="buddy_cont">
+    <div id="buddy_imagine">
+        <div id="buddy_corp" class="imagine"></div>
+        <div id="buddy_ochi"></div> 
+    </div>
+    <div id="buddy_chat">
+        <a class="buddy_optiune" href="cinematica.html">Miscare si repaus</a>
+        <a class="buddy_optiune" href="principii.html">Principiile dinamicii</a>
+        <a class="buddy_optiune" href="forte.html">Forte</a>
+        <a class="buddy_optiune" href="LucruMecanic.html">Energia</a>
+        <a class="buddy_optiune" href="impuls.html">Impulsul</a>
+
+    </div>
+    <div id="buddy_arrow" onclick="schimba()"></div>
+
+</div>
+<div id="cont_intro">
+    <div id="resort" class="imagine"></div>
+    <div id="greutate" class="imagine"></div>
+    <div id="text_intro" class="imagine"></div>
+</div>
+<div id="grav_header" class="header">forța gravitațională</div>
+<div id="bara0" class="bara"></div>
+<div id="grav_cont">
+    <div id="grav_desc_cont">
+        <div id="grav_desc_titlu" class="titlu resizeText0">Legea atracției universale</div>
+        <div id="grav_desc_text" class="text resizeText1">Între oricare <red>2 corpuri</red> presupuse <red>punctiforme</red> în raport cu <red>distanța care le separă</red> se exercită o <green>forță de atracție</green> orientată pe direcția care le unește. Această forță e <red>direct proporțională</red> cu <red>produsul maselor</red> și <green>invers proporțională</green> cu <green>distanța dintre acestea la pătrat</green>.</div>
+    </div>
+    <div id="grav_img_cont">
+        <div id="grav_img" class="imagine"></div>
+        <div id="grav_img_titlu" class="titlu resizeText2">schiță</div>
+    </div>
+</div>
+<div id="atr_formula_text" class="text resizeText3">Din <red>legea de atracție universală</red> reiese <red>formula</red>:</div>
+<div id="atr_formula_img" class="imagine"></div>
+    <div id="atr_formula_explicatie" class="text resizeText4">unde <red>F12</red>/<green>F21</green> este forța cu care este atras corpul <red>2</red>/<green>1</green> de către corpul <red>1</red>/<green>2</green>, <red>r</red> distanța dintre corpuri și <green>k</green> constanta gravitațională</div>
+<div id="grav_expl" class="text resizeText5"><red>Forța de atracție</red> gravitațională a <red>Pământului</red> (<red>G</red>) este <red>direct proporțională</red> cu <red>masa corpului atras</red>, imprimând o accelerație de ~<red>9,81</red> metri pe secundă la pătrat (<red>accelerația gravitațională g</red>).</div>
+<div id="grav_formula" class="imagine"></div>
+
+<div id="elast_header" class="header">Forța elastică</div>
+<div id="bara1" class="bara"></div>
+<div id="filler"></div>
+<div id="elast_cont">
+    <div id="elast_img_cont">
+        <div id="elast_img_titlu" class="titlu resizeText6">EFECT AL FORȚEI</div>
+        <div id="elast_img" class="imagine"></div>
+        
+    </div>
+    <div id="elast_desc_cont">
+        <div id="elast_desc_text" class="text resizeText7">Atunci când asupra unui corp este <red>exercitată o forță</red>, pe lângă <red>apariția accelerației</red>,  apare și <red>efectul de deformare</red> al corpului. Dacă deformarea este <red>plastică</red>, atunci corpul <red>nu mai poate reveni</red> la forma sa inițială. Dacă este <red>elastică</red>, atunci corpul <red>poate reveni</red> la forma inițială sub acțiunea unei <green>forțe elastice</green>.</div>
+        <div id="elast_desc_titlu" class="titlu resizeText8">TIPURI DE DEFORMĂRI</div>
+    </div>
+</div>
+    
+<div id="forta_elast_cont">
+    <div id="forta_elast_desc_cont">
+        <div id="forta_elast_desc_titlu" class="titlu resizeText9">FORȚA ELASTICĂ</div>
+        <div id="forta_elast_desc_text" class="text resizeText10">
+            <green>Forța elastică</green> este forța ce aduce un corp la
+            <red>forma sa inițială</red> după ce o
+            <red>forță exterioară</red> acționează asupra sa.</div>
+    </div>
+    <div id="forta_elast_schita_cont">
+
+        <div id="forta_elast_schita_img" class="imagine"></div>
+        <div id="resort_titlu" class="titlu resizeText11">Deformarea unui resort</div>
+    </div>
+</div>
+<div id="expl1" class="text resizeText12">Din <red>măsurători experimentale</red> reiese că:</div>
+<div id="expl2" class="imagine"></div>
+<div id="legea_hooke_cont">
+    <div id="legea_hooke_titlu" class="imagine"></div>
+    <div id="legea_hooke_text" class="text resizeText13">Spune că <red>alungirea unui resort</red> este <red>direct proporțională</red> cu <red>modulul forței</red> care determină <red>deformarea</red>, cu condiția ca această forță să nu depășească <red>limitele de elasticitate</red>, legea fiind scrisă astfel:</div>
+    <div id="round"></div>
+</div>
+<div id="hooke_formula" class="imagine"></div>
+<div id="expl3" class="text resizeText14">unde:</div>
+<div id="hooke_expl" class="imagine"></div>
+    <div id="tensiune_header" class="header">FORȚA DE TENSIUNE ÎN FIR</div>
+<div id="bara2" class="bara"></div>
+<div id="tensiune_cont">
+    <div id="tensiune_desc_cont">
+        <div id="tensiune_titlu" class="titlu resizeText15">DEFINIȚIE</div>
+        <div id="tensiune_desc" class="text resizeText16">Forța de <red>tensiune în fir</red> apare în <red>orice secțiune</red> a unui fir întins și reprezintă forța cu care <red>o parte</red> a firului <red>trage</red> de cealaltă.</div>
+    </div>
+    <div id="tensiune_img_cont">
+        <div id="tensiune_img" class="imagine"></div>
+        <div id="tensiune_img_titlu" class="titlu resizeText17">TENSIUNEA ÎNTR-UN PUNCT</div>
+    </div>
+</div>
+<div id="tensiune_expl">
+    <div id="tensiune_img_real" class="imagine"></div>
+    <div id="tensiune_desc_real_cont">
+        <div id="tensiune_desc_real_titlu" class="titlu resizeText18">CONSECINȚE</div>
+        <div id="tensiune_desc_real" class="text resizeText19">
+            Un corp poate să fie <red>ridicat</red> cu ajutorul unui fir deoarece tensiunea din punctul de <red>legătură</red> combate <red>greutatea</red> acestuia. Dacă nu ar exista forța de <red>tensiune în fir</red>, lampa din imagine <red>ar cădea</red>. 
+        </div>
+    </div>
+</div>
+    
+<div id="frecare_header" class="header">Forța de frecare</div>
+<div id="bara3" class="bara"></div>
+<div id="frec_cont">
+    <div id="frec_desc_cont">
+        <div id="frec_titlu" class="titlu resizeText20">DEFINIȚIE</div>
+        <div id="frec_desc" class="text resizeText21"><green>Forța de frecare</green> este forța care apare la <red>suprafața de contact</red> dintre 2 corpuri și <red>se opune mișcării</red> unui corp față de celălalt.</div>
+    </div>
+    <div id="frec_schita" class="imagine"></div>
+</div>
+<div id="legi_frec_header" class="header">-Legile frecării-</div>
+<div id="lege1_frec">
+    <div id="lege1_titlu" class="titlu resizeText22">LEGEA I</div>
+    <div id="lege1_desc" class="text resizeText23">Forța de frecare <red>nu depinde</red> de aria <red>suprafeței de contact</red>.</div>
+</div>
+<div id="lege2_frec">
+    
+    <div id="lege2_desc" class="text resizeText25">Forța de frecare este <red>direct proporțională</red> cu <red>forța de apăsare normală</red> (<red>N</red>).</div>
+    <div id="lege2_titlu" class="titlu resizeText24">LEGEA II</div>
+</div>
+<div id="frec_formula" class="imagine"></div>
+    <div id="frec_expl" class="text resizeText26">unde <red>μ</red> este <red>coeficientul de frecare</red> dintre 2 suprafețe</div>
+    
+    
+    
+    
+    

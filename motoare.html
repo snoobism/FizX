@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fizica</title>
+    <link type="text/css" rel="stylesheet" href="motoare.css">
+</head>
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="jquery-3.1.1.min.js"></script>
+<script src="motoare.js"></script>
+<ul id="lista">
+    <li><a class='link' href="acasa.html">Acasa</a></li>
+    <li><a class='link' href="materie.html">Materie</a></li>
+    <li><a class='link' href="subiecte.html">subiecte</a></li>
+    <li><a class='link' href="test.html">test</a></li>
+    <li class="imagine"></li>
+
+</ul>
+<div id="buddy_cont">
+    <div id="buddy_imagine">
+        <div id="buddy_corp" class="imagine"></div>
+        <div id="buddy_ochi"></div> 
+    </div>
+    <div id="buddy_chat">
+        <a class="buddy_optiune" href="notiuni.html">Notiuni termodinamice de baza</a>
+        <a class="buddy_optiune" href="principii_termo.html">Principiile termodinamicii</a>
+        <a class="buddy_optiune" href="procese.html">Transformarile gazului ideal</a>
+        <a class="buddy_optiune" href="motoare.html">Motoare termice</a>
+
+    </div>
+    <div id="buddy_arrow" onclick="schimba()"></div>
+
+</div>
+<div id="intro" class="imagine"></div>
+<div id="motoare_header" class="header">MOTOARE TERMICE</div>
+<div id="bara0" class="bara"></div>
+<div id="motor_cont">
+    <div id="motor_1">
+        <div id="motor_titlu" class="resizeText0 titlu">DEFINIȚIE</div>
+        <div id="motor_desc" class="resizeText1 text">Un <red>motor termic</red> este o <red>mașină termică</red>  care transformă <red>căldura</red> în <red>lucru mecanic</red>. Acesta lucrează pe baza unui <red>ciclu termodinamic</red> realizat cu ajutorul unui fluid. Motorul preia căldură de la o <red>sursă caldă</red> și transformă o parte în lucru mecanic, iar restul îl transferă unei <red>surse reci</red>.
+        </div>
+    </div>
+    <div id="motor_img" class="imagine"></div>
+</div>
+<div id="randament_cont">
+    <div id="randament_img_cont">
+        <div id="randament_img1" class="imagine"></div>
+        <div id="randament_img2" class="imagine"></div>
+    </div>
+    <div id="randament_text_cont">
+        <div id="randament_titlu" class="resizeText2 titlu">RANDAMENT</div>
+        <div id="randament_desc" class="resizeText3 text"><red>Eficienţa transformării căldurii</red> în <red>lucru mecanic</red> este exprimată prin <red>randamentul motorului termic</red> (<red>η</red>). Acesta reprezintă <red>raportul</red> dintre <red>lucrul mecanic</red> efectuat de sistem (util) si <red>căldură absorbită</red> de la sursa caldă.</div>
+    </div>
+</div>
+<div id="cicluri_header" class="header">CICLURI TERMODINAMICE</div>
+<div id="bara1" class="bara"></div>
+<div id="otto_cont">
+    <div id="otto_img_cont">
+        <div id="otto_titlu" class="resizeText4 titlu">CICLUL OTTO</div>
+        <div id="otto_img" class="imagine"></div>
+    </div>
+    <div id="otto_text_cont">
+        <div id="otto_text" class="resizeText5 text">Ciclul <red>Otto</red> este alcătuit din <red>4 etape</red>: 1→2 <red>comprimare adiabatică</red>, 2→3 <red>încălzire izocoră</red>, 3→4 <red>destindere adiabatică</red> și 4→1 <red>răcire izocoră</red>. <red>Randamentul</red> unui motor ce funcționează pe ciclul Otto poate fi scris în funcție de <red>raportul de compresie</red>(<red>ε</red>):</div>
+        <div id="otto_text_img" class='imagine'></div>
+    </div>
+</div>
+<div id="diesel_cont"> 
+    <div id="diesel_text_cont">
+        <div id="diesel_text" class="resizeText7 text">Ciclul <red>diesel</red> este alcătuit din <red>4 etape</red>: 1→2 <red>comprimare adiabatică</red>, 2→3 <red>destindere izobară</red>, 3→4 <red>destindere adiabatică</red> și 4→1 <red>răcire izocoră</red>. <red>Randamentul</red> unui motor ce funcționează pe ciclul Diesel poate fi scris în funcție de <red>raportul de compresie</red>(<red>ε</red>) și de <red>destindere</red>(<red>α</red>):</div>
+        <div id="diesel_text_img" class='imagine'></div>
+    </div>
+    <div id="diesel_img_cont">
+        <div id="diesel_titlu" class="resizeText6 titlu">CICLUL diesel</div>
+        <div id="diesel_img" class="imagine"></div>
+    </div>
+</div>
+<div id="carnot_cont">
+    <div id="carnot_img_cont">
+        <div id="carnot_titlu" class="resizeText8 titlu">CICLUL carnot</div>
+        <div id="carnot_img" class="imagine"></div>
+    </div>
+    <div id="carnot_text_cont">
+        <div id="carnot_text" class="resizeText9 text">Ciclul <red>Carnot</red> este alcătuit din <red>4 etape</red>: 1→2 <red>răcire adiabatică</red>, 2→3 <red>comprimare izotermă</red>, 3→4 <red>încălzire adiabatică</red> și 4→1 <red>destindere izotermă</red>. <red>Randamentul</red> unui motor ce funcționează pe ciclul Carnot poate fi scris în funcție de <red>temperatura minimă</red> și <red>maximă</red>:</div>
+        <div id="carnot_text_img" class='imagine'></div>
+    </div>
+</div>
+<div id="filler"></div>

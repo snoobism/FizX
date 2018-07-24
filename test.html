@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="test.css">
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<body>
+<ul id="lista">
+    <li><a class='link' href="acasa.html">Acasa</a></li>
+    <li><a class='link' href="materie.html">Materie</a></li>
+    <li><a class='link' href="subiecte.html">subiecte</a></li>
+    <li><a class='link' href="test.html">Test</a></li>
+    <li class="imagine2"></li>
+
+</ul>
+	<script src="jquery-3.1.1.min.js"></script>
+	<script src="test.js"></script>
+    <div id="test_alegere">
+        <div id="toate" title="Toată materia" class="imagine" onclick="schimba_alegere(0)">
+            
+        </div>
+        <div id="optica" title="Optică" class="imagine" onclick="schimba_alegere(1)">
+                
+        </div>
+        <div id="mecanica" title="Mecanică" class="imagine" onclick="schimba_alegere(2)">
+            
+        </div>
+        <div id="termodinamica" title="Termodinamică" class="imagine" onclick="schimba_alegere(3)">
+            
+        </div>
+        <div id="electricitate" title="Electricitate" class="imagine" onclick="schimba_alegere(4)">
+            
+        </div>
+    </div>
+	<div id="test_cont">
+        <img id='filmrolls' src="imagini/banner.png"/>
+        <div id='contmare'>
+            <div id='puncte' class='r1'>PUNCTE 0/10</div>
+            <div id='intrebare' class='r2'>INTREBARE</div>
+            <div id='viteza' class='r3' onclick='viteza()'>
+                <span> VITEZA</span>
+                <img class='buton' id='b1' src='imagini/buton_on.png'/>
+                <img class='buton' id='b2' src='imagini/buton_on.png'/>
+                <img class='buton' id='b3' src='imagini/buton_off.png'/>
+            </div>
+        </div>
+        <div id="cont1">
+            <div class="resizeText0" id="c0">Întrebare</div>
+            <div id="bara">
+                <div id="progres"></div>
+            </div>
+            <div id="cont2">
+                <div class="resizeText1" id="c1" onclick="apasat1()">Răspuns 1</div>
+                <div class="resizeText2" id="c2" onclick="apasat2()">Răspuns 2</div>
+            </div>
+            <div id="cont3">
+                    <div class="resizeText3" id="c3" onclick="apasat3()">Răspuns 3</div>
+                    <div class="resizeText4" id="c4" onclick="apasat4()">Răspuns 4</div>
+            </div>
+
+
+        </div>
+        <div id="STARTBUTTON" onclick="incepe()">START</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fizica</title>
+    <link type="text/css" rel="stylesheet" href="lentile.css">
+</head>
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="jquery-3.1.1.min.js"></script>
+<script src="lentile.js"></script>
+
+<ul id="lista">
+    <li><a class='link' href="acasa.html">Acasa</a></li>
+    <li><a class='link' href="materie.html">Materie</a></li>
+    <li><a class='link' href="subiecte.html">SUBIECTE</a></li>
+    <li><a class='link' href="test.html">TEST</a></li>
+    <li class="imagine"></li>
+
+</ul>
+<div id="buddy_cont">
+    <div id="buddy_imagine">
+        <div id="buddy_corp" class="imagine"></div>
+        <div id="buddy_ochi"></div> 
+    </div>
+    <div id="buddy_chat">
+        <a class="buddy_optiune" href="reflexie_refractie.html">Reflexia si refractia</a>
+        <a class="buddy_optiune" href="lentile.html">Lentile subtiri</a>
+        <a class="buddy_optiune" href="interferenta.html">Interferenta</a>
+        <a class="buddy_optiune" href="efect_fotoelectric.html">Efectul fotoelectric</a>
+
+    </div>
+    <div id="buddy_arrow" onclick="schimba()"></div>
+
+</div>
+<div id="intro" class="imagine"></div>
+<div id="bara1" class="bara"></div>
+<div id="def_cont">
+    <div id="def_titlu" class="titlu resizeText0">DEFINIȚIE</div>
+    <div id="def_desc" class="text resizeText1"><strong>Lentilele</strong> sunt <blue>componente optice</blue> alcătuite dintr-un <blue>mediu transparent</blue> delimitat de mediul înconjurător.</div>
+</div>
+<div id="elem_cont">
+    <div id="elem_desc">
+        <div id="aop_cont">
+            <div id="aop_text" class="text resizeText2">
+                <red>Axa optică principală</red> este <blue>axa de simetrie</blue> a lentilei, care trece prin <blue>centrele de curbură</blue> ale suprafețelor ei.
+            </div>
+            <div id="aop_img" class="imagine"></div>
+        </div>
+        <div id="focar_cont">
+            <div id="focar_text" class="text resizeText3">
+                <green>Focarele lentilei</green> sunt acele puncte în care se <blue>concentrează</blue> (sau din care <blue>diverg</blue>) razele de <blue>lumină</blue> care vin într-un <blue>fascicul paralel</blue> orientat după axa optică. 
+            </div>
+            <div id="focar_img" class="imagine"></div>
+        </div>
+    </div>
+    <div id="elem_titlu" class="titlu resizeText4">proprietăți optice</div>
+</div>
+<div id="lentile_header" class="header">TIPURI DE LENTILE</div>    
+<div id="bara2" class="bara"></div>
+<div id="conv_cont">
+    <div id="conv_titlu" class="titlu resizeText5">LENTILE CONVERGENTE</div>
+    <div id="conv_desc">
+        <div class="ex_cont">
+            <div id="c_img1" class="imagine c_img"></div>
+            <div class="text resizeText6 c_nume">lentilă bi-convexă</div>
+        </div>
+        <div class="ex_cont">
+            <div id="c_img2" class="imagine c_img"></div>
+            <div class="text resizeText7 c_nume">lentilă plan-convexă</div>
+        </div>
+        <div class="ex_cont">
+            <div id="c_img3" class="imagine c_img"></div>
+            <div class="text resizeText8 c_nume">menisc convergent</div>
+        </div>
+        <div class="ex_cont">
+            <div id="c_img4" class="imagine c_img"></div>
+            <div class="text resizeText9 c_nume">schema lentilelor convergente</div>
+        </div>
+    </div>
+</div>    
+<div id="div_cont">
+    <div id="div_titlu" class="titlu resizeText10">LENTILE divergente</div>
+    <div id="div_desc">
+        <div class="ex_cont">
+            <div id="d_img1" class="imagine d_img"></div>
+            <div class="text resizeText11 d_nume">lentilă bi-concavă</div>
+        </div>
+        <div class="ex_cont">
+            <div id="d_img2" class="imagine d_img"></div>
+            <div class="text resizeText12 d_nume">lentilă plan-concavă</div>
+        </div>
+        <div class="ex_cont">
+            <div id="d_img3" class="imagine d_img"></div>
+            <div class="text resizeText13 d_nume">menisc divergent</div>
+        </div>
+        <div class="ex_cont">
+            <div id="d_img4" class="imagine d_img"></div>
+            <div class="text resizeText14 d_nume">schema lentilelor divergente</div>
+        </div>
+    </div>
+</div>  
+<div id="focar_cont2">
+    <div id="optiuni_cont">
+        <div id="optiuni_con" class="imagine" onclick="conv_switch()"></div>
+        <div id="optiuni_div" class="imagine" onclick="div_switch()"></div>
+    </div>
+    <div id="focar_desc_cont">
+        <div id="focar_titlu" class="titlu resizeText15">Focarele lentilei</div>
+        <div id="focar_desc" class="text resizeText16"><strong>La o lentilă convergentă</strong>, toate razele de lumină ce trec prin ea se <green>converg</green> într-un punct <green>F</green>, situat pe axa optică, numit <green>focar imagine</green> (<green>focar real</green>). <green>Focarul obiect</green>(<green>F'</green>) este pe partea cealaltă a lentilei, la aceeași distanță(<green>f</green>) de ea ca și <green>focarul imagine</green>.</div>
+        <div id="focar_img2" class="imagine"></div>
+    </div>
+    
+</div>
+<div id="imagine_cont">
+    <div id="imagine_desc_cont">
+        <div id="imagine_titlu" class="titlu resizeText17">Formarea imaginii</div>
+        <div style="display:inline-block; vertical-align: middle;">
+            <div id="txt1" class="text resizeText18"><yellow>Un punct luminos (A)</yellow> emite lumină în toate direcțiile. Pentru a obține grafic <yellow>imaginea acestui punct(A')</yellow>, este suficient să reprezentăm <blue>două</blue> din următoarele raze:</div>
+            <div id="txt2" class="text resizeText19">•<magenta>o rază care trece nedeviată prin centrul optic și traversează lentila fără să fie deviată</magenta></div>
+            <div id="txt3" class="text resizeText20">•<red>o rază paralelă cu axa optică principală care, după refracție, trece prin focarul imagine</red></div>
+            <div id="txt4" class="text resizeText21">•<green>o rază care trecând prin focarul obiect, după refracție devine paralelă cu axa optică principală</green></div>
+        </div>
+        <div id="imagine_img" class="imagine"></div>
+    </div>
+    <div id="optiuni_cont2">
+        <div id="optiuni_con2" class="imagine" onclick="conv_switch2()"></div>
+        <div id="optiuni_div2" class="imagine" onclick="div_switch2()"></div>
+    </div>
+</div>
+<div id="formule_titlu" class="titlu resizeText24">Formulele lentilelor subțiri</div>
+<div id="explicatie_cont">
+    <div id="explicatie_text_cont">
+        <div id="sr" class="text resizeText22">Pentru a calcula unde se formează <yellow>imaginea unui obiect</yellow> văzut prin lentilă trebuie mai întâi să ne raportăm la un sistem de coordonate cu <yellow>originea în centrul optic</yellow> al lentilei, cu <yellow>axa Ox</yellow> îndreptată în <yellow>sensul de propagare a luminii</yellow> și <yellow>axa Oy</yellow> luată astfel încât <yellow>coordonata înălțimii</yellow> obiectului să fie <yellow>pozitivă</yellow> .</div>
+        <div id="notatii" class="text resizeText23">Notăm <yellow>x</yellow> distanța obiect-lentilă, <yellow>y</yellow> înălțimea obiectului, <yellow>x'</yellow> distanța imagine-lentilă, <yellow>y'</yellow> înălțimea imaginii și <yellow>f</yellow> distanța focar-lentilă, <yellow>β</yellow> raport de optică transversală. Acestea se leagă prin:</div>
+        <div id="formula" class="imagine"></div>
+    </div>
+    <div id="explicatie_img" class="imagine">
+<!--
+    <div id="asociatii" class="text resizeText24">
+            
+    </div>
+-->
+    </div>
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    

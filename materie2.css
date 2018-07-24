@@ -1,0 +1,223 @@
+body{
+    margin:0 auto;
+    background:black;
+    overflow: hidden;
+}
+@font-face{
+	font-family:museo;
+	src:url(fonts/museo500.woff)
+}
+@font-face{
+	font-family:bebasthin;
+	src:url(fonts/BebasNeue-Thin.woff)
+}
+@font-face{
+	font-family:bebasbook;
+	src:url(fonts/BebasNeue-Book.woff)
+}
+@font-face{
+	font-family:bebasbold;
+	src:url(fonts/BebasNeue-Bold.woff)
+}
+@font-face{
+	font-family:bebaslight;
+	src:url(fonts/BebasNeue-Light.woff)
+}
+@font-face{
+	font-family:bebasregular;
+	src:url(fonts/BebasNeue-Regular.woff)
+}
+ul{	position:fixed;
+	width:100%;
+	background:black;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top:0;
+	font-family:bebasregular;
+	box-shadow:0 0px 3px white;
+	z-index:5;
+	white-space: nowrap;	
+	border-bottom:3px solid #ffffff;
+	opacity:1;
+	display:block;
+	list-style-type: none;
+    transition:1s all;
+
+}
+li{	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:20px;
+	padding-right:20px;
+    display: inline-block;
+    text-align: center;
+	color:White;
+	transition:0.3s all;
+	float:left;
+    vertical-align: middle;
+}
+li:nth-child(5){
+    background-image: url(imagini/FIZ_X2.png);
+    background-color:Rgba(0,0,0,0);
+    float:right;
+    margin-right: 25px;
+    vertical-align: middle;
+}
+li:hover{
+	cursor:pointer;
+}
+li:nth-child(2){
+		background-color:#ffffff;
+        color:Black;
+}
+.link{
+	text-decoration: none;
+	color:white;
+    transition:0.3s all;
+}
+
+.materie_cont{
+    position:relative;
+    display:inline-block;
+    background:#1c1c1c;
+    vertical-align: top;
+    float:left;
+}
+.imagine{
+    display:block;
+    position:relative;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:center;    
+    margin:0 auto;
+    transition:0.3s all;
+    
+}
+.imagine2{
+    position:relative;
+    background-color:rgba(0,0,0,0.5);
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+#container{
+    background-color:black;
+    width:100vw;
+    height: 90vh;
+    margin-top:10vh;
+}
+.col{
+    display:inline-block;
+    float:left;
+    background-color:black;
+    cursor:pointer;
+    transition:0.5s ease-in;
+
+}
+.cont{
+    width:49vw;
+    height: 43vh;
+    display:block;
+    transition:0.5s all;
+    opacity:1;
+}
+#optica_cont{
+    border-right:1vw solid white;
+    border-bottom:1vh solid white;
+    background-image:url(imagini/transp.png);
+    background-color:black;
+    z-index: 4;
+    transition:0.5s all;
+
+}
+#termo_cont{
+    border-right:1vw solid white;
+    border-top:1vh solid white;
+    background-image:url(imagini/transp.png);
+    background-color:black;
+    z-index: 4;
+    transition:0.5s all;
+
+
+}
+#mecanica_cont{
+    border-left:1vw solid white;
+    border-bottom:1vh solid white;
+    background-image:url(imagini/transp.png);
+    background-color:black;
+    z-index: 5;
+    transition:0.5s all;
+
+
+}
+#elec_cont{
+    border-left:1vw solid white;
+    border-top:1vh solid white;
+    background-image:url(imagini/transp.png);
+    background-color:black;
+    z-index: 4;
+    transition:0.5s all;
+
+}
+#optica_cont:hover{
+    background-image:url(imagini/m0h.png);
+    background-color:black;
+}
+#termo_cont:hover{
+    background-image:url(imagini/m1h.png);
+    background-color:black;
+}
+#mecanica_cont:hover{
+    background-image:url(imagini/m2h.png);
+    background-color:black;
+}
+#elec_cont:hover{
+    background-image:url(imagini/m3h.png);
+    background-color:black;
+}
+.text{
+    position:absolute;
+    vertical-align: middle;
+    text-align: center;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    font-family:bebasbold;
+    font-size:5vw;
+    opacity:0;
+    transition:0.3s ease-in;
+
+}
+#col1{
+    background:black;
+}
+#optica_text{
+    color:rgba(105,210,231,1);
+    border:2px solid rgba(105,210,231,1);
+    padding:1vh;
+
+}
+#termo_text{
+    color:red;
+    border:2px  solid red;
+    padding:1vh;
+
+}
+#mecanica_text{
+    color: rgba(17,150,77,1);
+    border:2px solid rgba(17,150,77,1);
+    padding:1vh;
+
+
+}
+#elec_text{
+    color:rgba(243,217,21,1);
+    border:2px solid rgba(243,217,21,1);
+    padding:1vh;
+}
+#col3{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    overflow-y:scroll;
+}

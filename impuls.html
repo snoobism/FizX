@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fizica</title>
+    <link type="text/css" rel="stylesheet" href="impuls.css">
+</head>
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="jquery-3.1.1.min.js"></script>
+<script src="impuls.js"></script>
+<ul id="lista">
+    <li><a class='link' href="acasa.html">Acasa</a></li>
+    <li><a class='link' href="materie.html">Materie</a></li>
+    <li><a class='link' href="subiecte.html">subiecte</a></li>
+    <li><a class='link' href="test.html">test</a></li>
+    <li class="imagine"></li>
+
+</ul>
+    
+<div id="buddy_cont">
+    <div id="buddy_imagine">
+        <div id="buddy_corp" class="imagine"></div>
+        <div id="buddy_ochi"></div> 
+    </div>
+    <div id="buddy_chat">
+        <a class="buddy_optiune" href="cinematica.html">Miscare si repaus</a>
+        <a class="buddy_optiune" href="principii.html">Principiile dinamicii</a>
+        <a class="buddy_optiune" href="forte.html">Forte</a>
+        <a class="buddy_optiune" href="LucruMecanic.html">Energia</a>
+        <a class="buddy_optiune" href="impuls.html">Impulsul</a>
+
+    </div>
+    <div id="buddy_arrow" onclick="schimba()"></div>
+
+</div>
+    
+<div id="intro_cont">
+    <div class="litera resizeText0">I</div>
+    <div class="litera resizeText1">M</div>
+    <div class="litera resizeText2">P</div>
+    <div class="litera resizeText3">U</div>
+    <div class="litera resizeText4">L</div>
+    <div class="litera resizeText5">S</div>
+    <div class="litera resizeText6">?</div>
+
+
+</div>
+    
+
+    
+<div id="impuls_header" class="header">IMPULSUL</div>
+<div id="bara0" class="bara"></div>
+<div id="impuls_cont">
+    <div id="impuls_desc_cont">
+        <div id="impuls_titlu" class="titlu resizeText7">DEFINIȚIE</div>
+        <div id="impuls_text" class="text resizeText8"><red>Impulsul unui corp</red> este o mărime fizică definită ca fiind <red>produsul</red> dintre <red>masă</red> și <red>viteză</red>. <red>Impulsul forței</red> este măsura <red>efortului</red> care trebuie depus pentru a <red>schimba starea de mișcare</red>.
+
+ </div>
+    </div>
+    <div id="impuls_img_cont">
+        <div id="impuls_formula" class="imagine"></div>
+        <div id="impuls_si" class="imagine"></div>
+    </div>
+</div>
+<div id="variatie_impuls_header" class="header">-Variația impulsului-</div>
+    <div id="explicatie1" class="text resizeText9">Dacă înlocuim formula impulsului în <red>ecuația fundamentală</red> a mecanicii putem determina <red>variația impulsului</red></div>
+<div id="var_impuls" class="imagine"></div>
+<div id="conserv_impuls_header" class="header">-conservarea impulsului-</div>
+
+<div id="conserv_cont">
+    <div id="conserv_desc_cont">
+        <div id="conserv_titlu" class="titlu resizeText10">Legea conservării impulsului</div>
+        <div id="conserv_desc" class="text resizeText11">Intr-un <red>sistem izolat</red>, adică asupra sistemului <red>nu acționează nicio forță</red> sau rezultanta tuturor forțelor aplicate este egal cu zero, suma vectoriala a <red>impulsurilor inițiale</red> este <red>egala</red> cu suma vectoriala a <red>impulsurilor finale</red>.</div>
+    </div>
+    <div id="conserv_img_cont">
+        <div id="conserv_img" class="imagine"></div>
+        <div id="conserv_img_titlu" class="titlu resizeText12">INTERPRETARE FIZICĂ</div>
+    </div>
+</div>
+<div id="ciocnire_cont">
+    <div id="ciocnire_titlu" class="imagine"></div>
+    <div id="ciocnire_desc" class="text resizeText13">
+        <red>Ciocnirea</red> reprezintă <red>interacțiunea de scurtă durată</red> dintre două sau mai multe corpuri, în urma căreia <red>se modifică vitezele și direcțiile</red> de mișcare ale acestora. Într-un astfel de proces, impulsul total <red>se conservă</red>.
+    </div>
+</div>
+<div id="clasificare_cioc" class="header">Tipuri de  ciocniri</div>
+<div id="bara1" class="bara"></div>
+<div id="cioc_plast_cont">
+    <div id="cioc_plast_desc_cont">
+        <div id="cioc_plast_titlu" class="titlu resizeText14">CIOCNIRE PERFECT PLASTICĂ</div>    
+        <div id="cioc_plast_desc" class="text resizeText15"><green>Ciocnirea perfect plastică</green> este ciocnirea în care corpurile își <red>cuplează masele</red> și se mișcă ulterior <red>împreună</red>. <b>Din conservarea impulsului reiese:</b></div>
+        <div id="cioc_plast_impuls" class="imagine"></div>
+        <div id="cioc_plast_desc2" class="text resizeText16">În <green>ciocnirea plastică</green> se degajă <red>căldură</red> pe seama <red>scăderii energiei cinetice</red>, astfel că:</div>
+        <div id="cioc_plast_energie" class="imagine"></div>
+    </div>
+    <canvas id="cioc_plast_anim"></canvas>
+</div>
+    
+<div id="cioc_elast_cont">
+   
+    <canvas id="cioc_elast_anim"></canvas>
+    <div id="cioc_elast_desc_cont">
+        <div id="cioc_elast_titlu" class="titlu resizeText17">CIOCNIRE PERFECT ELASTICĂ</div>    
+        <div id="cioc_elast_desc" class="text resizeText18"><green>Ciocnirea perfect elastică</green> este ciocnirea în urma căreia cele doua corpuri se mișcă <red>separat</red> cu viteze finale <red>diferite</red> de cele inițiale, înainte de ciocnire. În urma ciocnirii, <red>energia se conservă</red>. <b>Din conservarea impulsului reiese:</b></div>
+        <div id="cioc_elast_impuls" class="imagine"></div>
+        <div id="cioc_elast_desc2" class="text resizeText19">Din <red>conservarea energiei</red> reiese:</div>
+        <div id="cioc_elast_energie" class="imagine"></div>
+    </div>
+</div>
+<div id="filler"></div>
+    
+</body>
+</html>
+    
+    
+    
+    
+    
+    

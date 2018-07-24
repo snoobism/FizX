@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="interferenta.css">
+	<title>Fizica</title>
+
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<body>
+<ul id="lista">
+    <li><a class='link' href="acasa.html">Acasa</a></li>
+    <li><a class='link' href="materie.html">Materie</a></li>
+    <li><a class='link' href="subiecte.html">subiecte</a></li>
+    <li><a class='link' href="test.html">test</a></li>
+    <li class="imagine"></li>
+
+</ul>
+<div id="buddy_cont">
+    <div id="buddy_imagine">
+        <div id="buddy_corp" class="imagine"></div>
+        <div id="buddy_ochi"></div> 
+    </div>
+    <div id="buddy_chat">
+        <a class="buddy_optiune" href="reflexie_refractie.html">Reflexia si refractia</a>
+        <a class="buddy_optiune" href="lentile.html">Lentile subtiri</a>
+        <a class="buddy_optiune" href="interferenta.html">Interferenta</a>
+        <a class="buddy_optiune" href="efect_fotoelectric.html">Efectul fotoelectric</a>
+
+    </div>
+    <div id="buddy_arrow" onclick="schimba()"></div>
+
+</div>
+	<script src="jquery-3.1.1.min.js"></script>
+	<script src="interferenta.js"></script>
+    
+<div id="background"></div>
+<div id="titlu_cont">
+    <div class="titlu_litera text">I</div>
+    <div class="titlu_litera text">N</div>
+    <div class="titlu_litera text">T</div>
+    <div class="titlu_litera text">E</div>
+    <div class="titlu_litera text">R</div>
+    <div class="titlu_litera text">F</div>
+    <div class="titlu_litera text">E</div>
+    <div class="titlu_litera text">R</div>
+    <div class="titlu_litera text">E</div>
+    <div class="titlu_litera text">N</div>
+    <div class="titlu_litera text">Ț</div>
+    <div class="titlu_litera text">A</div>
+
+</div>
+<div id="interferenta_header" class="header">Interferența luminii</div>
+<div id="bara" class="bara"></div> 
+<div id="interferenta_cont">
+    <div id="interferenta_titlu" class="titlu resizeText0">Ce este interferența?</div>
+    <div id="interferenta_desc" class="text resizeText1">
+        <strong>Interferența</strong> este <red>fenomenul de suprapunere</red> a doua sau mai multe <blue>unde</blue>. Pentru ca interferența să fie <blue>observabilă</blue>, undele ce interferă trebuie să fie <blue>coerente</blue>. Două unde sunt <green>coerente</green> dacă <green>diferența de fază</green> a celor două este <green>constantă în timp</green> și au aceeași <green>lungime de undă</green>. 
+    </div>
+</div>
+<div id="interf_poza_cont">
+    <div id="interf_poza" class="imagine"></div>
+    <div id="interf_poza_titlu" class="titlu resizeText2">INTERFERENȚA</div>
+</div>
+<!--
+<div id="unde_cont">
+    <div id="unde_titlu" class="titlu resizeText3">Interferența staționară</div>
+    <div id="unde_desc" class="text resizeText4">
+    Pentru a obține un <strong>fenomen de interferență staționară</strong>, undele trebuie să aibă aceeași <blue>frecvență</blue> și să fie <blue>coerente</blue>, adică să aibă o <green>diferență de fază constantă</green> în timp.
+    </div>
+</div>
+-->
+<div id="coer_cont">
+    <div id="coer_titlu" class="titlu resizeText5">
+    OBȚINEREA UNDELOR COERENTE
+    </div>
+    <div id="coer_desc" class="text resizeText6">
+    Obţinerea <blue>undelor coerente</blue> pentru realizarea interferenţei se face <green>separând din fluxul luminos</green> emis de o sursă monocromatică <green>două fascicule de lumină</green> care ulterior se suprapun din nou în <blue>zona de interferenţă</blue>. In acest scop se utilizează numeroase dispozitive, printre care și <red>Dispozitivul lui Young</red>.
+    </div>
+</div>
+<div id="young_header" class='header'>
+Dispozitivul lui Young
+</div>
+<div id='bara2' class='bara'></div>
+<div id="young_cont">
+    <div id="young_titlu" class="titlu resizeText7">DISPOZITIVUL LUI YOUNG</div>
+    <div id="young_desc" class="text resizeText8"><strong>Dispozitivul cu două deschideri al lui Young</strong> este cel mai vechi dispozitiv experimental pentru <blue>observarea interferenței</blue> luminii. Lumina emisă de <magenta>sursa punctiformă S</magenta> cade pe <magenta>ecranul A</magenta>, ce prezintă două deschideri mici – <magenta>fantele F1 și F2</magenta> – <green>egal depărtate</green> de S. Deoarece <blue>undele emise de F1 si F2</blue> provin de la <blue>aceeași sursă</blue>, ele sunt unde <blue>coerente</blue>.</div>
+</div>
+    
+<div id="young_img_cont">
+    <div id="young_img" class="imagine"></div>
+    <div id="young_img_titlu" class="titlu resizeText9">Exemplu</div>
+</div>
+    
+<div id="schita_titlu" class="titlu resizeText10">Schiță dispozitiv</div>
+<div id="schita_cont">
+    <div id="schita_img" class="imagine"></div>
+    <div id="schita_notatii">
+        <div id="schita_desc">
+            <div class="notatie resizeText12"><yellow>S</yellow> - sursă de lumină</div>
+            <div class="notatie resizeText13"><yellow>F1</yellow>, <yellow>F2</yellow> - fante(deschideri foarte înguste într-un paravan opac)</div>
+            <div class="notatie resizeText14"><green>d</green> - distanța dintre sursă și paravanul opac</div>
+            <div class="notatie resizeText15"><green>D</green> - distanța dintre paravan și ecran</div>
+            <div class="notatie resizeText16"><magenta>2L</magenta> - distanța dintre fante</div>
+            <div class="notatie resizeText17"><yellow>P</yellow> - un punct oarecare de pe ecran situat la distanțele r1, r2 față de fantele F1, F2</div>
+
+        </div>
+        <div id="notatii_titlu" class="titlu resizeText11">notații</div>
+    </div>
+</div>
+<div id="continuare" class="text resizeText18">
+    Din schița de mai sus reiese:
+</div>
+<div id="ecuatii1" class="imagine">
+</div>
+<div id="continuare2" class="text resizeText19">
+    Cum distanțele <red>x</red> și <magenta>L</magenta> sunt de ordinul <blue>fracțiunilor de milimetru</blue>, iar distanța <green>D</green> de ordinul mai <blue>multor sute de milimetri</blue>, se poate considera că <yellow>r1 + r2</yellow> ≈ <green>2D</green>. Rezultă coordonata punctului de pe ecran în care se vede <red>franja de interferență</red>:
+</div>
+<div id="ecuatii2" class="imagine"></div>
+<div id="continuare3" class="text resizeText20">
+    Condiția ca în <yellow>P</yellow> să existe un <yellow>maxim de interferență</yellow> este ca <yellow>diferența de drum optic</yellow> să fie un <blue>multiplu întreg</blue> al <magenta>lungimii de undă</magenta> (<yellow>Δr</yellow> = <blue>k</blue> · <magenta>λ</magenta>). Rezultă poziția <red>franjei luminoase</red> de <blue>ordin k</blue> (distanța de la ea la punctul central O):    
+</div>
+<div id="ecuatii3" class="imagine"></div>
+<div id="continuare4" class="text resizeText21">
+Conform relației precedente, <blue>distanța dintre două franje vecine</blue>, numită <red>interfranjă</red>, este dată de relația:
+</div>
+<div id="ecuatii4" class="imagine"></div>
+<div id="filler"></div>
+

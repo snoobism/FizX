@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fizica</title>
+    <link type="text/css" rel="stylesheet" href="cinematica.css">
+</head>
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="jquery-3.1.1.min.js"></script>
+<script src="cinematica.js"></script>
+
+<ul id="lista">
+    <li><a class='link' href="acasa.html">Acasa</a></li>
+    <li><a class='link' href="materie.html">Materie</a></li>
+    <li><a class='link' href="subiecte.html">subiecte</a></li>
+    <li><a class='link' href="test.html">test</a></li>
+    <li class="imagine"></li>
+
+</ul>
+<div id="buddy_cont">
+    <div id="buddy_imagine">
+        <div id="buddy_corp" class="imagine"></div>
+        <div id="buddy_ochi"></div> 
+    </div>
+    <div id="buddy_chat">
+        <a class="buddy_optiune" href="cinematica.html">Miscare si repaus</a>
+        <a class="buddy_optiune" href="principii.html">Principiile dinamicii</a>
+        <a class="buddy_optiune" href="forte.html">Forte</a>
+        <a class="buddy_optiune" href="LucruMecanic.html">Energia</a>
+        <a class="buddy_optiune" href="impuls.html">Impulsul</a>
+
+    </div>
+    <div id="buddy_arrow" onclick="schimba()"></div>
+
+</div>
+<div id="titlu_cont">
+    <div class="litera resizeText0">C</div>
+    <div class="litera resizeText1">i</div>
+    <div class="litera resizeText2">n</div>
+    <div class="litera resizeText3">e</div>
+    <div class="litera resizeText4">m</div>
+    <div class="litera resizeText5">a</div>
+    <div class="litera resizeText6">t</div>
+    <div class="litera resizeText7">i</div>
+    <div class="litera resizeText8">c</div>
+    <div class="litera resizeText9">a</div>
+</div>
+    
+<div id="notiuni_header" class="header">noțiuni de bază</div>
+<div id="bara" class="bara"></div>
+<div id="punct_cont">
+    <div id="punct_titlu" class="imagine"></div>
+    <div id="punct_desc" class="text resizeText10"><strong>Punctul material</strong> reprezintă rezultatul unui <red>proces de abstractizare</red> în urma căruia un corp e <red>înlocuit</red> de un <red>punct geometric</red> care păstrează doar acele <red>atribuții necesare</red> descrierii calităților sale.</div>
+</div>
+<div id="traiectorie_cont">
+    <div id="traiectorie_desc" class="text resizeText11"><strong>Traiectoria</strong> este <red>locul geometric</red> al <red>pozițiilor succesive</red> ale mobilului într-un <red>interval de timp</red> dat. <red>Mișcarea</red> înseamnă a cunoaște <red>pozițiile mobilului</red> la fiecare moment al intervalului de timp dat.</div>
+    <div id="traiectorie_titlu" class="imagine"></div>
+
+</div>
+<div id="viteza_cont">
+    <div id="viteza_desc_cont">
+        <div id="viteza_titlu" class="titlu resizeText12">VITEZA</div>
+        <div id="viteza_text" class="text resizeText13"><strong>Viteza</strong> este mărimea fizică vectorială egală cu <red>raportul vectorului deplasare</red>(<red>Δr</red>) și <red>intervalul de timp</red> corespunzător.</div>
+    </div>
+    <div id="viteza_img_cont">
+        <div id="viteza_formula" class="imagine"></div>
+        <div id="viteza_si" class="imagine"></div>
+    </div>
+</div>
+    <div id="acceleratie_cont">
+    <div id="acceleratie_img_cont">
+        <div id="acceleratie_formula" class="imagine"></div>
+        <div id="acceleratie_si" class="imagine"></div>
+    </div>
+    <div id="acceleratie_desc_cont">
+        <div id="acceleratie_titlu" class="titlu resizeText14">ACCELERAȚIA</div>
+        <div id="acceleratie_text" class="text resizeText15"><strong>Accelerația</strong> este mărimea fizică vectorială egală cu <red>raportul variației vectorului viteză</red>(<red>Δv</red>) și <red>intervalul de timp</red> corespunzător.</div>
+    </div>
+    
+</div>
+    
+<div id="clasificare_header" class="header">CLASIFICAREA MIȘCĂRII</div>
+<div id="bara2" class="bara"></div>
+    
+<div id="clasificare_cont">
+    <div class="clas_div">
+        <div class="clas_titlu" id="titlu1"></div>
+        <div class="clas_elem imagine" id="rectilinie"></div>
+        <div class="clas_elem imagine" id="curbilinie"></div>
+
+    </div>
+    <div class="clas_div">
+        <div class="clas_titlu" id="titlu2"></div>
+        <div class="clas_elem imagine" id="unif"></div>
+        <div class="clas_elem imagine" id="variata"></div>
+    </div>
+    <div class="clas_div">
+        <div class="clas_titlu" id="titlu3"></div>
+        <div class="clas_elem imagine" id="unif_var"></div>
+        <div class="clas_elem imagine" id="neunif"></div>
+    </div>
+    <div class="clas_div">
+        <div class="clas_titlu" id="titlu4"></div>
+        <div class="clas_elem imagine" id="acc"></div>
+        <div class="clas_elem imagine" id="incetinit"></div>
+    </div>
+    
+</div>
+<div id="simulare_titlu" class="titlu resizeText16">SIMULARE</div>
+<div id="simulare_cont">
+    <canvas id="simulare_canvas">
+    </canvas>
+    <div id="simulare_desc">
+        <div class="meniu_elem">
+            <div class="titlu meniu_titlu  resizeText17">TRAIECTORIE</div>
+            <div id="traiectorie1" class="meniu_buton resizeText18" onclick="traiector(1)">RECTILINIE</div>
+            <div id="traiectorie2" class="meniu_buton resizeText19" onclick="traiector(2)">CURBILINIE</div>
+        </div>
+        <div class="meniu_elem">
+            <div class="titlu meniu_titlu resizeText25">VITEZĂ</div>
+            <div id="viteza1" class="meniu_buton resizeText20" onclick="viteza(2)">UNIFORMĂ</div>
+            <div id="viteza2" class="meniu_buton resizeText21" onclick="viteza(1)">VARIATĂ</div>
+        </div>
+        <div class="meniu_elem">
+            <div class="titlu meniu_titlu  resizeText24">VARIAȚIE</div>
+            <div id="acceleratie1" class="meniu_buton resizeText22" onclick="acceleratie(1)">ACCELERATĂ</div>
+            <div id="acceleratie2" class="meniu_buton resizeText23" onclick="acceleratie(2)">ÎNCETINITĂ</div>
+        </div>
+    </div>
+</div>
+    
+<div id="compunere_header" class="header">LEGEA MIȘCĂRII</div>
+<div id="bara3" class="bara"></div>
+<div id="legea_miscarii_desc" class="text resizeText26">Putem determina <orange>coordonata</orange> (<orange>x</orange>) unui mobil în mișcare la <orange>un moment dat</orange> (<orange>t</orange>) cunoscând <orange>viteza</orange> sa inițială (<orange>v0</orange>), <orange>accelerația</orange> sa (<orange>a</orange>), <orange>momentul inițial</orange> (<orange>t0</orange>) și <orange>poziția sa inițială</orange>(<orange>x0</orange>):</div>
+<div id="legea_miscarii_formula" class="imagine"></div>
+<div id="tip1" class="text resizeText27">Pentru a determina mai ușor <orange>poziția mobilului</orange>, de cele mai multe ori vom alege <orange>originea sistemului de referință</orange> în <orange>poziția inițială</orange> a mobilului și vom lua acel moment drept <orange>t0</orange>. De aici rezultă <orange>x0=0</orange></div>
+    
+<div id="legea_vitezei_header" class="header">LEGEA VITEZEI</div>
+<div id="bara4" class="bara"></div>
+<div id="legea_vitezei_desc" class="text resizeText28">Pentru a determina viteza la <orange>un moment dat</orange> (<orange>t</orange>) al unui mobil ce se <orange>mișcă accelerat</orange> trebuie să știm <orange>viteza sa inițială</orange> (<orange>v0</orange>), <orange>momentul inițial</orange> (<orange>t0</orange>) și <orange>accelerația sa</orange> (<orange>a</orange>):</div>
+<div id="legea_vitezei_formula" class="imagine"></div>
+<div id="formula_galilei_header" class="header">FORMULA LUI GALILEI</div>
+<div id="bara5" class="bara"></div>
+<div id="galilei_desc" class="text resizeText29">În cazul în care vrem să aflăm <orange>viteza unui mobil</orange> ce se mișcă <orange>accelerat</orange> după ce a parcurs o <orange>anumită distanță</orange>, avem nevoie de <orange>distanța parcursă</orange> (<orange>Δx</orange>), <orange>viteza inițială</orange> (<orange>v0</orange>) și <orange>accelerația sa</orange> (<orange>a</orange>):</div>
+<div id="galileo_formula" class="imagine"></div>
+    
+    
+    
