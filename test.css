@@ -407,7 +407,7 @@ padding-top:1%;
 }
 #filmrolls{
 	position:absolute;
-	z-index:2;
+	z-index:0;
 	text-align:center;
 	left: 50%;
 	transform:translate(-50%,0);

@@ -6,7 +6,7 @@ $.fn.resizeText0 = function () {
     var height = $(this).innerHeight();
     var newElem = $("<div>", {
         html: $(this).html(),
-        style: "display: inline-block;overflow:hidden;font-size:0.1em;padding:0;margin:0;border:0;outline:0"
+        style: "display: block;overflow:auto;font-size:0.1em;padding:0;margin:0;border:0;outline:0"
     });
     
     $(this).html(newElem);
@@ -57,9 +57,30 @@ var showing=0;
                 document.getElementById("buddy_arrow").style.transform="rotate(0deg)";
             }
     }
+
+
+window.onresize = function(){
+    var y0=window.screen.availHeight;
+    var x0=window.screen.availWidth;
+    
+    
+    
+    setTimeout(function(){for(var i=0;i<=21;i++)
+        {
+            if(i!=3 || i!=4)
+            {
+                $(".resizeText"+i).resizeText0();
+            }
+        }
+                         
+     },100);
+
+    
+}
+
 window.onload = function (){
-    document.getElementById("background").style.width=$(window).width()+'px'  ;
-    document.getElementById("background").style.height=$(window).height()+'px'  ;
+    document.getElementById("background").style.width=100+'vw'  ;
+    document.getElementById("background").style.height=100+'vh'  ;
     setTimeout(function(){
         document.getElementById("background").style.opacity=1;
     },1000);
@@ -77,7 +98,7 @@ window.onload = function (){
 	
 	for(var i=0;i<=d.length-2;i++)
 	{
-		d[i].style.fontSize=0.05*y0+"px";
+		d[i].style.fontSize=0.05*100+'vh';
         $(d[i]).hover(function(){
             for(var i=0;i<=d.length-2;i++)
                 {
@@ -106,13 +127,13 @@ window.onload = function (){
             
         })
 	}
-    d[4].style.width=0.1*x0+'px';
-    d[4].style.height=0.045*y0+'px';
-    document.getElementById("titlu_cont").style.width=x0+'px';
+    d[4].style.width=0.1*100+'vw';
+    d[4].style.height=0.045*100+'vh';
+    document.getElementById("titlu_cont").style.width=100+'vw';
     var litere=document.getElementsByClassName("titlu_litera");
     for(var i=0;i<=litere.length-1;i++)
         {
-            litere[i].style.fontSize=0.3*y0+'px';
+            litere[i].style.fontSize=0.3*100+'vh';
         }
 
     setTimeout(function()
@@ -211,108 +232,108 @@ window.onload = function (){
         
         
     }
-    document.getElementById("interferenta_header").style.fontSize=0.1*y0+'px';
-    document.getElementById("bara").style.marginTop=0.01*y0+'px';
-    document.getElementById("interferenta_header").style.marginTop=0.1*y0+'px';
-    document.getElementById("interferenta_cont").style.marginLeft=0.03*x0+'px';
-    document.getElementById("interferenta_cont").style.marginTop=0.05*y0+'px';
+    document.getElementById("interferenta_header").style.fontSize=0.1*100+'vh';
+    document.getElementById("bara").style.marginTop=0.01*100+'vh';
+    document.getElementById("interferenta_header").style.marginTop=0.1*100+'vh';
+    document.getElementById("interferenta_cont").style.marginLeft=0.03*100+'vw';
+    document.getElementById("interferenta_cont").style.marginTop=0.05*100+'vh';
     
-    document.getElementById("interferenta_titlu").style.width=0.6*x0+'px';
-    document.getElementById("interferenta_titlu").style.height=0.1*y0+'px';
+    document.getElementById("interferenta_titlu").style.width=0.6*100+'vw';
+    document.getElementById("interferenta_titlu").style.height=0.1*100+'vh';
     
-    document.getElementById("interferenta_desc").style.width=0.6*x0+'px';
-    document.getElementById("interferenta_desc").style.height=0.5*y0+'px';
+    document.getElementById("interferenta_desc").style.width=0.6*100+'vw';
+    document.getElementById("interferenta_desc").style.height=0.5*100+'vh';
     
     $(".resizeText0").resizeText0();
     $(".resizeText1").resizeText0();
     
-    document.getElementById("interf_poza_cont").style.marginLeft=0.03*x0+'px';
-    document.getElementById("interf_poza").style.width=0.3*x0+'px';
-    document.getElementById("interf_poza").style.height=0.3*y0+'px';
+    document.getElementById("interf_poza_cont").style.marginLeft=0.03*100+'vw';
+    document.getElementById("interf_poza").style.width=0.3*100+'vw';
+    document.getElementById("interf_poza").style.height=0.3*100+'vh';
     
-    document.getElementById("interf_poza_titlu").style.width=0.3*x0+'px';
-    document.getElementById("interf_poza_titlu").style.height=0.1*y0+'px';
+    document.getElementById("interf_poza_titlu").style.width=0.3*100+'vw';
+    document.getElementById("interf_poza_titlu").style.height=0.1*100+'vh';
     
     $(".resizeText2").resizeText0();
 
-//    document.getElementById("unde_cont").style.marginLeft=0.05*x0+'px';
-//    document.getElementById("unde_cont").style.marginTop=0.1*y0+'px';
+//    document.getElementById("unde_cont").style.marginLeft=0.05*100+'vw';
+//    document.getElementById("unde_cont").style.marginTop=0.1*100+'vh';
 //    
-//    document.getElementById("unde_titlu").style.width=0.4*x0+'px';
-//    document.getElementById("unde_titlu").style.height=0.1*y0+'px';
+//    document.getElementById("unde_titlu").style.width=0.4*100+'vw';
+//    document.getElementById("unde_titlu").style.height=0.1*100+'vh';
 //    
-//    document.getElementById("unde_desc").style.width=0.4*x0+'px';
-//    document.getElementById("unde_desc").style.height=0.3*y0+'px';
+//    document.getElementById("unde_desc").style.width=0.4*100+'vw';
+//    document.getElementById("unde_desc").style.height=0.3*100+'vh';
 //    
 //    $(".resizeText3").resizeText0();
 //    $(".resizeText4").resizeText0();
     
-    document.getElementById("coer_cont").style.marginLeft=0.2*x0+'px';
-    document.getElementById("coer_cont").style.marginTop=0.1*y0+'px';
+    document.getElementById("coer_cont").style.marginLeft=0.2*100+'vw';
+    document.getElementById("coer_cont").style.marginTop=0.1*100+'vh';
     
-    document.getElementById("coer_titlu").style.width=0.6*x0+'px';
-    document.getElementById("coer_titlu").style.height=0.1*y0+'px';
+    document.getElementById("coer_titlu").style.width=0.6*100+'vw';
+    document.getElementById("coer_titlu").style.height=0.1*100+'vh';
     
-    document.getElementById("coer_desc").style.width=0.6*x0+'px';
-    document.getElementById("coer_desc").style.height=0.3*y0+'px';
+    document.getElementById("coer_desc").style.width=0.6*100+'vw';
+    document.getElementById("coer_desc").style.height=0.3*100+'vh';
     
     
     $(".resizeText5").resizeText0();
     $(".resizeText6").resizeText0();
     
-    document.getElementById("young_header").style.fontSize=0.1*y0+'px';
-    document.getElementById("young_header").style.marginTop=0.05*y0+'px';
+    document.getElementById("young_header").style.fontSize=0.1*100+'vh';
+    document.getElementById("young_header").style.marginTop=0.05*100+'vh';
 
-    document.getElementById("bara2").style.marginTop=0.01*y0+'px';
+    document.getElementById("bara2").style.marginTop=0.01*100+'vh';
     
-    document.getElementById("young_cont").style.marginTop=0.05*y0+'px';
-    document.getElementById("young_cont").style.marginLeft=0.05*x0+'px';
+    document.getElementById("young_cont").style.marginTop=0.05*100+'vh';
+    document.getElementById("young_cont").style.marginLeft=0.05*100+'vw';
     
-    document.getElementById("young_titlu").style.width=0.5*x0+'px';
-    document.getElementById("young_titlu").style.height=0.1*y0+'px';
+    document.getElementById("young_titlu").style.width=0.5*100+'vw';
+    document.getElementById("young_titlu").style.height=0.1*100+'vh';
     
-    document.getElementById("young_desc").style.width=0.5*x0+'px';
-    document.getElementById("young_desc").style.height=0.3*y0+'px';
+    document.getElementById("young_desc").style.width=0.5*100+'vw';
+    document.getElementById("young_desc").style.height=0.3*100+'vh';
     
     $(".resizeText7").resizeText0();
     $(".resizeText8").resizeText0();
     
-    document.getElementById("young_img_cont").style.marginLeft=0.05*x0+'px';
-    document.getElementById("young_img_cont").style.marginTop=0.05*y0+'px';
+    document.getElementById("young_img_cont").style.marginLeft=0.05*100+'vw';
+    document.getElementById("young_img_cont").style.marginTop=0.05*100+'vh';
     
-    document.getElementById("young_img").style.width=0.35*x0+'px';
-    document.getElementById("young_img").style.height=0.4*y0+'px';
+    document.getElementById("young_img").style.width=0.35*100+'vw';
+    document.getElementById("young_img").style.height=0.4*100+'vh';
     
-    document.getElementById("young_img_titlu").style.width=0.35*x0+'px';
-    document.getElementById("young_img_titlu").style.height=0.1*y0+'px';
+    document.getElementById("young_img_titlu").style.width=0.35*100+'vw';
+    document.getElementById("young_img_titlu").style.height=0.1*100+'vh';
     
     $(".resizeText9").resizeText0();
 
-    document.getElementById("schita_titlu").style.height=0.1*y0+'px';
-    document.getElementById("schita_titlu").style.width=0.8*x0+'px';
-    document.getElementById("schita_titlu").style.marginTop=0.05*y0+'px';
-    document.getElementById("schita_titlu").style.marginLeft=0.1*x0+'px';
+    document.getElementById("schita_titlu").style.height=0.1*100+'vh';
+    document.getElementById("schita_titlu").style.width=0.8*100+'vw';
+    document.getElementById("schita_titlu").style.marginTop=0.05*100+'vh';
+    document.getElementById("schita_titlu").style.marginLeft=0.1*100+'vw';
     
-    document.getElementById("schita_cont").style.width=0.8*x0+'px';
-    document.getElementById("schita_cont").style.height=0.7*y0+'px';
-    document.getElementById("schita_cont").style.marginLeft=0.1*x0+'px';
+    document.getElementById("schita_cont").style.width=0.8*100+'vw';
+    document.getElementById("schita_cont").style.height=0.7*100+'vh';
+    document.getElementById("schita_cont").style.marginLeft=0.1*100+'vw';
     
-    document.getElementById("schita_img").style.width=0.5*x0+'px';
-    document.getElementById("schita_img").style.height=0.7*y0+'px';
+    document.getElementById("schita_img").style.width=0.5*100+'vw';
+    document.getElementById("schita_img").style.height=0.7*100+'vh';
     
-    document.getElementById("schita_notatii").style.width=0.295*x0+'px';
-    document.getElementById("schita_notatii").style.height=0.7*y0+'px';
+    document.getElementById("schita_notatii").style.width=0.295*100+'vw';
+    document.getElementById("schita_notatii").style.height=0.7*100+'vh';
     
     var not=document.getElementsByClassName("notatie");
     for(var i=0;i<=not.length-1;i++)
         {
-            not[i].style.width=0.25*x0+'px';
-            not[i].style.height=0.1*y0+'px';
-            not[i].style.marginLeft=0.0225*x0+'px';
+            not[i].style.width=0.25*100+'vw';
+            not[i].style.height=0.1*100+'vh';
+            not[i].style.marginLeft=0.0225*100+'vw';
         }
     
-    document.getElementById("notatii_titlu").style.width=0.295*x0+'px';
-    document.getElementById("notatii_titlu").style.height=0.1*y0+'px';
+    document.getElementById("notatii_titlu").style.width=0.295*100+'vw';
+    document.getElementById("notatii_titlu").style.height=0.1*100+'vh';
     
     $(".resizeText10").resizeText0();
     $(".resizeText11").resizeText0();
@@ -323,53 +344,53 @@ window.onload = function (){
     $(".resizeText16").resizeText0();
     $(".resizeText17").resizeText0();
 
-    document.getElementById("continuare").style.width=0.5*x0+'px';
-    document.getElementById("continuare").style.height=0.1*y0+'px';
-    document.getElementById("continuare").style.marginTop=0.05*y0+'px';
-    document.getElementById("continuare").style.marginLeft=0.25*x0+'px';
+    document.getElementById("continuare").style.width=0.5*100+'vw';
+    document.getElementById("continuare").style.height=0.1*100+'vh';
+    document.getElementById("continuare").style.marginTop=0.05*100+'vh';
+    document.getElementById("continuare").style.marginLeft=0.25*100+'vw';
     
     $(".resizeText18").resizeText0();
  
-    document.getElementById("ecuatii1").style.width=0.5*x0+'px';
-    document.getElementById("ecuatii1").style.height=0.4*y0+'px';
-    document.getElementById("ecuatii1").style.marginTop=0.015*y0+'px';
-    document.getElementById('ecuatii1').style.marginLeft=0.25*x0+'px';
+    document.getElementById("ecuatii1").style.width=0.5*100+'vw';
+    document.getElementById("ecuatii1").style.height=0.4*100+'vh';
+    document.getElementById("ecuatii1").style.marginTop=0.015*100+'vh';
+    document.getElementById('ecuatii1').style.marginLeft=0.25*100+'vw';
     
-    document.getElementById("continuare2").style.width=0.7*x0+'px';
-    document.getElementById("continuare2").style.height=0.15*y0+'px';
-    document.getElementById("continuare2").style.marginTop=0.05*y0+'px';
-    document.getElementById("continuare2").style.marginLeft=0.15*x0+'px';
+    document.getElementById("continuare2").style.width=0.7*100+'vw';
+    document.getElementById("continuare2").style.height=0.15*100+'vh';
+    document.getElementById("continuare2").style.marginTop=0.05*100+'vh';
+    document.getElementById("continuare2").style.marginLeft=0.15*100+'vw';
     
     $(".resizeText19").resizeText0();
     
-    document.getElementById("ecuatii2").style.width=0.5*x0+'px';
-    document.getElementById("ecuatii2").style.height=0.2*y0+'px';
-    document.getElementById("ecuatii2").style.marginTop=0.015*y0+'px';
-    document.getElementById('ecuatii2').style.marginLeft=0.25*x0+'px';
+    document.getElementById("ecuatii2").style.width=0.5*100+'vw';
+    document.getElementById("ecuatii2").style.height=0.2*100+'vh';
+    document.getElementById("ecuatii2").style.marginTop=0.015*100+'vh';
+    document.getElementById('ecuatii2').style.marginLeft=0.25*100+'vw';
     
-    document.getElementById("continuare3").style.width=0.7*x0+'px';
-    document.getElementById("continuare3").style.height=0.15*y0+'px';
-    document.getElementById("continuare3").style.marginTop=0.05*y0+'px';
-    document.getElementById("continuare3").style.marginLeft=0.15*x0+'px';
+    document.getElementById("continuare3").style.width=0.7*100+'vw';
+    document.getElementById("continuare3").style.height=0.15*100+'vh';
+    document.getElementById("continuare3").style.marginTop=0.05*100+'vh';
+    document.getElementById("continuare3").style.marginLeft=0.15*100+'vw';
     
     $(".resizeText20").resizeText0();
     
-    document.getElementById("ecuatii3").style.width=0.5*x0+'px';
-    document.getElementById("ecuatii3").style.height=0.2*y0+'px';
-    document.getElementById("ecuatii3").style.marginTop=0.015*y0+'px';
-    document.getElementById('ecuatii3').style.marginLeft=0.25*x0+'px';
+    document.getElementById("ecuatii3").style.width=0.5*100+'vw';
+    document.getElementById("ecuatii3").style.height=0.2*100+'vh';
+    document.getElementById("ecuatii3").style.marginTop=0.015*100+'vh';
+    document.getElementById('ecuatii3').style.marginLeft=0.25*100+'vw';
     
-    document.getElementById("continuare4").style.width=0.7*x0+'px';
-    document.getElementById("continuare4").style.height=0.15*y0+'px';
-    document.getElementById("continuare4").style.marginTop=0.05*y0+'px';
-    document.getElementById("continuare4").style.marginLeft=0.15*x0+'px';
+    document.getElementById("continuare4").style.width=0.7*100+'vw';
+    document.getElementById("continuare4").style.height=0.15*100+'vh';
+    document.getElementById("continuare4").style.marginTop=0.05*100+'vh';
+    document.getElementById("continuare4").style.marginLeft=0.15*100+'vw';
     
     $(".resizeText21").resizeText0();
     
-    document.getElementById("ecuatii4").style.width=0.5*x0+'px';
-    document.getElementById("ecuatii4").style.height=0.2*y0+'px';
-    document.getElementById("ecuatii4").style.marginTop=0.015*y0+'px';
-    document.getElementById('ecuatii4').style.marginLeft=0.25*x0+'px';
+    document.getElementById("ecuatii4").style.width=0.5*100+'vw';
+    document.getElementById("ecuatii4").style.height=0.2*100+'vh';
+    document.getElementById("ecuatii4").style.marginTop=0.015*100+'vh';
+    document.getElementById('ecuatii4').style.marginLeft=0.25*100+'vw';
     
-    document.getElementById("filler").style.padding=0.05*y0+'px';
+    document.getElementById("filler").style.padding=0.05*100+'vh';
 }

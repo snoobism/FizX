@@ -15,7 +15,7 @@ $.fn.resizeText0 = function () {
     var height = $(this).innerHeight();
     var newElem = $("<div>", {
         html: $(this).html(),
-        style: "display: inline-block;overflow:hidden;font-size:0.1em;padding:0;margin:0;border:0;outline:0"
+        style: "display: table;overflow:hidden;font-size:0.1em;padding:0;margin:0;border:0;outline:0;text-align:center;width:100%"
     });
     
     $(this).html(newElem);
@@ -50,7 +50,6 @@ $.resizeText0 = {
         }
     }
 };
-
 
 
 
@@ -98,6 +97,27 @@ document.addEventListener("mousemove", function(event)
     rotate2(event)
 }, false);
 
+
+window.onresize = function(){
+    setTimeout(function(){
+        startResize();
+   },500)
+    
+};
+
+
+
+function startResize () {
+    $(".resizeText0").resizeText0();
+    $(".resizeText1").resizeText0();
+    $(".resizeText3").resizeText0();
+    $(".resizeText4").resizeText0();
+    $(".resizeText5").resizeText0();
+    $(".resizeText6").resizeText0();
+    $(".resizeText7").resizeText0();
+    $(".resizeText8").resizeText0();
+};
+
 window.onload = function (){
     
     var d=document.getElementById("lista").children;
@@ -143,66 +163,66 @@ window.onload = function (){
             
         })
 	}
-    document.getElementById("linii").style.width=2*x0+'px';
-    document.getElementById("linii").style.height=2*y0+'px';
+    document.getElementById("linii").style.width=2*100+'vw';
+    document.getElementById("linii").style.height=2*100+'vh';
     
-    document.getElementById("loading").style.width=0.2*y0+'px';
-    document.getElementById("loading").style.height=0.2*y0+'px';
-    document.getElementById("loading2").style.width=0.1*y0+'px';
-    document.getElementById("loading2").style.height=0.1*y0+'px';
+    document.getElementById("loading").style.width=0.2*100+'vh';
+    document.getElementById("loading").style.height=0.2*100+'vh';
+    document.getElementById("loading2").style.width=0.1*100+'vh';
+    document.getElementById("loading2").style.height=0.1*100+'vh';
     document.getElementById("loading").style.border=0.01*y0+'px solid #121212';
     document.getElementById("loading").style.borderTop=0.01*y0+'px solid white';
-    document.getElementById("loading").style.marginLeft=-0.1*y0+'px';
-    document.getElementById("loading").style.marginTop=-0.1*y0+'px';
-    document.getElementById("loading2").style.marginLeft=0.01*y0+'px';
-    document.getElementById("loading2").style.marginTop=0.01*y0+'px';
-    document.getElementById("xj").style.width=0.15*y0+'px';
-    document.getElementById("xs").style.width=0.15*y0+'px';
-    document.getElementById("xj").style.height=0.2*y0+'px';
-    document.getElementById("xs").style.height=0.2*y0+'px';
-    document.getElementById("logo").style.width=0.8*x0+'px';
-    document.getElementById("logo").style.height=0.5*y0+'px';
-    document.getElementById("logo").style.marginLeft=0.1*x0+'px';
-    document.getElementById("desc").style.fontSize=0.05*y0+'px';
-    document.getElementById('meniu_fals').style.fontSize=0.1*y0+'px';
-    document.getElementById("content").style.marginTop=y0+'px';
-    document.getElementById("decefiz_cont").style.height=0.5*y0+'px';
-    document.getElementById("decefiz").style.width=x0+'px';
-    document.getElementById("decefiz").style.height=0.6*y0+'px';
-    document.getElementById('decefiz_text').style.width=0.4*x0+'px';
-	document.getElementById('decefiz_text').style.height=0.8*0.4*y0+'px';
-	document.getElementById('decefiz_text').style.marginLeft=0.05*x0+'px';
-	document.getElementById('decefiz_titlu').style.width=0.4*x0+'px';
-	document.getElementById('decefiz_titlu').style.height=0.8*0.45*0.6*y0+'px';
-	document.getElementById('decefiz_titlu').style.marginLeft=0.55*x0+'px';
+    document.getElementById("loading").style.marginLeft=-0.1*100+'vh';
+    document.getElementById("loading").style.marginTop=-0.1*100+'vh';
+    document.getElementById("loading2").style.marginLeft=0.01*100+'vh';
+    document.getElementById("loading2").style.marginTop=0.01*100+'vh';
+    document.getElementById("xj").style.width=0.15*100+'vh';
+    document.getElementById("xs").style.width=0.15*100+'vh';
+    document.getElementById("xj").style.height=0.2*100+'vh';
+    document.getElementById("xs").style.height=0.2*100+'vh';
+    document.getElementById("logo").style.width=0.8*100+'vw';
+    document.getElementById("logo").style.height=0.5*100+'vh';
+    document.getElementById("logo").style.marginLeft=0.1*100+'vw';
+    document.getElementById("desc").style.fontSize=0.05*100+'vh';
+    document.getElementById('meniu_fals').style.fontSize=0.1*100+'vh';
+    document.getElementById("content").style.marginTop=100+'vh';
+    document.getElementById("decefiz_cont").style.height=0.5*100+'vh';
+    document.getElementById("decefiz").style.width=100+'vw';
+    document.getElementById("decefiz").style.height=0.6*100+'vh';
+    document.getElementById('decefiz_text').style.width=0.4*100+'vw';
+	document.getElementById('decefiz_text').style.height=0.8*0.4*100+'vh';
+	document.getElementById('decefiz_text').style.marginLeft=0.05*100+'vw';
+	document.getElementById('decefiz_titlu').style.width=0.4*100+'vw';
+	document.getElementById('decefiz_titlu').style.height=0.8*0.45*0.6*100+'vh';
+	document.getElementById('decefiz_titlu').style.marginLeft=0.55*100+'vw';
     
-    document.getElementById("decefiz_cont2").style.height=0.5*y0+'px';
-    document.getElementById("decefiz2").style.width=x0+'px';
-    document.getElementById("decefiz2").style.height=0.6*y0+'px';
-    document.getElementById('decefiz_text2').style.width=0.4*x0+'px';
-	document.getElementById('decefiz_text2').style.height=0.8*0.4*y0+'px';
-	document.getElementById('decefiz_text2').style.marginLeft=0.55*x0+'px';
-	document.getElementById('decefiz_titlu2').style.width=0.4*x0+'px';
-	document.getElementById('decefiz_titlu2').style.height=0.8*0.45*0.6*y0+'px';
-	document.getElementById('decefiz_titlu2').style.marginLeft=0.05*x0+'px';
+    document.getElementById("decefiz_cont2").style.height=0.5*100+'vh';
+    document.getElementById("decefiz2").style.width=100+'vw';
+    document.getElementById("decefiz2").style.height=0.6*100+'vh';
+    document.getElementById('decefiz_text2').style.width=0.4*100+'vw';
+	document.getElementById('decefiz_text2').style.height=0.8*0.4*100+'vh';
+	document.getElementById('decefiz_text2').style.marginLeft=0.55*100+'vw';
+	document.getElementById('decefiz_titlu2').style.width=0.4*100+'vw';
+	document.getElementById('decefiz_titlu2').style.height=0.8*0.45*0.6*100+'vh';
+	document.getElementById('decefiz_titlu2').style.marginLeft=0.05*100+'vw';
    
-    document.getElementById("imagini_poza").style.width=0.6*(16/9)*y0+'px';
-    document.getElementById("imagini_poza").style.height=0.6*y0+'px';
+    document.getElementById("imagini_poza").style.width=0.6*(16/9)*100+'vh';
+    document.getElementById("imagini_poza").style.height=0.6*100+'vh';
     
-    document.getElementById("img_titlu").style.fontSize=0.15*y0+'px';
+    document.getElementById("img_titlu").style.fontSize=0.15*100+'vh';
     schimba(0);
     var b=document.getElementsByClassName("buton");
     var a=document.getElementsByClassName("buton_cont");
      v=b[0];
     for(var i=0;i<=a.length-1;i++)
         {   
-            a[i].style.width=0.25*0.6*x0+'px';
-            a[i].style.height=0.15*0.6*y0+'px';
-            a[i].style.marginLeft=0.03*0.6*x0+'px';
-            a[0].style.marginTop=-0.075*0.6*y0+'px';
-            a[3].style.marginTop=-0.075*0.6*y0+'px';
-            a[1].style.marginTop=-0.0375*0.6*y0+'px';
-            a[2].style.marginTop=-0.0375*0.6*y0+'px';
+            a[i].style.width=0.25*0.6*100+'vw';
+            a[i].style.height=0.15*0.6*100+'vh';
+            a[i].style.marginLeft=0.03*0.6*100+'vw';
+            a[0].style.marginTop=-0.075*0.6*100+'vh';
+            a[3].style.marginTop=-0.075*0.6*100+'vh';
+            a[1].style.marginTop=-0.0375*0.6*100+'vh';
+            a[2].style.marginTop=-0.0375*0.6*100+'vh';
             $(b[i]).hover(function () {
                 for(var i=0;i<=a.length-1;i++)
                     {
@@ -216,15 +236,14 @@ window.onload = function (){
                 this.style.color = 'white';
                 v.style.backgroundColor = culori[v.id];
                 v.style.color = 'black';
-                console.log(v);
                 
             })
             }
     
-    document.getElementById("left").style.width=0.2*0.6*y0+'px';
-    document.getElementById("left").style.height=0.2*0.6*y0+'px';
-    document.getElementById("right").style.width=0.2*0.6*y0+'px';
-    document.getElementById("right").style.height=0.2*0.6*y0+'px';
+    document.getElementById("left").style.width=0.2*0.6*100+'vh';
+    document.getElementById("left").style.height=0.2*0.6*100+'vh';
+    document.getElementById("right").style.width=0.2*0.6*100+'vh';
+    document.getElementById("right").style.height=0.2*0.6*100+'vh';
     
     $(".resizeText0").resizeText0();
     $(".resizeText1").resizeText0();
@@ -253,8 +272,8 @@ window.onload = function (){
 
     },3000);
     setTimeout(function(){
-        document.getElementById('xj').style.marginTop=0.4*y0+'px';
-        document.getElementById('xs').style.marginTop=-0.4*y0+'px';
+        document.getElementById('xj').style.marginTop=0.4*100+'vh';
+        document.getElementById('xs').style.marginTop=-0.4*100+'vh';
 
     },4000);
     setTimeout(

@@ -1,12 +1,14 @@
 var y0=window.screen.availHeight;
 var x0=window.screen.availWidth;
 
+
+
 $.fn.resizeText0 = function () {
     var width = $(this).innerWidth();
     var height = $(this).innerHeight();
     var newElem = $("<div>", {
         html: $(this).html(),
-        style: "display: inline-block;overflow:hidden;font-size:0.1em;padding:0;margin:0;border:0;outline:0"
+        style: "display: block;overflow:auto;font-size:0.1em;padding:0;margin:0;border:0;outline:0"
     });
     
     $(this).html(newElem);
@@ -41,6 +43,22 @@ $.resizeText0 = {
         }
     }
 };
+
+window.onresize = function(){
+    var y0=window.screen.availHeight;
+    var x0=window.screen.availWidth;
+    
+    
+    
+    setTimeout(function(){for(var i=0;i<=29;i++)
+        {
+            $(".resizeText"+i).resizeText0();
+        }
+                         
+     },100);
+
+    
+}
 var v_rectilinie=3;
 var rectilinie_x=-0.05*0.35*x0*2;
 function traiector(a)
@@ -104,7 +122,30 @@ function acceleratie(a)
     }
 
 
+
+
+
+    var showing=0;
+    function schimba(){
+        if(showing==0)
+            {
+                showing=1;
+                document.getElementById("buddy_cont").style.left="1vh";
+                document.getElementById("buddy_arrow").style.opacity=1;
+                document.getElementById("buddy_arrow").style.transform="rotate(180deg)";
+
+            }else{
+                document.getElementById("buddy_cont").style.left="-97vh";
+                showing=0;
+                document.getElementById("buddy_arrow").style.opacity=0.7;
+                document.getElementById("buddy_arrow").style.transform="rotate(0deg)";
+            }
+    }
+
+
 window.onload = function (){
+    
+    
     var d=document.getElementById("lista").children;
 	var e=document.getElementsByClassName("textc");
     var m=document.getElementsByClassName("link");
@@ -119,7 +160,7 @@ window.onload = function (){
 	
 	for(var i=0;i<=d.length-2;i++)
 	{
-		d[i].style.fontSize=0.05*y0+"px";
+		d[i].style.fontSize=0.05*100+'vh';
         $(d[i]).hover(function(){
             for(var i=0;i<=d.length-2;i++)
                 {
@@ -148,18 +189,17 @@ window.onload = function (){
             
         })
 	}
-    d[4].style.width=0.1*x0+'px';
-    d[4].style.height=0.045*y0+'px';
-    document.getElementById("titlu_cont").style.width=x0+'px';
-    document.getElementById("titlu_cont").style.height=y0+'px';
+    d[4].style.width=0.1*100+'vw';
+    d[4].style.height=0.045*100+'vh';
+    document.getElementById("titlu_cont").style.width=100+'vw';
+    document.getElementById("titlu_cont").style.height=100+'vh';
     var lit=document.getElementsByClassName("litera");
     for(var i=0;i<=lit.length-1;i++)
         {
-            lit[i].style.width=0.1*0.7*x0+'px';
-            lit[i].style.height=0.25*y0+'px';
-            $(".resizeText"+i).resizeText0();
-            lit[i].style.marginTop=0.35*y0+'px';
-            lit[i].style.marginLeft=x0+'px';
+            lit[i].style.width=0.1*0.7*100+'vw';
+            lit[i].style.height=0.25*100+'vh';
+            lit[i].style.marginTop=0.35*100+'vh';
+            lit[i].style.marginLeft=100+'vw';
             lit[i].style.float='left';
         }
     setTimeout(function(){
@@ -167,7 +207,7 @@ window.onload = function (){
     },1000);
     setTimeout(function(){
         var ok=1;
-        lit[0].style.marginLeft=0.15*x0+'px';
+        lit[0].style.marginLeft=0.15*100+'vw';
         var lit_int=setInterval(    
         function(){
             lit[ok].style.marginLeft=0+'px';
@@ -260,105 +300,99 @@ window.onload = function (){
      document.getElementById("viteza_desc_cont").style.opacity=1;
         document.getElementById("viteza_img_cont").style.opacity=1;
     },6750);
-    document.getElementById("notiuni_header").style.fontSize=0.1*y0+'px';
-    document.getElementById("bara").style.marginTop=0.01*y0+'px';
-    document.getElementById("notiuni_header").style.marginTop=0.1*y0+'px';
+    document.getElementById("notiuni_header").style.fontSize=0.1*100+'vh';
+    document.getElementById("bara").style.marginTop=0.01*100+'vh';
+    document.getElementById("notiuni_header").style.marginTop=0.1*100+'vh';
     
-    document.getElementById("punct_titlu").style.width=0.2*x0+'px';
-    document.getElementById("punct_titlu").style.height=0.2*y0+'px';
+    document.getElementById("punct_titlu").style.width=0.2*100+'vw';
+    document.getElementById("punct_titlu").style.height=0.2*100+'vh';
     
-    document.getElementById("punct_cont").style.marginTop=0.1*y0+'px';
-    document.getElementById("punct_cont").style.marginLeft=0.15*x0+'px';
+    document.getElementById("punct_cont").style.marginTop=0.1*100+'vh';
+    document.getElementById("punct_cont").style.marginLeft=0.15*100+'vw';
     
-    document.getElementById("punct_desc").style.width=0.5*x0+'px';
-    document.getElementById("punct_desc").style.height=0.2*y0+'px';
+    document.getElementById("punct_desc").style.width=0.5*100+'vw';
+    document.getElementById("punct_desc").style.height=0.2*100+'vh';
     
-    $(".resizeText10").resizeText0();
     
-    document.getElementById("traiectorie_titlu").style.width=0.2*x0+'px';
-    document.getElementById("traiectorie_titlu").style.height=0.2*y0+'px';
+    document.getElementById("traiectorie_titlu").style.width=0.2*100+'vw';
+    document.getElementById("traiectorie_titlu").style.height=0.2*100+'vh';
     
-    document.getElementById("traiectorie_cont").style.marginTop=0.1*y0+'px';
-    document.getElementById("traiectorie_cont").style.marginLeft=0.15*x0+'px';
+    document.getElementById("traiectorie_cont").style.marginTop=0.1*100+'vh';
+    document.getElementById("traiectorie_cont").style.marginLeft=0.15*100+'vw';
     
-    document.getElementById("traiectorie_desc").style.width=0.5*x0+'px';
-    document.getElementById("traiectorie_desc").style.height=0.2*y0+'px';
+    document.getElementById("traiectorie_desc").style.width=0.5*100+'vw';
+    document.getElementById("traiectorie_desc").style.height=0.2*100+'vh';
     
-    $(".resizeText11").resizeText0();
     
-    document.getElementById("viteza_cont").style.marginTop=0.1*y0+'px';
-    document.getElementById("viteza_desc_cont").style.marginLeft=0.1875*x0+'px';
+    document.getElementById("viteza_cont").style.marginTop=0.1*100+'vh';
+    document.getElementById("viteza_desc_cont").style.marginLeft=0.1875*100+'vw';
     
-    document.getElementById("viteza_titlu").style.width=0.35*x0+'px';
-    document.getElementById("viteza_titlu").style.height=0.1*y0+'px';
-    document.getElementById("viteza_text").style.width=0.35*x0+'px';
-    document.getElementById("viteza_text").style.height=0.3*y0+'px';
+    document.getElementById("viteza_titlu").style.width=0.35*100+'vw';
+    document.getElementById("viteza_titlu").style.height=0.1*100+'vh';
+    document.getElementById("viteza_text").style.width=0.35*100+'vw';
+    document.getElementById("viteza_text").style.height=0.3*100+'vh';
     
-    $(".resizeText12").resizeText0();
-    $(".resizeText13").resizeText0();
+
     
-    document.getElementById("viteza_img_cont").style.marginLeft=0.025*x0+'px';
-    document.getElementById("viteza_formula").style.width=0.125*x0+'px';
-    document.getElementById("viteza_formula").style.height=0.125*x0+"px";
-    document.getElementById("viteza_formula").style.marginLeft=0.125*x0+'px';
+    document.getElementById("viteza_img_cont").style.marginLeft=0.025*100+'vw';
+    document.getElementById("viteza_formula").style.width=0.125*100+'vw';
+    document.getElementById("viteza_formula").style.height=0.125*100+'vw';
+    document.getElementById("viteza_formula").style.marginLeft=0.125*100+'vw';
     
-    document.getElementById("viteza_si").style.width=0.125*x0+'px';
-    document.getElementById("viteza_si").style.height=0.125*x0+'px';
+    document.getElementById("viteza_si").style.width=0.125*100+'vw';
+    document.getElementById("viteza_si").style.height=0.125*100+'vw';
     
-    document.getElementById("acceleratie_cont").style.marginTop=0.1*y0+'px';
-    document.getElementById("acceleratie_img_cont").style.marginLeft=0.1875*x0+'px';
+    document.getElementById("acceleratie_cont").style.marginTop=0.1*100+'vh';
+    document.getElementById("acceleratie_img_cont").style.marginLeft=0.1875*100+'vw';
     
-    document.getElementById("acceleratie_titlu").style.width=0.35*x0+'px';
-    document.getElementById("acceleratie_titlu").style.height=0.1*y0+'px';
-    document.getElementById("acceleratie_text").style.width=0.35*x0+'px';
-    document.getElementById("acceleratie_text").style.height=0.3*y0+'px';
+    document.getElementById("acceleratie_titlu").style.width=0.35*100+'vw';
+    document.getElementById("acceleratie_titlu").style.height=0.1*100+'vh';
+    document.getElementById("acceleratie_text").style.width=0.35*100+'vw';
+    document.getElementById("acceleratie_text").style.height=0.3*100+'vh';
+
     
-    $(".resizeText14").resizeText0();
-    $(".resizeText15").resizeText0();
+    document.getElementById("acceleratie_desc_cont").style.marginLeft=0.025*100+'vw';
+    document.getElementById("acceleratie_formula").style.width=0.125*100+'vw';
+    document.getElementById("acceleratie_formula").style.height=0.125*100+'vw';
     
-    document.getElementById("acceleratie_desc_cont").style.marginLeft=0.025*x0+'px';
-    document.getElementById("acceleratie_formula").style.width=0.125*x0+'px';
-    document.getElementById("acceleratie_formula").style.height=0.125*x0+"px";
+    document.getElementById("acceleratie_si").style.marginLeft=0.125*100+'vw';
+    document.getElementById("acceleratie_si").style.width=0.125*100+'vw';
+    document.getElementById("acceleratie_si").style.height=0.125*100+'vw';
     
-    document.getElementById("acceleratie_si").style.marginLeft=0.125*x0+'px';
-    document.getElementById("acceleratie_si").style.width=0.125*x0+'px';
-    document.getElementById("acceleratie_si").style.height=0.125*x0+'px';
+    document.getElementById("clasificare_header").style.marginTop=0.05*100+'vh';
+    document.getElementById("clasificare_header").style.fontSize=0.1*100+'vh';
+    document.getElementById("bara2").style.marginTop=0.01*100+'vh';
     
-    document.getElementById("clasificare_header").style.marginTop=0.05*y0+'px';
-    document.getElementById("clasificare_header").style.fontSize=0.1*y0+'px';
-    document.getElementById("bara2").style.marginTop=0.01*y0+'px';
-    
-    document.getElementById("clasificare_cont").style.marginTop=0.05*y0+'px';
+    document.getElementById("clasificare_cont").style.marginTop=0.05*100+'vh';
     
     var clas_div=document.getElementsByClassName("clas_div");
     for(var i=0;i<=clas_div.length-1;i++)
         {
-            clas_div[i].style.width=0.2*x0+'px';
-            clas_div[i].style.marginLeft=0.035*x0+'px';
+            clas_div[i].style.width=0.2*100+'vw';
+            clas_div[i].style.marginLeft=0.035*100+'vw';
         }
     var clas_titlu=document.getElementsByClassName("clas_titlu");
     for(var i=0;i<=clas_titlu.length-1;i++)
         {
-            clas_titlu[i].style.width=0.2*x0+'px';
-            clas_titlu[i].style.height=0.15*y0+'px';
+            clas_titlu[i].style.width=0.2*100+'vw';
+            clas_titlu[i].style.height=0.15*100+'vh';
         }
     var clas_elem=document.getElementsByClassName("clas_elem");
     for(var i=0;i<=clas_elem.length-1;i++)
         {
-            clas_elem[i].style.width=0.15*x0+"px";
-            clas_elem[i].style.height=0.15*x0+'px';
-            clas_elem[i].style.marginLeft=0.0245*x0+'px';
-            clas_elem[i].style.marginTop=0.025*y0+'px';
+            clas_elem[i].style.width=0.15*100+'vw';
+            clas_elem[i].style.height=0.15*100+'vw';
+            clas_elem[i].style.marginLeft=0.0245*100+'vw';
+            clas_elem[i].style.marginTop=0.025*100+'vh';
         }
     
-    document.getElementById("simulare_cont").style.marginLeft=0.2*x0+'px';
+    document.getElementById("simulare_cont").style.marginLeft=0.2*100+'vw';
     
-    document.getElementById("simulare_titlu").style.width=0.6*x0+'px';
-    document.getElementById("simulare_titlu").style.height=0.1*y0+'px';
-    document.getElementById("simulare_titlu").style.marginLeft=0.2*x0+'px';
-    document.getElementById("simulare_titlu").style.marginTop=0.05*y0+'px';
+    document.getElementById("simulare_titlu").style.width=0.6*100+'vw';
+    document.getElementById("simulare_titlu").style.height=0.1*100+'vh';
+    document.getElementById("simulare_titlu").style.marginLeft=0.2*100+'vw';
+    document.getElementById("simulare_titlu").style.marginTop=0.05*100+'vh';
 
-    $('.resizeText16').resizeText0();
     
     var canvas = document.getElementById("simulare_canvas");
     
@@ -489,40 +523,32 @@ window.onload = function (){
     
     
     
-    document.getElementById("simulare_desc").style.width=0.25*x0+"px";
-    document.getElementById("simulare_desc").style.height=0.35*x0+'px';
+    document.getElementById("simulare_desc").style.width=0.25*100+'vw';
+    document.getElementById("simulare_desc").style.height=0.35*100+'vw';
     
     var meniu_elem=document.getElementsByClassName("meniu_elem");
     
     for(var i=0;i<=meniu_elem.length-1;i++)
         {
-            meniu_elem[i].style.marginLeft=0.024*x0+'px';
-            meniu_elem[i].style.marginTop=0.025*x0+'px';
+            meniu_elem[i].style.marginLeft=0.024*100+'vw';
+            meniu_elem[i].style.marginTop=0.025*100+'vw';
         }
 
     var meniu_buton=document.getElementsByClassName("meniu_buton");
     
     for(var i=0;i<=meniu_buton.length-1;i++)
         {
-            meniu_buton[i].style.width=0.0995*x0+'px';
-            meniu_buton[i].style.height=0.04*x0+'px';
+            meniu_buton[i].style.width=0.0995*100+'vw';
+            meniu_buton[i].style.height=0.04*100+'vw';
         }
      var meniu_titlu=document.getElementsByClassName("meniu_titlu");
     
     for(var i=0;i<=meniu_titlu.length-1;i++)
         {
-            meniu_titlu[i].style.width=0.0995*2*x0+4+'px';
-            meniu_titlu[i].style.height=0.04*x0+'px';
+            meniu_titlu[i].style.width=0.0995*2*100+'vw';
+            meniu_titlu[i].style.height=0.04*100+'vw';
         }
-    $(".resizeText17").resizeText0();
-    $(".resizeText18").resizeText0();
-    $(".resizeText19").resizeText0();
-    $(".resizeText20").resizeText0();
-    $(".resizeText21").resizeText0();
-    $(".resizeText22").resizeText0();
-    $(".resizeText23").resizeText0();
-    $(".resizeText24").resizeText0();
-    $(".resizeText25").resizeText0();
+
 
     document.getElementById("traiectorie1").onclick=function(){
     var a=1;
@@ -637,65 +663,64 @@ window.onload = function (){
     }
     }
 
-    document.getElementById("compunere_header").style.fontSize=0.1*y0+'px';
-    document.getElementById("compunere_header").style.marginTop=0.05*y0+'px';
-    document.getElementById("bara3").style.marginTop=0.01*y0+'px';
+    document.getElementById("compunere_header").style.fontSize=0.1*100+'vh';
+    document.getElementById("compunere_header").style.marginTop=0.05*100+'vh';
+    document.getElementById("bara3").style.marginTop=0.01*100+'vh';
     
-    document.getElementById("legea_miscarii_desc").style.width=0.5*x0+'px';
-    document.getElementById("legea_miscarii_desc").style.height=0.15*y0+'px';
-    document.getElementById("legea_miscarii_desc").style.marginLeft=0.25*x0+'px';
-    document.getElementById("legea_miscarii_desc").style.marginTop=0.05*y0+'px';
+    document.getElementById("legea_miscarii_desc").style.width=0.5*100+'vw';
+    document.getElementById("legea_miscarii_desc").style.height=0.15*100+'vh';
+    document.getElementById("legea_miscarii_desc").style.marginLeft=0.25*100+'vw';
+    document.getElementById("legea_miscarii_desc").style.marginTop=0.05*100+'vh';
     
-    $(".resizeText26").resizeText0();
         
-    document.getElementById("legea_miscarii_formula").style.width=0.7*x0+'px';
-    document.getElementById("legea_miscarii_formula").style.height=0.25*y0+'px';
-    document.getElementById("legea_miscarii_formula").style.marginLeft=0.15*x0+"px";
-    document.getElementById("legea_miscarii_formula").style.marginTop=0.01*y0+'px';
+    document.getElementById("legea_miscarii_formula").style.width=0.7*100+'vw';
+    document.getElementById("legea_miscarii_formula").style.height=0.25*100+'vh';
+    document.getElementById("legea_miscarii_formula").style.marginLeft=0.15*100+'vw';
+    document.getElementById("legea_miscarii_formula").style.marginTop=0.01*100+'vh';
     
-    document.getElementById("tip1").style.width=0.4*x0+'px';
-    document.getElementById('tip1').style.height=0.2*y0+'px';
-    document.getElementById("tip1").style.marginLeft=0.3*x0+'px';
-    document.getElementById("tip1").style.marginTop=0.01*y0+'px';
+    document.getElementById("tip1").style.width=0.4*100+'vw';
+    document.getElementById('tip1').style.height=0.2*100+'vh';
+    document.getElementById("tip1").style.marginLeft=0.3*100+'vw';
+    document.getElementById("tip1").style.marginTop=0.01*100+'vh';
     
-    $(".resizeText27").resizeText0();
     
-    document.getElementById("legea_vitezei_header").style.marginTop=0.03*y0+'px';
-    document.getElementById("legea_vitezei_header").style.fontSize=0.1*y0+'px';
+    document.getElementById("legea_vitezei_header").style.marginTop=0.03*100+'vh';
+    document.getElementById("legea_vitezei_header").style.fontSize=0.1*100+'vh';
     
-    document.getElementById("bara4").style.marginTop=0.01*y0+'px';
+    document.getElementById("bara4").style.marginTop=0.01*100+'vh';
         
-    document.getElementById("legea_vitezei_desc").style.width=0.5*x0+'px';
-    document.getElementById("legea_vitezei_desc").style.height=0.15*y0+'px';
-    document.getElementById("legea_vitezei_desc").style.marginTop=0.05*y0+'px';
-    document.getElementById("legea_vitezei_desc").style.marginLeft=0.25*x0+'px';
+    document.getElementById("legea_vitezei_desc").style.width=0.5*100+'vw';
+    document.getElementById("legea_vitezei_desc").style.height=0.15*100+'vh';
+    document.getElementById("legea_vitezei_desc").style.marginTop=0.05*100+'vh';
+    document.getElementById("legea_vitezei_desc").style.marginLeft=0.25*100+'vw';
     
+
     
-    $('.resizeText28').resizeText0();
-    
-    document.getElementById("legea_vitezei_formula").style.width=0.6*x0+'px';
-    document.getElementById("legea_vitezei_formula").style.height=0.2*y0+'px';
-    document.getElementById("legea_vitezei_formula").style.marginLeft=0.2*x0+'px';
-    document.getElementById("legea_vitezei_formula").style.marginTop=0.01*y0+'px';
+    document.getElementById("legea_vitezei_formula").style.width=0.6*100+'vw';
+    document.getElementById("legea_vitezei_formula").style.height=0.2*100+'vh';
+    document.getElementById("legea_vitezei_formula").style.marginLeft=0.2*100+'vw';
+    document.getElementById("legea_vitezei_formula").style.marginTop=0.01*100+'vh';
         
-    document.getElementById("formula_galilei_header").style.fontSize=0.1*y0+'px';
-    document.getElementById("formula_galilei_header").style.marginTop=0.02*y0+'px';
+    document.getElementById("formula_galilei_header").style.fontSize=0.1*100+'vh';
+    document.getElementById("formula_galilei_header").style.marginTop=0.02*100+'vh';
     
-    document.getElementById("bara5").style.marginTop=0.01*y0+'px';
+    document.getElementById("bara5").style.marginTop=0.01*100+'vh';
     
-    document.getElementById('galilei_desc').style.width=0.4*x0+'px';
-    document.getElementById("galilei_desc").style.height=0.2*y0+'px';
-    document.getElementById("galilei_desc").style.marginLeft=0.3*x0+'px';
-    document.getElementById("galilei_desc").style.marginTop=0.05*y0+'px';
+    document.getElementById('galilei_desc').style.width=0.4*100+'vw';
+    document.getElementById("galilei_desc").style.height=0.2*100+'vh';
+    document.getElementById("galilei_desc").style.marginLeft=0.3*100+'vw';
+    document.getElementById("galilei_desc").style.marginTop=0.05*100+'vh';
     
-    $(".resizeText29").resizeText0();
     
-    document.getElementById("galileo_formula").style.width=0.6*x0+'px';
-    document.getElementById("galileo_formula").style.height=0.2*y0+'px';
-    document.getElementById("galileo_formula").style.marginLeft=0.2*x0+'px';
-    document.getElementById("galileo_formula").style.marginTop=0.01*y0+'px';
+    document.getElementById("galileo_formula").style.width=0.6*100+'vw';
+    document.getElementById("galileo_formula").style.height=0.2*100+'vh';
+    document.getElementById("galileo_formula").style.marginLeft=0.2*100+'vw';
+    document.getElementById("galileo_formula").style.marginTop=0.01*100+'vh';
         
-        
+     for(var i=0;i<=29;i++)
+        {
+            $(".resizeText"+i).resizeText0();
+        }   
         
         
         

@@ -6,7 +6,7 @@ $.fn.resizeText0 = function () {
     var height = $(this).innerHeight();
     var newElem = $("<div>", {
         html: $(this).html(),
-        style: "display: inline-block;overflow:hidden;font-size:0.1em;padding:0;margin:0;border:0;outline:0"
+        style: "display: block;overflow:auto;font-size:0.1em;padding:0;margin:0;border:0;outline:0"
     });
     
     $(this).html(newElem);
@@ -62,6 +62,25 @@ $.resizeText0 = {
 var elemente_desc=["<strong>Generatorul electric</strong> este un dispozitiv care transformă o formă de energie: chimică, mecanică, optică, termică etc. în energie electrică. Astfel, ele se numesc: pile, dinamuri, alternatoare, celule fotoelectrice.","<strong>Rezistorul</strong> este o piesă componentă din circuitele electrice și electronice a cărei principală proprietate este rezistența electrică.","<strong>Ampermetrul</strong> este un aparat de măsurare a intensității curentului electric ce trece printr-un conductor sau un circuit electric.","<strong>Voltmetrul</strong> este un aparat electric de măsură folosit pentru măsurarea tensiunilor în circuitele electrice.","<strong>Consumatorul electric</strong> este o componentă electrică sau o porțiune a unui circuit care consumă energie electrică. Consumatorii electrici pot fi obiecte electrice cum ar fi: becuri, dispozitive, aparate, mașini electrice etc.","<strong>Întrerupătorul</strong> este o componentă electrică folosită la închiderea sau deschiderea rețelei prin care trece un curent electric."];
 var elemente_simbol=['generator.png','rezistor.png','ampermetru.png','voltmetru.png','consumator.png','intrerupator.png'];
 var elemente_poza=['baterie.png','rezistorp.png','ampermetrup.png','voltmetrup.png','bec.png','intrerupatorp.png'];
+
+
+window.onresize = function(){
+    var y0=window.screen.availHeight;
+    var x0=window.screen.availWidth;
+    
+    
+    
+    setTimeout(function(){for(var i=0;i<=20;i++)
+        {
+            $(".resizeText"+i).resizeText0();
+        }
+                         
+     },100);
+
+    
+}
+
+
 window.onload = function (){
     var d=document.getElementById("lista").children;
 	var e=document.getElementsByClassName("textc");
@@ -77,7 +96,7 @@ window.onload = function (){
 	
 	for(var i=0;i<=d.length-2;i++)
 	{
-		d[i].style.fontSize=0.05*y0+"px";
+		d[i].style.fontSize=0.05*100+'vh';
         $(d[i]).hover(function(){
             for(var i=0;i<=d.length-2;i++)
                 {
@@ -106,11 +125,11 @@ window.onload = function (){
             
         })
 	}
-    d[4].style.width=0.1*x0+'px';
-    d[4].style.height=0.045*y0+'px';
-    document.getElementById("titlu").style.marginTop=0.05*y0+'px';
-    document.getElementById("titlu").style.width=0.9*x0+'px';
-    document.getElementById("titlu").style.height=0.9*y0+'px';
+    d[4].style.width=0.1*100+'vw';
+    d[4].style.height=0.045*100+'vh';
+    document.getElementById("titlu").style.marginTop=0.05*100+'vh';
+    document.getElementById("titlu").style.width=0.9*100+'vw';
+    document.getElementById("titlu").style.height=0.9*100+'vh';
       $(".resizeText0").resizeText0();
 //    var a=document.getElementsByClassName("spanz");
 //    
@@ -124,9 +143,9 @@ window.onload = function (){
 //            }
 //    },100);
     setTimeout(function(){
-        document.getElementById("titlu").style.marginTop=0.1*y0+'px';
+        document.getElementById("titlu").style.marginTop=0.1*100+'vh';
         document.getElementById("titlu").style.fontSize="0.2em";
-        document.getElementById("titlu").style.height=0.1*y0+'px';
+        document.getElementById("titlu").style.height=0.1*100+'vh';
     },1000);
     setTimeout(function(){
         document.body.style.backgroundSize="15%,15%";
@@ -188,108 +207,108 @@ window.onload = function (){
         
     }
     
-	document.getElementById("descriere_titlu").style.width=0.5*x0+"px";
-    document.getElementById("descriere_titlu").style.height=0.1*y0+'px';
-	document.getElementById("curent_img_poza").style.width=0.3*x0-20+"px";
-    document.getElementById("curent_img_poza").style.height=0.35*y0+'px';
+	document.getElementById("descriere_titlu").style.width=0.5*100+'vw';
+    document.getElementById("descriere_titlu").style.height=0.1*100+'vh';
+	document.getElementById("curent_img_poza").style.width=0.3*100+'vw';
+    document.getElementById("curent_img_poza").style.height=0.35*100+'vh';
 	
-	document.getElementById("descriere_text").style.width=0.5*x0-20+"px";
-    document.getElementById("descriere_text").style.height=0.35*y0+'px';
-    document.getElementById("curent_img_titlu").style.width=0.3*x0+"px";
-    document.getElementById("curent_img_titlu").style.height=0.1*y0+'px';
+	document.getElementById("descriere_text").style.width=0.5*100+'vw';
+    document.getElementById("descriere_text").style.height=0.35*100+'vh';
+    document.getElementById("curent_img_titlu").style.width=0.3*100+'vw';
+    document.getElementById("curent_img_titlu").style.height=0.1*100+'vh';
 	
-    document.getElementById("descriere_cont").style.marginTop=-0.05*y0+'px';
-    document.getElementById("curent_img_cont").style.marginTop=-0.05*y0+'px';
+    document.getElementById("descriere_cont").style.marginTop=-0.05*100+'vh';
+    document.getElementById("curent_img_cont").style.marginTop=-0.05*100+'vh';
     
-    document.getElementById("curent_gif_titlu").style.width=0.7*x0+"px";
-    document.getElementById("curent_gif_titlu").style.height=0.1*y0+'px';
+    document.getElementById("curent_gif_titlu").style.width=0.7*100+'vw';
+    document.getElementById("curent_gif_titlu").style.height=0.1*100+'vh';
     
-    document.getElementById("intensitate_def").style.width=0.6*x0+"px";
-    document.getElementById("intensitate_def").style.height=0.1*y0+'px';
-    document.getElementById("intensitate_si").style.width=0.2*x0+'px';
-    document.getElementById("intensitate_si").style.height=0.1*y0+"px";
+    document.getElementById("intensitate_def").style.width=0.6*100+'vw';
+    document.getElementById("intensitate_def").style.height=0.1*100+'vh';
+    document.getElementById("intensitate_si").style.width=0.2*100+'vw';
+    document.getElementById("intensitate_si").style.height=0.1*100+'vh';
     
-    document.getElementById("intensitate_cont").style.marginLeft=0.1*x0-40+"px";
+    document.getElementById("intensitate_cont").style.marginLeft=0.1*100+'vw';
     
-    document.getElementById("tensiune_cont").style.marginLeft=0.1*x0-40+"px";
+    document.getElementById("tensiune_cont").style.marginLeft=0.1*100+'vw';
     
-    document.getElementById("rezistenta_cont").style.marginLeft=0.1*x0-40+"px";
-    document.getElementById("rezistenta_cont").style.marginTop=0.1*y0+'px';
-    document.getElementById("tensiune_cont").style.marginTop=0.1*y0+'px';
-        document.getElementById("intensitate_cont").style.marginTop=0.1*y0+'px';
-    document.getElementById("filler").style.padding=0.05*y0+10+'px';
+    document.getElementById("rezistenta_cont").style.marginLeft=0.1*100+'vw';
+    document.getElementById("rezistenta_cont").style.marginTop=0.1*100+'vh';
+    document.getElementById("tensiune_cont").style.marginTop=0.1*100+'vh';
+        document.getElementById("intensitate_cont").style.marginTop=0.1*100+'vh';
+    document.getElementById("filler").style.padding=0.05*100+'vh';
     
-    document.getElementById("tensiune_def").style.width=0.6*x0+"px";
-    document.getElementById("tensiune_def").style.height=0.1*y0+'px';
-    document.getElementById("tensiune_si").style.width=0.2*x0+'px';
-    document.getElementById("tensiune_si").style.height=0.1*y0+"px";
+    document.getElementById("tensiune_def").style.width=0.6*100+'vw';
+    document.getElementById("tensiune_def").style.height=0.1*100+'vh';
+    document.getElementById("tensiune_si").style.width=0.2*100+'vw';
+    document.getElementById("tensiune_si").style.height=0.1*100+'vh';
 
-    document.getElementById("rezistenta_def").style.width=0.6*x0+"px";
-    document.getElementById("rezistenta_def").style.height=0.1*y0+'px';
-    document.getElementById("rezistenta_si").style.width=0.2*x0+'px';
-    document.getElementById("rezistenta_si").style.height=0.1*y0+"px";
+    document.getElementById("rezistenta_def").style.width=0.6*100+'vw';
+    document.getElementById("rezistenta_def").style.height=0.1*100+'vh';
+    document.getElementById("rezistenta_si").style.width=0.2*100+'vw';
+    document.getElementById("rezistenta_si").style.height=0.1*100+'vh';
     
-    document.getElementById("rezistivitate_cont").style.marginTop=0.05*y0+'px';
-    document.getElementById("rezistivitate_cont").style.width=0.4*x0+'px';
-    document.getElementById('rezistivitate_cont').style.height=0.07*y0+'px';
-    document.getElementById("rezistivitate_cont").style.marginLeft=0.3*x0+'px';
+    document.getElementById("rezistivitate_cont").style.marginTop=0.05*100+'vh';
+    document.getElementById("rezistivitate_cont").style.width=0.4*100+'vw';
+    document.getElementById('rezistivitate_cont').style.height=0.07*100+'vh';
+    document.getElementById("rezistivitate_cont").style.marginLeft=0.3*100+'vw';
     
     $(".resizeText18").resizeText0();
     
-    document.getElementById("rezistenta_img").style.width=0.15*x0+'px';
-    document.getElementById("rezistenta_img").style.height=0.15*y0+'px';
-    document.getElementById("rezistenta_img").style.marginTop=0.05*y0+'px';
-    document.getElementById("rezistenta_img").style.marginLeft=0.425*x0+'px';
+    document.getElementById("rezistenta_img").style.width=0.15*100+'vw';
+    document.getElementById("rezistenta_img").style.height=0.15*100+'vh';
+    document.getElementById("rezistenta_img").style.marginTop=0.05*100+'vh';
+    document.getElementById("rezistenta_img").style.marginLeft=0.425*100+'vw';
     document.getElementById("rezistenta_img").style.backgroundImage="url(imagini/rezistenta.png)";
     
-    document.getElementById("explicatie").style.marginTop=0.05*y0+'px';
-    document.getElementById("explicatie").style.width=0.6*x0+'px';
-    document.getElementById('explicatie').style.height=0.1*y0+'px';
-    document.getElementById("explicatie").style.marginLeft=0.2*x0+'px';
+    document.getElementById("explicatie").style.marginTop=0.05*100+'vh';
+    document.getElementById("explicatie").style.width=0.6*100+'vw';
+    document.getElementById('explicatie').style.height=0.1*100+'vh';
+    document.getElementById("explicatie").style.marginLeft=0.2*100+'vw';
     
     $(".resizeText19").resizeText0();    
     
-    document.getElementById("poza1").style.width=0.35*x0+'px';
-    document.getElementById("poza1").style.height=0.2*y0+'px';
-    document.getElementById("poza2").style.width=0.35*x0+'px';
-    document.getElementById("poza2").style.height=0.2*y0+'px';
-    document.getElementById("poza1").style.marginTop=0.05*y0+'px';
-    document.getElementById("poza2").style.marginTop=0.05*y0+'px';
-    document.getElementById("poza1").style.marginLeft=0.1*x0+'px';
-    document.getElementById("poza2").style.marginLeft=0.1*x0+'px';
+    document.getElementById("poza1").style.width=0.35*100+'vw';
+    document.getElementById("poza1").style.height=0.2*100+'vh';
+    document.getElementById("poza2").style.width=0.35*100+'vw';
+    document.getElementById("poza2").style.height=0.2*100+'vh';
+    document.getElementById("poza1").style.marginTop=0.05*100+'vh';
+    document.getElementById("poza2").style.marginTop=0.05*100+'vh';
+    document.getElementById("poza1").style.marginLeft=0.1*100+'vw';
+    document.getElementById("poza2").style.marginLeft=0.1*100+'vw';
     
-    document.getElementById("explicatie2").style.marginTop=0.05*y0+'px';
-    document.getElementById("explicatie2").style.width=0.5*x0+'px';
-    document.getElementById('explicatie2').style.height=0.1*y0+'px';
-    document.getElementById("explicatie2").style.marginLeft=0.25*x0+'px';
+    document.getElementById("explicatie2").style.marginTop=0.05*100+'vh';
+    document.getElementById("explicatie2").style.width=0.5*100+'vw';
+    document.getElementById('explicatie2').style.height=0.1*100+'vh';
+    document.getElementById("explicatie2").style.marginLeft=0.25*100+'vw';
     
     $(".resizeText20").resizeText0();   
-    document.getElementById("titlu_notiuni").style.fontSize=0.1*y0+'px';
-    document.getElementById("titlu_el").style.fontSize=0.1*y0+'px';
+    document.getElementById("titlu_notiuni").style.fontSize=0.1*100+'vh';
+    document.getElementById("titlu_el").style.fontSize=0.1*100+'vh';
     
     var b=document.getElementsByClassName("element");
     for(var i=0;i<=b.length-1;i++)
         {
-            b[i].style.width=0.11*x0+'px';
-            b[i].style.height=0.11*x0+'px';
-            b[i].style.marginLeft=0.02*x0+'px';
-            b[i].style.lineHeight=0.11*x0+'px';
+            b[i].style.width=0.11*100+'vw';
+            b[i].style.height=0.11*100+'vw';
+            b[i].style.marginLeft=0.02*100+'vw';
+            b[i].style.lineHeight=0.11*100+'vw';
             
         }
     var c=document.getElementsByClassName("titlu_e");
     for(var i=0;i<=c.length-1;i++)
         {
-            c[i].style.width=0.3*x0+'px';
-            c[i].style.height=0.1*y0+'px';
+            c[i].style.width=0.3*100+'vw';
+            c[i].style.height=0.1*100+'vh';
         }
-    document.getElementById("element_desc").style.width=0.3*x0+"px";
-    document.getElementById("element_desc").style.height=0.3*y0+'px';
+    document.getElementById("element_desc").style.width=0.3*100+'vw';
+    document.getElementById("element_desc").style.height=0.3*100+'vh';
     
-    document.getElementById("element_simbol").style.width=0.3*x0+'px';
-    document.getElementById("element_simbol").style.height=0.3*y0+'px';
+    document.getElementById("element_simbol").style.width=0.3*100+'vw';
+    document.getElementById("element_simbol").style.height=0.3*100+'vh';
     
-    document.getElementById("element_poza").style.width=0.3*x0+"px";
-    document.getElementById("element_poza").style.height=0.3*y0+'px';
+    document.getElementById("element_poza").style.width=0.3*100+'vw';
+    document.getElementById("element_poza").style.height=0.3*100+'vh';
     
 
     $(".resizeText1").resizeText0();
@@ -311,10 +330,10 @@ window.onload = function (){
     $(".resizeText17").resizeText0();
 
     for (var i = 0; i <= b.length - 1; i++) {
-        b[i].style.width = 0.12 * x0 + 'px';
-        b[i].style.height = 0.12 * x0 + 'px';
-        b[i].style.marginLeft = 0.035 * x0 + 'px';
-        b[i].style.lineHeight = 0.12 * x0 + 'px';
+        b[i].style.width = 0.12 * 100+'vw';
+        b[i].style.height = 0.12 *100+'vw';
+        b[i].style.marginLeft = 0.035 * 100+'vw';
+        b[i].style.lineHeight = 0.12 * 100+'vw';
         $(b[i]).click(function () {
             for(var j=0;j<=b.length-1;j++)
                 {

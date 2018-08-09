@@ -6,7 +6,7 @@ $.fn.resizeText0 = function () {
     var height = $(this).innerHeight();
     var newElem = $("<div>", {
         html: $(this).html(),
-        style: "display: inline-block;overflow:hidden;font-size:0.1em;padding:0;margin:0;border:0;outline:0"
+        style: "display: table;overflow:hidden;font-size:0.1em;padding:0;margin:0;border:0;outline:0;text-align:center;width:100%"
     });
     
     $(this).html(newElem);
@@ -92,6 +92,21 @@ function schimba_sub(a,nr){
     b[nr].style.color='black';
 }
 
+window.onresize = function(){
+    var y0=window.screen.availHeight;
+    var x0=window.screen.availWidth;
+    
+    
+    
+    setTimeout(function(){for(var i=0;i<=7;i++)
+        {
+            $(".resizeText"+i).resizeText0();
+        }
+                         
+     },500);
+
+    
+}
 window.onload = function (){
 
     
@@ -124,7 +139,7 @@ window.onload = function (){
 	
 	for(var i=0;i<=d.length-2;i++)
 	{
-		d[i].style.fontSize=0.05*y0+"px";
+		d[i].style.fontSize=0.05*100+'vh';
         $(d[i]).hover(function(){
             for(var i=0;i<=d.length-2;i++)
                 {
@@ -153,65 +168,65 @@ window.onload = function (){
             
         })
 	}
-    d[4].style.width=0.1*x0+'px';
-    d[4].style.height=0.045*y0+'px';
-    document.getElementById("pdf_cont").style.width=0.6*x0+'px';
-    document.getElementById("pdf_cont").style.height=0.8*y0+'px';
-    document.getElementById("pdf_cont").style.marginTop=0.09*y0+'px';
-    document.getElementById("pdf_cont").style.marginLeft=0.03*x0+'px';
-    document.getElementById("meniu_cont").style.width=0.3*x0+'px';
-    document.getElementById("meniu_cont").style.height=0.8*y0+'px';
-    document.getElementById("meniu_cont").style.marginLeft=0.03*x0+'px';
-    document.getElementById('meniu_cont').style.marginTop=0.09*y0+'px';
+    d[4].style.width=0.1*100+'vw';
+    d[4].style.height=0.045*100+'vh';
+    document.getElementById("pdf_cont").style.width=0.6*100+'vw';
+    document.getElementById("pdf_cont").style.height=0.8*100+'vh';
+    document.getElementById("pdf_cont").style.marginTop=0.09*100+'vh';
+    document.getElementById("pdf_cont").style.marginLeft=0.03*100+'vw';
+    document.getElementById("meniu_cont").style.width=0.3*100+'vw';
+    document.getElementById("meniu_cont").style.height=0.8*100+'vh';
+    document.getElementById("meniu_cont").style.marginLeft=0.03*100+'vw';
+    document.getElementById('meniu_cont').style.marginTop=0.09*100+'vh';
     
-    document.getElementById("var").style.width=0.14*x0+'px';
-    document.getElementById("bar").style.width=0.14*x0+'px';
-    document.getElementById("bar").style.height=0.075*y0+'px';
-    document.getElementById("var").style.height=0.075*y0+'px';
+    document.getElementById("var").style.width=0.14*100+'vw';
+    document.getElementById("bar").style.width=0.14*100+'vw';
+    document.getElementById("bar").style.height=0.075*100+'vh';
+    document.getElementById("var").style.height=0.075*100+'vh';
     $(".resizeText0").resizeText0();
     $(".resizeText1").resizeText0();
-    document.getElementById("varbar_cont").style.marginTop=0.01*y0+'px';    
-    document.getElementById("capitole_header").style.height=0.1*y0+'px';
-    document.getElementById('capitole_header').style.width=0.25*x0+'px';
+    document.getElementById("varbar_cont").style.marginTop=0.01*100+'vh';    
+    document.getElementById("capitole_header").style.height=0.1*100+'vh';
+    document.getElementById('capitole_header').style.width=0.25*100+'vw';
     
-    document.getElementById("capitole_header").style.paddingBottom=0.001*y0+'px';
+    document.getElementById("capitole_header").style.paddingBottom=0.001*100+'vh';
     $(".resizeText2").resizeText0();
     
-    document.getElementById("optica_buton").style.width=0.145*x0+'px';
-    document.getElementById("optica_buton").style.height=0.1*y0+'px';
-    document.getElementById("rand1").style.marginTop=0.01*y0+'px';
-    document.getElementById('rand2').style.marginTop=0.01*y0+'px';
-    document.getElementById("mecanica_buton").style.width=0.145*x0+'px';
-    document.getElementById("mecanica_buton").style.height=0.1*y0+'px';
-    document.getElementById("termodinamica_buton").style.width=0.145*x0+'px';
-    document.getElementById("termodinamica_buton").style.height=0.1*y0+'px';
-    document.getElementById("electricitate_buton").style.width=0.145*x0+'px';
-    document.getElementById("electricitate_buton").style.height=0.1*y0+'px';
+    document.getElementById("optica_buton").style.width=0.145*100+'vw';
+    document.getElementById("optica_buton").style.height=0.1*100+'vh';
+    document.getElementById("rand1").style.marginTop=0.01*100+'vh';
+    document.getElementById('rand2').style.marginTop=0.01*100+'vh';
+    document.getElementById("mecanica_buton").style.width=0.145*100+'vw';
+    document.getElementById("mecanica_buton").style.height=0.1*100+'vh';
+    document.getElementById("termodinamica_buton").style.width=0.145*100+'vw';
+    document.getElementById("termodinamica_buton").style.height=0.1*100+'vh';
+    document.getElementById("electricitate_buton").style.width=0.145*100+'vw';
+    document.getElementById("electricitate_buton").style.height=0.1*100+'vh';
     
-    document.getElementById("optica_buton").style.lineHeight=0.1*y0+'px';
-    document.getElementById("mecanica_buton").style.lineHeight=0.1*y0+'px';
-    document.getElementById("termodinamica_buton").style.lineHeight=0.1*y0+'px';
-    document.getElementById("electricitate_buton").style.lineHeight=0.1*y0+'px';
+    document.getElementById("optica_buton").style.lineHeight=0.1*100+'vh';
+    document.getElementById("mecanica_buton").style.lineHeight=0.1*100+'vh';
+    document.getElementById("termodinamica_buton").style.lineHeight=0.1*100+'vh';
+    document.getElementById("electricitate_buton").style.lineHeight=0.1*100+'vh';
 
-    document.getElementById("optica_buton").style.padding=0.001*y0+'px';
-    document.getElementById("mecanica_buton").style.padding=0.001*y0+'px';
-    document.getElementById("termodinamica_buton").style.padding=0.001*y0+'px';
-    document.getElementById("electricitate_buton").style.padding=0.001*y0+'px';
+    document.getElementById("optica_buton").style.padding=0.001*100+'vh';
+    document.getElementById("mecanica_buton").style.padding=0.001*100+'vh';
+    document.getElementById("termodinamica_buton").style.padding=0.001*100+'vh';
+    document.getElementById("electricitate_buton").style.padding=0.001*100+'vh';
     
     $(".resizeText3").resizeText0();
     $(".resizeText4").resizeText0();
     $(".resizeText5").resizeText0();
     $(".resizeText6").resizeText0();
     
-     document.getElementById("subiecte_header").style.height=0.05*y0+'px';
-    document.getElementById('subiecte_header').style.width=0.25*x0+'px';
+     document.getElementById("subiecte_header").style.height=0.05*100+'vh';
+    document.getElementById('subiecte_header').style.width=0.25*100+'vw';
     
-    document.getElementById("subiecte_header").style.paddingBottom=0.001*y0+'px';
+    document.getElementById("subiecte_header").style.paddingBottom=0.001*100+'vh';
     $(".resizeText7").resizeText0();
     
-    document.getElementById("subiecte_cont").style.width=0.3*x0+'px';
-    document.getElementById("subiecte_cont").style.height=0.3*y0+'px';
-    document.getElementById("subiecte_cont").style.marginTop=0.01*y0+'px';
+    document.getElementById("subiecte_cont").style.width=0.3*100+'vw';
+    document.getElementById("subiecte_cont").style.height=0.3*100+'vh';
+    document.getElementById("subiecte_cont").style.marginTop=0.01*100+'vh';
     
     
     

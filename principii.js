@@ -6,7 +6,7 @@ $.fn.resizeText0 = function () {
     var height = $(this).innerHeight();
     var newElem = $("<div>", {
         html: $(this).html(),
-        style: "display: inline-block;overflow:hidden;font-size:0.1em;padding:0;margin:0;border:0;outline:0"
+        style: "display: block;overflow:auto;font-size:0.1em;padding:0;margin:0;border:0;outline:0"
     });
     
     $(this).html(newElem);
@@ -57,7 +57,21 @@ $.resizeText0 = {
                 document.getElementById("buddy_arrow").style.transform="rotate(0deg)";
             }
     }
+window.onresize = function(){
+    var y0=window.screen.availHeight;
+    var x0=window.screen.availWidth;
+    
+    
+    
+    setTimeout(function(){for(var i=0;i<=13;i++)
+        {
+            $(".resizeText"+i).resizeText0();
+        }
+                         
+     },100);
 
+    
+}
 window.onload = function (){
     var d=document.getElementById("lista").children;
 	var e=document.getElementsByClassName("textc");
@@ -73,7 +87,7 @@ window.onload = function (){
 	
 	for(var i=0;i<=d.length-2;i++)
 	{
-		d[i].style.fontSize=0.05*y0+"px";
+		d[i].style.fontSize=0.05*100+'vh';
         $(d[i]).hover(function(){
             for(var i=0;i<=d.length-2;i++)
                 {
@@ -102,13 +116,13 @@ window.onload = function (){
             
         })
 	}
-    d[4].style.width=0.1*x0+'px';
-    d[4].style.height=0.045*y0+'px';
-    document.getElementById("cont_intro").style.width=0.7*x0+'px';
-    document.getElementById("cont_intro").style.height=0.7*y0+'px';
+    d[4].style.width=0.1*100+'vw';
+    d[4].style.height=0.045*100+'vh';
+    document.getElementById("cont_intro").style.width=0.7*100+'vw';
+    document.getElementById("cont_intro").style.height=0.7*100+'vh';
     
-    document.getElementById("cont_mar").style.width=0.1*y0+'px';
-    document.getElementById("cont_mar").style.height=0.1*y0+'px';
+    document.getElementById("cont_mar").style.width=0.1*100+'vh';
+    document.getElementById("cont_mar").style.height=0.1*100+'vh';
     
     setTimeout(function(){
         document.getElementById("cont_intro").style.backgroundImage="url(imagini/copac_img.png)";
@@ -132,7 +146,7 @@ window.onload = function (){
         document.getElementById("cont_intro").style.opacity=1;
     },5000);
     setTimeout(function(){
-        document.getElementById("cont_intro").style.marginLeft=0.8*x0+'px';
+        document.getElementById("cont_intro").style.marginLeft=0.8*100+'vw';
     },6000);
     setTimeout(function(){
         document.getElementById("lista").style.opacity=1;
@@ -203,197 +217,197 @@ window.onload = function (){
         
         
     }
-    document.getElementById("despre_header").style.fontSize=0.1*y0+'px';
-    document.getElementById("despre_header").style.marginTop=0.1*y0+'px';
-    document.getElementById("bara0").style.marginTop=0.01*y0+'px';
+    document.getElementById("despre_header").style.fontSize=0.1*100+'vh';
+    document.getElementById("despre_header").style.marginTop=0.1*100+'vh';
+    document.getElementById("bara0").style.marginTop=0.01*100+'vh';
     
-    document.getElementById("despre_cont").style.marginTop=0.04*y0+'px';
-    document.getElementById("despre_desc_cont").style.marginLeft=0.05*x0+'px';
-    document.getElementById("despre_mecanica").style.width=0.2*x0+'px';
-    document.getElementById("despre_mecanica").style.height=0.4*y0+'px';
+    document.getElementById("despre_cont").style.marginTop=0.04*100+'vh';
+    document.getElementById("despre_desc_cont").style.marginLeft=0.05*100+'vw';
+    document.getElementById("despre_mecanica").style.width=0.2*100+'vw';
+    document.getElementById("despre_mecanica").style.height=0.4*100+'vh';
     
-    document.getElementById("despre_text").style.width=0.4*x0+'px';
-    document.getElementById("despre_text").style.height=0.4*y0+'px';
+    document.getElementById("despre_text").style.width=0.4*100+'vw';
+    document.getElementById("despre_text").style.height=0.4*100+'vh';
     
-    document.getElementById("newton_cont").style.marginLeft=0.05*x0+'px';
-    document.getElementById("newton_img").style.width=0.25*x0+"px";
-    document.getElementById("newton_img").style.height=0.5*y0+'px';
-    document.getElementById("newton_titlu").style.height=0.1*y0+'px';
-    document.getElementById("newton_titlu").style.width=0.25*x0+'px';
+    document.getElementById("newton_cont").style.marginLeft=0.05*100+'vw';
+    document.getElementById("newton_img").style.width=0.25*100+'vw';
+    document.getElementById("newton_img").style.height=0.5*100+'vh';
+    document.getElementById("newton_titlu").style.height=0.1*100+'vh';
+    document.getElementById("newton_titlu").style.width=0.25*100+'vw';
     
     $(".resizeText0").resizeText0();
     $(".resizeText1").resizeText0();
     
-    document.getElementById("princ_header").style.marginTop=0.05*y0+'px';
-    document.getElementById("princ_header").style.fontSize=0.15*y0+'px';
-    document.getElementById('bara1').style.marignTop=0.01*y0+'px';
+    document.getElementById("princ_header").style.marginTop=0.05*100+'vh';
+    document.getElementById("princ_header").style.fontSize=0.15*100+'vh';
+    document.getElementById('bara1').style.marignTop=0.01*100+'vh';
     
     
-   document.getElementById("princ1_cont").style.marginTop=0.05*y0+'px';
-    document.getElementById("princ1_cont").style.marginLeft=0.15*x0+'px';
-    document.getElementById("filler").style.height=0.05*y0+'px';
-    document.getElementById("princ1_header").style.fontSize=0.1*y0+'px';
+   document.getElementById("princ1_cont").style.marginTop=0.05*100+'vh';
+    document.getElementById("princ1_cont").style.marginLeft=0.15*100+'vw';
+    document.getElementById("filler").style.height=0.05*100+'vh';
+    document.getElementById("princ1_header").style.fontSize=0.1*100+'vh';
    
-    document.getElementById("princ1_desc_cont").style.marginLeft=-0.1*x0+'px';
+    document.getElementById("princ1_desc_cont").style.marginLeft=-0.1*100+'vw';
 
-    document.getElementById("nr_princ1").style.width=0.2*x0+'px';
-    document.getElementById("nr_princ1").style.height=0.2*x0+'px';
-    document.getElementById("princ1_desc_cont").style.width=0.6*x0+'px';
-    document.getElementById('princ1_desc_cont').style.height=0.2*x0+'px';
+    document.getElementById("nr_princ1").style.width=0.2*100+'vw';
+    document.getElementById("nr_princ1").style.height=0.2*100+'vw';
+    document.getElementById("princ1_desc_cont").style.width=0.6*100+'vw';
+    document.getElementById('princ1_desc_cont').style.height=0.2*100+'vw';
     
-    document.getElementById('princ1_text').style.width=0.45*x0+'px';
-    document.getElementById("princ1_text").style.height=0.18*x0+'px';
-    document.getElementById("princ1_text").style.marginTop=0.01*x0+'px';
-    document.getElementById("princ1_text").style.marginLeft=0.125*x0+'px';
+    document.getElementById('princ1_text').style.width=0.45*100+'vw';
+    document.getElementById("princ1_text").style.height=0.18*100+'vw';
+    document.getElementById("princ1_text").style.marginTop=0.01*100+'vw';
+    document.getElementById("princ1_text").style.marginLeft=0.125*100+'vw';
     
     $(".resizeText2").resizeText0();
     
-    document.getElementById('rost_princ1').style.width=0.4*x0+'px';
-    document.getElementById("rost_princ1").style.marginLeft=0.3*x0+'px';
-    document.getElementById("rost_princ1").style.height=0.15*y0+'px';
-    document.getElementById("rost_princ1").style.marginTop=0.05*y0+'px';
+    document.getElementById('rost_princ1').style.width=0.4*100+'vw';
+    document.getElementById("rost_princ1").style.marginLeft=0.3*100+'vw';
+    document.getElementById("rost_princ1").style.height=0.15*100+'vh';
+    document.getElementById("rost_princ1").style.marginTop=0.05*100+'vh';
     
     $(".resizeText3").resizeText0();
 
-    document.getElementById("sr").style.width=0.4*x0+"px";
-    document.getElementById("sr").style.height=0.3*y0+'px';
-    document.getElementById("sr").style.marginLeft=0.3*x0+'px';
-    document.getElementById("sr").style.marginTop=0.01*y0+'px';
+    document.getElementById("sr").style.width=0.4*100+'vw';
+    document.getElementById("sr").style.height=0.3*100+'vh';
+    document.getElementById("sr").style.marginLeft=0.3*100+'vw';
+    document.getElementById("sr").style.marginTop=0.01*100+'vh';
     
-    document.getElementById("sri").style.width=0.7*x0+'px';
-    document.getElementById("sri").style.height=0.3*y0+'px';
-    document.getElementById("sri").style.marginLeft=0.15*x0+'px';
-    document.getElementById("sri").style.marginTop=0.05*y0+'px';
+    document.getElementById("sri").style.width=0.7*100+'vw';
+    document.getElementById("sri").style.height=0.3*100+'vh';
+    document.getElementById("sri").style.marginLeft=0.15*100+'vw';
+    document.getElementById("sri").style.marginTop=0.05*100+'vh';
     
     $(".resizeText4").resizeText0();
     
-    document.getElementById("exemplu_cont").style.marginTop=0.05*y0+'px';
-    document.getElementById("exemplu_cont").style.marginLeft=0.17*x0+'px';
-    document.getElementById("exemplu_cont").style.height=0.45*y0+'px';
-    document.getElementById("exemplu_cont").style.width=0.66*x0+'px';
-    document.getElementById("exemplu_desc").style.width=0.25*x0+'px';
-    document.getElementById("exemplu_desc").style.height=0.45*y0+'px';
+    document.getElementById("exemplu_cont").style.marginTop=0.05*100+'vh';
+    document.getElementById("exemplu_cont").style.marginLeft=0.17*100+'vw';
+    document.getElementById("exemplu_cont").style.height=0.45*100+'vh';
+    document.getElementById("exemplu_cont").style.width=0.66*100+'vw';
+    document.getElementById("exemplu_desc").style.width=0.25*100+'vw';
+    document.getElementById("exemplu_desc").style.height=0.45*100+'vh';
     
-    document.getElementById("exemplu_gif").style.width=0.4*x0+'px';
-    document.getElementById("exemplu_gif").style.height=0.35*y0+'px';
+    document.getElementById("exemplu_gif").style.width=0.4*100+'vw';
+    document.getElementById("exemplu_gif").style.height=0.35*100+'vh';
     
-    document.getElementById("exemplu_titlu").style.height=0.1*y0+'px';
-    document.getElementById("exemplu_titlu").style.width=0.4*x0+'px';
+    document.getElementById("exemplu_titlu").style.height=0.1*100+'vh';
+    document.getElementById("exemplu_titlu").style.width=0.4*100+'vw';
     $(".resizeText5").resizeText0();
     $(".resizeText6").resizeText0();
 
-    document.getElementById("princ2_cont").style.marginTop=0.05*y0+'px';
-    document.getElementById("princ2_cont").style.marginLeft=0.15*x0+'px';
+    document.getElementById("princ2_cont").style.marginTop=0.05*100+'vh';
+    document.getElementById("princ2_cont").style.marginLeft=0.15*100+'vw';
 
-    document.getElementById("filler2").style.height=0.05*y0+'px';
-    document.getElementById("princ2_header").style.fontSize=0.1*y0+'px';
+    document.getElementById("filler2").style.height=0.05*100+'vh';
+    document.getElementById("princ2_header").style.fontSize=0.1*100+'vh';
    
-    document.getElementById("princ2_desc_cont").style.marginLeft=-0.1*x0+'px';
+    document.getElementById("princ2_desc_cont").style.marginLeft=-0.1*100+'vw';
 
-    document.getElementById("nr_princ2").style.width=0.2*x0+'px';
-    document.getElementById("nr_princ2").style.height=0.2*x0+'px';
-    document.getElementById("princ2_desc_cont").style.width=0.6*x0+'px';
-    document.getElementById('princ2_desc_cont').style.height=0.2*x0+'px';
+    document.getElementById("nr_princ2").style.width=0.2*100+'vw';
+    document.getElementById("nr_princ2").style.height=0.2*100+'vw';
+    document.getElementById("princ2_desc_cont").style.width=0.6*100+'vw';
+    document.getElementById('princ2_desc_cont').style.height=0.2*100+'vw';
     
-    document.getElementById('princ2_text').style.width=0.45*x0+'px';
-    document.getElementById("princ2_text").style.height=0.18*x0+'px';
-    document.getElementById("princ2_text").style.marginTop=0.01*x0+'px';
-    document.getElementById("princ2_text").style.marginLeft=0.125*x0+'px';
+    document.getElementById('princ2_text').style.width=0.45*100+'vw';
+    document.getElementById("princ2_text").style.height=0.18*100+'vw';
+    document.getElementById("princ2_text").style.marginTop=0.01*100+'vw';
+    document.getElementById("princ2_text").style.marginLeft=0.125*100+'vw';
     
     $(".resizeText7").resizeText0();
     
-    document.getElementById("princ2_formula").style.width=0.7*x0+'px';
-    document.getElementById("princ2_formula").style.marginTop=0.05*y0+'px';
-    document.getElementById("princ2_formula").style.height=0.3*y0+'px';
-    document.getElementById("princ2_formula").style.marginLeft=0.15*x0+'px';
+    document.getElementById("princ2_formula").style.width=0.7*100+'vw';
+    document.getElementById("princ2_formula").style.marginTop=0.05*100+'vh';
+    document.getElementById("princ2_formula").style.height=0.3*100+'vh';
+    document.getElementById("princ2_formula").style.marginLeft=0.15*100+'vw';
     
-    document.getElementById("ec_fund1").style.width=0.5*x0+'px';
-    document.getElementById("ec_fund1").style.height=0.3*y0+'px';
-    document.getElementById("ec_fund1").style.marginTop=0.05*y0+'px';
-    document.getElementById("ec_fund1").style.marginLeft=0.25*x0+'px';
+    document.getElementById("ec_fund1").style.width=0.5*100+'vw';
+    document.getElementById("ec_fund1").style.height=0.3*100+'vh';
+    document.getElementById("ec_fund1").style.marginTop=0.05*100+'vh';
+    document.getElementById("ec_fund1").style.marginLeft=0.25*100+'vw';
     
     $(".resizeText8").resizeText0();
-    document.getElementById("ec_fund2").style.width=0.6*x0+'px';
-    document.getElementById("ec_fund2").style.height=0.15*y0+'px';
-    document.getElementById("ec_fund2").style.marginTop=0.05*y0+'px';
-    document.getElementById("ec_fund2").style.marginLeft=0.2*x0+'px';
+    document.getElementById("ec_fund2").style.width=0.6*100+'vw';
+    document.getElementById("ec_fund2").style.height=0.15*100+'vh';
+    document.getElementById("ec_fund2").style.marginTop=0.05*100+'vh';
+    document.getElementById("ec_fund2").style.marginLeft=0.2*100+'vw';
     
     $(".resizeText9").resizeText0();
     
     
-    document.getElementById("ec_fund3").style.width=0.5*x0+'px';
-    document.getElementById("ec_fund3").style.height=0.1*y0+'px';
-    document.getElementById("ec_fund3").style.marginTop=0.05*y0+'px';
-    document.getElementById("ec_fund3").style.marginLeft=0.25*x0+'px';
+    document.getElementById("ec_fund3").style.width=0.5*100+'vw';
+    document.getElementById("ec_fund3").style.height=0.1*100+'vh';
+    document.getElementById("ec_fund3").style.marginTop=0.05*100+'vh';
+    document.getElementById("ec_fund3").style.marginLeft=0.25*100+'vw';
     
     $(".resizeText10").resizeText0();
     
-    document.getElementById("inertie_formula").style.width=0.6*x0+'px';
-    document.getElementById("inertie_formula").style.height=0.2*y0+'px';
-    document.getElementById("inertie_formula").style.marginTop=0.05*y0+'px';
-    document.getElementById("inertie_formula").style.marginLeft=0.2*x0+'px';
+    document.getElementById("inertie_formula").style.width=0.6*100+'vw';
+    document.getElementById("inertie_formula").style.height=0.2*100+'vh';
+    document.getElementById("inertie_formula").style.marginTop=0.05*100+'vh';
+    document.getElementById("inertie_formula").style.marginLeft=0.2*100+'vw';
     
-    document.getElementById("filler3").style.height=0.05*y0+'px';
-    document.getElementById("princ3_header").style.fontSize=0.1*y0+'px';
+    document.getElementById("filler3").style.height=0.05*100+'vh';
+    document.getElementById("princ3_header").style.fontSize=0.1*100+'vh';
     
     
-    document.getElementById("princ3_cont").style.marginTop=0.05*y0+'px';
-    document.getElementById("princ3_cont").style.marginLeft=0.15*x0+'px';
-    document.getElementById("princ3_header").style.fontSize=0.1*y0+'px';
+    document.getElementById("princ3_cont").style.marginTop=0.05*100+'vh';
+    document.getElementById("princ3_cont").style.marginLeft=0.15*100+'vw';
+    document.getElementById("princ3_header").style.fontSize=0.1*100+'vh';
    
-    document.getElementById("princ3_desc_cont").style.marginLeft=-0.1*x0+'px';
+    document.getElementById("princ3_desc_cont").style.marginLeft=-0.1*100+'vw';
 
-    document.getElementById("nr_princ3").style.width=0.2*x0+'px';
-    document.getElementById("nr_princ3").style.height=0.2*x0+'px';
-    document.getElementById("princ3_desc_cont").style.width=0.6*x0+'px';
-    document.getElementById('princ3_desc_cont').style.height=0.2*x0+'px';
+    document.getElementById("nr_princ3").style.width=0.2*100+'vw';
+    document.getElementById("nr_princ3").style.height=0.2*100+'vw';
+    document.getElementById("princ3_desc_cont").style.width=0.6*100+'vw';
+    document.getElementById('princ3_desc_cont').style.height=0.2*100+'vw';
     
-    document.getElementById('princ3_text').style.width=0.45*x0+'px';
-    document.getElementById("princ3_text").style.height=0.18*x0+'px';
-    document.getElementById("princ3_text").style.marginTop=0.01*x0+'px';
-    document.getElementById("princ3_text").style.marginLeft=0.125*x0+'px';
+    document.getElementById('princ3_text').style.width=0.45*100+'vw';
+    document.getElementById("princ3_text").style.height=0.18*100+'vw';
+    document.getElementById("princ3_text").style.marginTop=0.01*100+'vw';
+    document.getElementById("princ3_text").style.marginLeft=0.125*100+'vw';
     
     $(".resizeText11").resizeText0();
     
-    document.getElementById("princ3_exemplu_cont").style.marginTop=0.05*y0+'px';
-    document.getElementById("princ3_exemplu_cont").style.width=0.76*x0+'px';
-    document.getElementById("princ3_exemplu_cont").style.marginLeft=0.12*x0+'px';
+    document.getElementById("princ3_exemplu_cont").style.marginTop=0.05*100+'vh';
+    document.getElementById("princ3_exemplu_cont").style.width=0.76*100+'vw';
+    document.getElementById("princ3_exemplu_cont").style.marginLeft=0.12*100+'vw';
     
-    document.getElementById("princ3_exemplu_desc").style.width=0.35*x0+'px';
-    document.getElementById("princ3_exemplu_desc").style.height=0.4*y0+'px';
-    document.getElementById("princ3_exemplu_img").style.width=0.4*x0+'px';
-    document.getElementById("princ3_exemplu_img").style.height=0.4*y0+'px';
+    document.getElementById("princ3_exemplu_desc").style.width=0.35*100+'vw';
+    document.getElementById("princ3_exemplu_desc").style.height=0.4*100+'vh';
+    document.getElementById("princ3_exemplu_img").style.width=0.4*100+'vw';
+    document.getElementById("princ3_exemplu_img").style.height=0.4*100+'vh';
     
     $(".resizeText12").resizeText0();
     
     
-    document.getElementById("filler4").style.height=0.05*y0+'px';
-    document.getElementById("princ4_header").style.fontSize=0.1*y0+'px';
+    document.getElementById("filler4").style.height=0.05*100+'vh';
+    document.getElementById("princ4_header").style.fontSize=0.1*100+'vh';
     
     
-    document.getElementById("princ4_cont").style.marginTop=0.05*y0+'px';
-    document.getElementById("princ4_cont").style.marginLeft=0.15*x0+'px';
-    document.getElementById("princ4_header").style.fontSize=0.1*y0+'px';
+    document.getElementById("princ4_cont").style.marginTop=0.05*100+'vh';
+    document.getElementById("princ4_cont").style.marginLeft=0.15*100+'vw';
+    document.getElementById("princ4_header").style.fontSize=0.1*100+'vh';
    
-    document.getElementById("princ4_desc_cont").style.marginLeft=-0.1*x0+'px';
+    document.getElementById("princ4_desc_cont").style.marginLeft=-0.1*100+'vw';
 
-    document.getElementById("nr_princ4").style.width=0.2*x0+'px';
-    document.getElementById("nr_princ4").style.height=0.2*x0+'px';
-    document.getElementById("princ4_desc_cont").style.width=0.6*x0+'px';
-    document.getElementById('princ4_desc_cont').style.height=0.2*x0+'px';
+    document.getElementById("nr_princ4").style.width=0.2*100+'vw';
+    document.getElementById("nr_princ4").style.height=0.2*100+'vw';
+    document.getElementById("princ4_desc_cont").style.width=0.6*100+'vw';
+    document.getElementById('princ4_desc_cont').style.height=0.2*100+'vw';
     
-    document.getElementById('princ4_text').style.width=0.45*x0+'px';
-    document.getElementById("princ4_text").style.height=0.18*x0+'px';
-    document.getElementById("princ4_text").style.marginTop=0.01*x0+'px';
-    document.getElementById("princ4_text").style.marginLeft=0.125*x0+'px';
+    document.getElementById('princ4_text').style.width=0.45*100+'vw';
+    document.getElementById("princ4_text").style.height=0.18*100+'vw';
+    document.getElementById("princ4_text").style.marginTop=0.01*100+'vw';
+    document.getElementById("princ4_text").style.marginLeft=0.125*100+'vw';
     
     $(".resizeText13").resizeText0();
     
     
-    document.getElementById("princ4_formula").style.width=0.7*x0+'px';
-    document.getElementById("princ4_formula").style.height=0.2*y0+'px';
-    document.getElementById("princ4_formula").style.marginLeft=0.15*x0+'px';
-    document.getElementById("princ4_formula").style.marginTop=0.05*y0+"px";
+    document.getElementById("princ4_formula").style.width=0.7*100+'vw';
+    document.getElementById("princ4_formula").style.height=0.2*100+'vh';
+    document.getElementById("princ4_formula").style.marginLeft=0.15*100+'vw';
+    document.getElementById("princ4_formula").style.marginTop=0.05*100+'vh';
     
     
     

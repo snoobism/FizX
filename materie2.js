@@ -1,5 +1,16 @@
 var y0=window.screen.availHeight;
 var x0=window.screen.availWidth;
+
+window.onresize = function () {
+    var y0=$(window).height();
+    var x0=$(window).width();
+    if(y0>0.8*x0){
+        $(".imagine2").css("display","none");
+    }else{
+        $(".imagine2").css("display","inline");
+    }
+}
+
 var alegeri=[];
 var culori=["rgb(105,210,231)","rgb(211,25,0)","rgb(17,150,77)","rgb(243,217,21)"];
 var texte=[

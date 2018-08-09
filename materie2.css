@@ -36,7 +36,7 @@ ul{	position:fixed;
     top:0;
 	font-family:bebasregular;
 	box-shadow:0 0px 3px white;
-	z-index:5;
+	z-index:15;
 	white-space: nowrap;	
 	border-bottom:3px solid #ffffff;
 	opacity:1;

@@ -6,7 +6,7 @@ $.fn.resizeText0 = function () {
     var height = $(this).innerHeight();
     var newElem = $("<div>", {
         html: $(this).html(),
-        style: "display: inline-block;overflow:hidden;font-size:0.1em;padding:0;margin:0;border:0;outline:0"
+        style: "display: block;overflow:auto;font-size:0.1em;padding:0;margin:0;border:0;outline:0"
     });
     
     $(this).html(newElem);
@@ -57,6 +57,23 @@ $.resizeText0 = {
                 document.getElementById("buddy_arrow").style.transform="rotate(0deg)";
             }
     }
+
+window.onresize = function(){
+    var y0=window.screen.availHeight;
+    var x0=window.screen.availWidth;
+    
+    
+    
+    setTimeout(function(){for(var i=0;i<=9;i++)
+        {
+            $(".resizeText"+i).resizeText0();
+        }
+                         
+     },100);
+
+    
+}
+
 window.onload = function (){
     var d=document.getElementById("lista").children;
 	var e=document.getElementsByClassName("textc");
@@ -72,7 +89,7 @@ window.onload = function (){
 	
 	for(var i=0;i<=d.length-2;i++)
 	{
-		d[i].style.fontSize=0.05*y0+"px";
+		d[i].style.fontSize=0.05*100+'vh';
         $(d[i]).hover(function(){
             for(var i=0;i<=d.length-2;i++)
                 {
@@ -101,13 +118,13 @@ window.onload = function (){
             
         })
 	}
-    d[4].style.width=0.1*x0+'px';
-    d[4].style.height=0.045*y0+'px';
-    document.getElementById("intro").style.width=0.01*x0+'px';
-    document.getElementById("intro").style.height=0.01*x0+'px';
+    d[4].style.width=0.1*100+'vw';
+    d[4].style.height=0.045*100+'vh';
+    document.getElementById("intro").style.width=0.01*100+'vw';
+    document.getElementById("intro").style.height=0.01*100+'vw';
     setTimeout(function(){
-        document.getElementById('intro').style.width=0.7*x0+'px';
-        document.getElementById('intro').style.height=0.7*x0+'px';
+        document.getElementById('intro').style.width=0.7*100+'vw';
+        document.getElementById('intro').style.height=0.7*100+'vw';
     },1000);
     setTimeout(function(){
         document.getElementById("intro").style.opacity=0;
@@ -117,12 +134,12 @@ window.onload = function (){
         document.getElementById("intro").style.opacity=1;
     },3500);
     
-    document.getElementById("motoare_header").style.fontSize=0.1*y0+'px';
-    document.getElementById("motoare_header").style.marginTop=0.1*y0+'px';
-    document.getElementById('bara0').style.marginTop=0.01*y0+'px';
+    document.getElementById("motoare_header").style.fontSize=0.1*100+'vh';
+    document.getElementById("motoare_header").style.marginTop=0.1*100+'vh';
+    document.getElementById('bara0').style.marginTop=0.01*100+'vh';
     
     setTimeout(function(){
-        document.getElementById("intro").style.marginLeft=2*x0+'px';
+        document.getElementById("intro").style.marginLeft=2*100+'vw';
     },4500);
     setTimeout(function(){
         document.body.style.backgroundSize="10%,10%,100% 100%";
@@ -189,87 +206,87 @@ window.onload = function (){
         
         
     }
-    document.getElementById("motor_cont").style.marginTop=0.05*y0+'px';
-    document.getElementById("motor_1").style.marginLeft=0.05*x0+'px';
-    document.getElementById("motor_titlu").style.width=0.4*x0+'px';
-    document.getElementById("motor_titlu").style.height=0.1*y0+'px';
-    document.getElementById("motor_desc").style.width=0.4*x0+'px';
-    document.getElementById("motor_desc").style.height=0.45*y0+'px';
-    document.getElementById("motor_img").style.width=0.4*x0+'px';
-    document.getElementById("motor_img").style.height=0.5*y0+'px';
-    document.getElementById("motor_img").style.marginLeft=0.05*x0+'px';
+    document.getElementById("motor_cont").style.marginTop=0.05*100+'vh';
+    document.getElementById("motor_1").style.marginLeft=0.05*100+'vw';
+    document.getElementById("motor_titlu").style.width=0.4*100+'vw';
+    document.getElementById("motor_titlu").style.height=0.1*100+'vh';
+    document.getElementById("motor_desc").style.width=0.4*100+'vw';
+    document.getElementById("motor_desc").style.height=0.45*100+'vh';
+    document.getElementById("motor_img").style.width=0.4*100+'vw';
+    document.getElementById("motor_img").style.height=0.5*100+'vh';
+    document.getElementById("motor_img").style.marginLeft=0.05*100+'vw';
     
     $(".resizeText0").resizeText0();
     $(".resizeText1").resizeText0();
 
-    document.getElementById("randament_cont").style.marginTop=0.15*y0+'px';
-    document.getElementById("randament_img_cont").style.marginLeft=0.12*x0+'px';
-    document.getElementById("randament_img1").style.width=0.3*x0+'px';
-    document.getElementById("randament_img1").style.height=0.2*y0+'px';
-    document.getElementById("randament_img2").style.width=0.3*x0+'px';
-    document.getElementById("randament_img2").style.height=0.2*y0+'px';
-    document.getElementById("randament_text_cont").style.marginLeft=0.05*x0+'px';
-    document.getElementById("randament_titlu").style.width=0.4*x0+'px';
-    document.getElementById("randament_titlu").style.height=0.1*y0+'px';
-    document.getElementById('randament_desc').style.width=0.4*x0+'px';
-    document.getElementById("randament_desc").style.height=0.4*y0+'px';
+    document.getElementById("randament_cont").style.marginTop=0.15*100+'vh';
+    document.getElementById("randament_img_cont").style.marginLeft=0.12*100+'vw';
+    document.getElementById("randament_img1").style.width=0.3*100+'vw';
+    document.getElementById("randament_img1").style.height=0.2*100+'vh';
+    document.getElementById("randament_img2").style.width=0.3*100+'vw';
+    document.getElementById("randament_img2").style.height=0.2*100+'vh';
+    document.getElementById("randament_text_cont").style.marginLeft=0.05*100+'vw';
+    document.getElementById("randament_titlu").style.width=0.4*100+'vw';
+    document.getElementById("randament_titlu").style.height=0.1*100+'vh';
+    document.getElementById('randament_desc').style.width=0.4*100+'vw';
+    document.getElementById("randament_desc").style.height=0.4*100+'vh';
     
     $(".resizeText2").resizeText0();
     $(".resizeText3").resizeText0();
     
-    document.getElementById("cicluri_header").style.fontSize=0.1*y0+'px';
-    document.getElementById("cicluri_header").style.marginTop=0.1*y0+'px';
-    document.getElementById('bara1').style.marginTop=0.01*y0+'px';
+    document.getElementById("cicluri_header").style.fontSize=0.1*100+'vh';
+    document.getElementById("cicluri_header").style.marginTop=0.1*100+'vh';
+    document.getElementById('bara1').style.marginTop=0.01*100+'vh';
     
-    document.getElementById("otto_cont").style.marginTop=0.05*y0+'px';
-    document.getElementById("otto_img_cont").style.marginLeft=0.15*x0+'px';
-    document.getElementById("otto_titlu").style.width=0.5*x0+'px';
-    document.getElementById("otto_titlu").style.height=0.1*y0+'px';
-    document.getElementById("otto_img").style.width=0.5*x0+'px';
-    document.getElementById("otto_img").style.height=0.5*y0+'px';
-    document.getElementById("otto_text").style.width=0.175*x0+'px';
-    document.getElementById("otto_text").style.marginLeft=0.0125*x0+'px';
-    document.getElementById("otto_text").style.height=0.375*y0+'px';
-    document.getElementById("otto_text").style.marginTop=0.025*y0+'px';
-    document.getElementById("otto_text_img").style.width=0.2*x0+'px';
-    document.getElementById("otto_text_img").style.height=0.2*y0+'px';
+    document.getElementById("otto_cont").style.marginTop=0.05*100+'vh';
+    document.getElementById("otto_img_cont").style.marginLeft=0.15*100+'vw';
+    document.getElementById("otto_titlu").style.width=0.5*100+'vw';
+    document.getElementById("otto_titlu").style.height=0.1*100+'vh';
+    document.getElementById("otto_img").style.width=0.5*100+'vw';
+    document.getElementById("otto_img").style.height=0.5*100+'vh';
+    document.getElementById("otto_text").style.width=0.175*100+'vw';
+    document.getElementById("otto_text").style.marginLeft=0.0125*100+'vw';
+    document.getElementById("otto_text").style.height=0.375*100+'vh';
+    document.getElementById("otto_text").style.marginTop=0.025*100+'vh';
+    document.getElementById("otto_text_img").style.width=0.2*100+'vw';
+    document.getElementById("otto_text_img").style.height=0.2*100+'vh';
     
     $(".resizeText4").resizeText0();
     $(".resizeText5").resizeText0();
     
-    document.getElementById("diesel_cont").style.marginTop=0.15*y0+'px';
-    document.getElementById("diesel_text_cont").style.marginLeft=0.15*x0+'px';
-    document.getElementById("diesel_titlu").style.width=0.5*x0+'px';
-    document.getElementById("diesel_titlu").style.height=0.1*y0+'px';
-    document.getElementById("diesel_img").style.width=0.5*x0+'px';
-    document.getElementById("diesel_img").style.height=0.5*y0+'px';
-    document.getElementById("diesel_text").style.width=0.175*x0+'px';
-    document.getElementById("diesel_text").style.marginLeft=0.0125*x0+'px';
-    document.getElementById("diesel_text").style.height=0.375*y0+'px';
-    document.getElementById("diesel_text").style.marginTop=0.025*y0+'px';
-    document.getElementById("diesel_text_img").style.width=0.2*x0+'px';
-    document.getElementById("diesel_text_img").style.height=0.2*y0+'px';
+    document.getElementById("diesel_cont").style.marginTop=0.15*100+'vh';
+    document.getElementById("diesel_text_cont").style.marginLeft=0.15*100+'vw';
+    document.getElementById("diesel_titlu").style.width=0.5*100+'vw';
+    document.getElementById("diesel_titlu").style.height=0.1*100+'vh';
+    document.getElementById("diesel_img").style.width=0.5*100+'vw';
+    document.getElementById("diesel_img").style.height=0.5*100+'vh';
+    document.getElementById("diesel_text").style.width=0.175*100+'vw';
+    document.getElementById("diesel_text").style.marginLeft=0.0125*100+'vw';
+    document.getElementById("diesel_text").style.height=0.375*100+'vh';
+    document.getElementById("diesel_text").style.marginTop=0.025*100+'vh';
+    document.getElementById("diesel_text_img").style.width=0.2*100+'vw';
+    document.getElementById("diesel_text_img").style.height=0.2*100+'vh';
     
     $(".resizeText6").resizeText0();
     $(".resizeText7").resizeText0();
     
-    document.getElementById("carnot_cont").style.marginTop=0.15*y0+'px';
-    document.getElementById("carnot_img_cont").style.marginLeft=0.15*x0+'px';
-    document.getElementById("carnot_titlu").style.width=0.5*x0+'px';
-    document.getElementById("carnot_titlu").style.height=0.1*y0+'px';
-    document.getElementById("carnot_img").style.width=0.5*x0+'px';
-    document.getElementById("carnot_img").style.height=0.5*y0+'px';
-    document.getElementById("carnot_text").style.width=0.175*x0+'px';
-    document.getElementById("carnot_text").style.marginLeft=0.0125*x0+'px';
-    document.getElementById("carnot_text").style.height=0.375*y0+'px';
-    document.getElementById("carnot_text").style.marginTop=0.025*y0+'px';
-    document.getElementById("carnot_text_img").style.width=0.2*x0+'px';
-    document.getElementById("carnot_text_img").style.height=0.2*y0+'px';
+    document.getElementById("carnot_cont").style.marginTop=0.15*100+'vh';
+    document.getElementById("carnot_img_cont").style.marginLeft=0.15*100+'vw';
+    document.getElementById("carnot_titlu").style.width=0.5*100+'vw';
+    document.getElementById("carnot_titlu").style.height=0.1*100+'vh';
+    document.getElementById("carnot_img").style.width=0.5*100+'vw';
+    document.getElementById("carnot_img").style.height=0.5*100+'vh';
+    document.getElementById("carnot_text").style.width=0.175*100+'vw';
+    document.getElementById("carnot_text").style.marginLeft=0.0125*100+'vw';
+    document.getElementById("carnot_text").style.height=0.375*100+'vh';
+    document.getElementById("carnot_text").style.marginTop=0.025*100+'vh';
+    document.getElementById("carnot_text_img").style.width=0.2*100+'vw';
+    document.getElementById("carnot_text_img").style.height=0.2*100+'vh';
     
     $(".resizeText8").resizeText0();
     $(".resizeText9").resizeText0();
     
-    document.getElementById("filler").style.height=0.1*y0+'px';
+    document.getElementById("filler").style.height=0.1*100+'vh';
     
     
     

@@ -235,7 +235,7 @@ li:first-child{
     transform:translateY(-50%);
     left:-50%;
     transition:0.5s ease-in;
-    background:url(imagini/decefiz.png);
+    background-image:url(imagini/decefiz.png);
     box-shadow:0px 0px 15px black;
 }
 #decefiz:hover{
@@ -276,7 +276,7 @@ li:first-child{
     transform:translateY(-50%);
     left:50%;
     transition:0.5s ease-in;
-    background:url(imagini/decefiz2.png);
+    background-image:url(imagini/decefiz2.png);
     box-shadow:0px 0px 15px black;
 
 }
@@ -356,7 +356,6 @@ yellow{
     vertical-align: middle;
     transition:0.3s all;
     border:1px solid white;
-    padding:1%;
     cursor:pointer;
 }
 /*

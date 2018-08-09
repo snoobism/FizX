@@ -6,7 +6,7 @@ $.fn.resizeText0 = function () {
     var height = $(this).innerHeight();
     var newElem = $("<div>", {
         html: $(this).html(),
-        style: "display: inline-block;overflow:hidden;font-size:0.1em;padding:0;margin:0;border:0;outline:0"
+        style: "display: block;overflow:auto;font-size:0.1em;padding:0;margin:0;border:0;outline:0"
     });
     
     $(this).html(newElem);
@@ -59,6 +59,22 @@ $.resizeText0 = {
             }
     }
 
+window.onresize = function(){
+    var y0=window.screen.availHeight;
+    var x0=window.screen.availWidth;
+    
+    
+    
+    setTimeout(function(){for(var i=0;i<=14;i++)
+        {
+            $(".resizeText"+i).resizeText0();
+        }
+                         
+     },500);
+
+    
+}
+
 window.onload = function (){
     var d=document.getElementById("lista").children;
 	var e=document.getElementsByClassName("textc");
@@ -74,7 +90,7 @@ window.onload = function (){
 	
 	for(var i=0;i<=d.length-2;i++)
 	{
-		d[i].style.fontSize=0.05*y0+"px";
+		d[i].style.fontSize=0.05*100+'vh';
         $(d[i]).hover(function(){
             for(var i=0;i<=d.length-2;i++)
                 {
@@ -103,26 +119,26 @@ window.onload = function (){
             
         })
 	}
-    d[4].style.width=0.1*x0+'px';
-    d[4].style.height=0.045*y0+'px';
-    document.getElementById("intro").style.marginTop=0.25*y0+'px';
-    document.getElementById("intro").style.width=0.6*x0+'px';
-    document.getElementById("intro").style.height=0.5*y0+'px';
-    document.getElementById("intro").style.left=-0.6*x0+'px';
+    d[4].style.width=0.1*100+'vw';
+    d[4].style.height=0.045*100+'vh';
+    document.getElementById("intro").style.marginTop=0.25*100+'vh';
+    document.getElementById("intro").style.width=0.6*100+'vw';
+    document.getElementById("intro").style.height=0.5*100+'vh';
+    document.getElementById("intro").style.left=-0.6*100+'vw';
     
     setTimeout(function(){
         document.getElementById("intro").style.transitionDuration="2s";
-        document.getElementById("intro").style.left=0.2*x0+'px';        
+        document.getElementById("intro").style.left=0.2*100+'vw';        
                }, 500);
     setTimeout(function(){
         document.getElementById("intro").style.transitionDuration="1s";
         document.getElementById("intro").style.transform="rotateY(360deg)";
     }, 2500);
     setTimeout(function(){
-        document.getElementById("intro").style.marginTop=0.05*y0+'px';
-        document.getElementById("intro").style.width=0.3*x0+'px';
-        document.getElementById("intro").style.height=0.25*y0+'px';
-        document.getElementById("intro").style.left=0.35*x0+'px';   document.body.style.backgroundSize="15%,15%,cover";
+        document.getElementById("intro").style.marginTop=0.05*100+'vh';
+        document.getElementById("intro").style.width=0.3*100+'vw';
+        document.getElementById("intro").style.height=0.25*100+'vh';
+        document.getElementById("intro").style.left=0.35*100+'vw';   document.body.style.backgroundSize="15%,15%,cover";
         document.body.style.backgroundImage="url(imagini/optic_left.png),url(imagini/optic_right.png),linear-gradient(to right,#000000, #16193B, #000000)";
     },4000);
     setTimeout(function(){
@@ -194,60 +210,60 @@ window.onload = function (){
 
     var text=document.getElementsByClassName("text");
     for (var i = 0; i < text.length; i++) {
-        text[i].style.marginLeft=0.0075*x0+'px';
-        text[i].style.marginRight=0.0075*x0+'px';
+        text[i].style.marginLeft=0.0075*100+'vw';
+        text[i].style.marginRight=0.0075*100+'vw';
     }
     
-    document.getElementById("def_cont").style.marginLeft=0.04*x0+'px';
-    document.getElementById("def_titlu").style.height=0.1*y0+"px";
-    document.getElementById("def_titlu").style.width=0.3*x0+'px';
-    document.getElementById("def_titlu").style.marginTop=0.05*y0+'px';
-    document.getElementById("def_desc").style.width=0.3*x0+'px';
-    document.getElementById("def_desc").style.height=0.3*y0+'px';
+    document.getElementById("def_cont").style.marginLeft=0.04*100+'vw';
+    document.getElementById("def_titlu").style.height=0.1*100+'vh';
+    document.getElementById("def_titlu").style.width=0.3*100+'vw';
+    document.getElementById("def_titlu").style.marginTop=0.05*100+'vh';
+    document.getElementById("def_desc").style.width=0.3*100+'vw';
+    document.getElementById("def_desc").style.height=0.3*100+'vh';
     
     $(".resizeText0").resizeText0();
     $(".resizeText1").resizeText0();
     
-    document.getElementById("elem_cont").style.marginTop=0.05*y0+'px';
-    document.getElementById("elem_cont").style.marginLeft=0.1*x0+"px";
-    document.getElementById("aop_text").style.marginTop=0.05*y0+'px';
-    document.getElementById("aop_text").style.width=0.5*x0+'px';
-    document.getElementById("aop_text").style.height=0.2*y0+'px';
-    document.getElementById("aop_img").style.width=0.5*x0+'px';
-    document.getElementById("aop_img").style.height=0.35*y0+'px';
-    document.getElementById("aop_img").style.marginLeft=0.0075*x0+'px';
-    document.getElementById("elem_titlu").style.height=0.1*y0+'px';
+    document.getElementById("elem_cont").style.marginTop=0.05*100+'vh';
+    document.getElementById("elem_cont").style.marginLeft=0.1*100+'vw';
+    document.getElementById("aop_text").style.marginTop=0.05*100+'vh';
+    document.getElementById("aop_text").style.width=0.5*100+'vw';
+    document.getElementById("aop_text").style.height=0.2*100+'vh';
+    document.getElementById("aop_img").style.width=0.5*100+'vw';
+    document.getElementById("aop_img").style.height=0.35*100+'vh';
+    document.getElementById("aop_img").style.marginLeft=0.0075*100+'vw';
+    document.getElementById("elem_titlu").style.height=0.1*100+'vh';
     $(".resizeText2").resizeText0();
     $(".resizeText3").resizeText0();
     $(".resizeText4").resizeText0();
     
-    document.getElementById("fotoe_header").style.fontSize=0.1*y0+'px';
-    document.getElementById("fotoe_header").style.marginTop=0.05*y0+'px';
+    document.getElementById("fotoe_header").style.fontSize=0.1*100+'vh';
+    document.getElementById("fotoe_header").style.marginTop=0.05*100+'vh';
     
     var cont=document.getElementsByClassName("lege_cont");
     var enunt=document.getElementsByClassName("lege_en");
     var numar=document.getElementsByClassName("lege_numar");
     
     for (var i = 0; i < cont.length; i+= 3) {
-        cont[i].style.marginTop=0.08*y0+'px';
-        cont[i].style.marginLeft=0.25*x0+'px';
-        enunt[i].style.width=0.5*x0+'px';
-        enunt[i].style.height=0.3*y0+'px';
-        numar[i].style.height=0.075*y0+'px';
+        cont[i].style.marginTop=0.08*100+'vh';
+        cont[i].style.marginLeft=0.25*100+'vw';
+        enunt[i].style.width=0.5*100+'vw';
+        enunt[i].style.height=0.3*100+'vh';
+        numar[i].style.height=0.075*100+'vh';
     }
     for (var i = 1; i < cont.length-1; i+= 1) {
-        cont[i].style.marginTop=0.08*y0+'px';
-        cont[i].style.marginLeft=0.1*x0+'px';
-        enunt[i].style.width=0.8*x0+'px';
-        enunt[i].style.height=0.3*y0+'px';
-        numar[i].style.height=0.075*y0+'px';
+        cont[i].style.marginTop=0.08*100+'vh';
+        cont[i].style.marginLeft=0.1*100+'vw';
+        enunt[i].style.width=0.8*100+'vw';
+        enunt[i].style.height=0.3*100+'vh';
+        numar[i].style.height=0.075*100+'vh';
     }
-    enunt[1].style.width=0.4*x0+'px';
-    enunt[3].style.height=0.1*y0+'px';
-    document.getElementById("lege_img").style.width=0.4*x0+'px';
-    document.getElementById("lege_img").style.height=0.274*y0+'px';
-    document.getElementById("lege_img").style.marginBottom=0.01*y0+'px';
-    document.getElementById("lege_img").style.marginTop=0.05*y0+'px';
+    enunt[1].style.width=0.4*100+'vw';
+    enunt[3].style.height=0.1*100+'vh';
+    document.getElementById("lege_img").style.width=0.4*100+'vw';
+    document.getElementById("lege_img").style.height=0.274*100+'vh';
+    document.getElementById("lege_img").style.marginBottom=0.01*100+'vh';
+    document.getElementById("lege_img").style.marginTop=0.05*100+'vh';
     
     $(".resizeText5").resizeText0();
     $(".resizeText6").resizeText0();
@@ -258,17 +274,17 @@ window.onload = function (){
     $(".resizeText11").resizeText0();
     $(".resizeText12").resizeText0();
     
-    document.getElementById("lm_header").style.fontSize=0.1*y0+'px';
-    document.getElementById("lm_header").style.marginTop=0.1*y0+'px';
+    document.getElementById("lm_header").style.fontSize=0.1*100+'vh';
+    document.getElementById("lm_header").style.marginTop=0.1*100+'vh';
     
-    document.getElementById("energie_cont").style.marginTop=0.05*y0+'px';
-    document.getElementById("energie_cont").style.marginLeft=0.1*x0+'px';
-    document.getElementById("energie_text").style.width=0.8*x0+'px';
-    document.getElementById("energie_text").style.height=0.4*y0+'px';
-    document.getElementById("energie_img").style.marginLeft=0.1*x0+'px';
-    document.getElementById("energie_img").style.width=0.6*x0+'px';
-    document.getElementById("energie_img").style.height=0.3*y0+'px';
-    document.getElementById("energie_titlu").style.height=0.1*y0+'px';
+    document.getElementById("energie_cont").style.marginTop=0.05*100+'vh';
+    document.getElementById("energie_cont").style.marginLeft=0.1*100+'vw';
+    document.getElementById("energie_text").style.width=0.8*100+'vw';
+    document.getElementById("energie_text").style.height=0.4*100+'vh';
+    document.getElementById("energie_img").style.marginLeft=0.1*100+'vw';
+    document.getElementById("energie_img").style.width=0.6*100+'vw';
+    document.getElementById("energie_img").style.height=0.3*100+'vh';
+    document.getElementById("energie_titlu").style.height=0.1*100+'vh';
     
     
     $(".resizeText13").resizeText0();

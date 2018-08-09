@@ -6,7 +6,7 @@ $.fn.resizeText0 = function () {
     var height = $(this).innerHeight();
     var newElem = $("<div>", {
         html: $(this).html(),
-        style: "display: inline-block;overflow:hidden;font-size:0.1em;padding:0;margin:0;border:0;outline:0"
+        style: "display: block;overflow:auto;font-size:0.1em;padding:0;margin:0;border:0;outline:0"
     });
     
     $(this).html(newElem);
@@ -58,6 +58,24 @@ $.resizeText0 = {
             }
     }
 
+
+window.onresize = function(){
+    var y0=window.screen.availHeight;
+    var x0=window.screen.availWidth;
+    
+    
+    
+    setTimeout(function(){for(var i=0;i<=23;i++)
+        {
+            $(".resizeText"+i).resizeText0();
+        }
+                         
+     },100);
+
+    
+}
+
+
 window.onload = function (){
     var d=document.getElementById("lista").children;
 	var e=document.getElementsByClassName("textc");
@@ -73,7 +91,7 @@ window.onload = function (){
 	
 	for(var i=0;i<=d.length-2;i++)
 	{
-		d[i].style.fontSize=0.05*y0+"px";
+		d[i].style.fontSize=0.05*100+'vh';
         $(d[i]).hover(function(){
             for(var i=0;i<=d.length-2;i++)
                 {
@@ -102,15 +120,15 @@ window.onload = function (){
             
         })
 	}
-    d[4].style.width=0.1*x0+'px';
-    d[4].style.height=0.045*y0+'px';
+    d[4].style.width=0.1*100+'vw';
+    d[4].style.height=0.045*100+'vh';
     setTimeout(function(){
         document.getElementById("intro1").style.marginTop=0+'px';
         document.getElementById("intro2").style.marginTop=0+'px';
     },1000);
     setTimeout(function(){
-        document.getElementById("intro1").style.marginLeft=x0+'px';
-        document.getElementById('intro2').style.marginLeft=-x0+'px';
+        document.getElementById("intro1").style.marginLeft=100+'vw';
+        document.getElementById('intro2').style.marginLeft=-100+'vw';
     },3000);
     setTimeout(function(){
         document.body.style.backgroundSize="15%,15%,cover";
@@ -186,172 +204,172 @@ window.onload = function (){
         
     }
 
-    document.getElementById("intro1").style.width=0.7*x0+'px';
-    document.getElementById("intro1").style.height=0.7*y0+'px';
-    document.getElementById("intro2").style.width=0.7*x0+'px';
-    document.getElementById("intro2").style.height=0.7*y0+'px';
-    document.getElementById("intro1").style.marginTop=-y0+'px';
-    document.getElementById("intro2").style.marginTop=y0+'px';
+    document.getElementById("intro1").style.width=0.7*100+'vw';
+    document.getElementById("intro1").style.height=0.7*100+'vh';
+    document.getElementById("intro2").style.width=0.7*100+'vw';
+    document.getElementById("intro2").style.height=0.7*100+'vh';
+    document.getElementById("intro1").style.marginTop=-100+'vh';
+    document.getElementById("intro2").style.marginTop=100+'vh';
     
-    document.getElementById("def_header").style.fontSize=0.1*y0+'px';
-    document.getElementById("def_header").style.marginTop=0.1*y0+'px';
-    document.getElementById("bara0").style.marginTop=0.01*y0+'px';
+    document.getElementById("def_header").style.fontSize=0.1*100+'vh';
+    document.getElementById("def_header").style.marginTop=0.1*100+'vh';
+    document.getElementById("bara0").style.marginTop=0.01*100+'vh';
     
-    document.getElementById("def_titlu").style.height=0.1*y0+'px';
-    document.getElementById("def_titlu").style.width=0.3*x0+'px';
-    document.getElementById("def_text").style.height= 0.3*y0+'px';
-    document.getElementById("def_text").style.width= 0.3*x0+'px';
-    document.getElementById("def_cont").style.marginLeft= 0.2*x0+'px';
-    document.getElementById("lm_def_cont").style.marginTop= 0.05*y0+'px';
-    document.getElementById("def_formula").style.height= 0.15*x0+'px';
-    document.getElementById("def_formula").style.width= 0.15*x0+'px';
-    document.getElementById("def_si").style.height= 0.15*x0+'px';
-    document.getElementById("def_si").style.width= 0.15*x0+'px';
-    document.getElementById("def_si").style.marginLeft=0.075*x0+'px';
-    document.getElementById("def_formula_cont").style.marginLeft=0.05*x0+'px';
+    document.getElementById("def_titlu").style.height=0.1*100+'vh';
+    document.getElementById("def_titlu").style.width=0.3*100+'vw';
+    document.getElementById("def_text").style.height= 0.3*100+'vh';
+    document.getElementById("def_text").style.width= 0.3*100+'vw';
+    document.getElementById("def_cont").style.marginLeft= 0.2*100+'vw';
+    document.getElementById("lm_def_cont").style.marginTop= 0.05*100+'vh';
+    document.getElementById("def_formula").style.height= 0.15*100+'vw';
+    document.getElementById("def_formula").style.width= 0.15*100+'vw';
+    document.getElementById("def_si").style.height= 0.15*100+'vw';
+    document.getElementById("def_si").style.width= 0.15*100+'vw';
+    document.getElementById("def_si").style.marginLeft=0.075*100+'vw';
+    document.getElementById("def_formula_cont").style.marginLeft=0.05*100+'vw';
     $(".resizeText0").resizeText0();
     $(".resizeText1").resizeText0();
     
-    document.getElementById("prop_header").style.fontSize= 0.1*y0+'px';
-    document.getElementById("prop_header").style.marginTop= 0.1*y0+'px';
-    document.getElementById("bara1").style.marginTop=0.01*y0+'px';
-    document.getElementById("addf_titlu").style.height= 0.1*y0+'px';
-    document.getElementById("addf_text").style.height= 0.3*y0+'px';
-    document.getElementById("addf_text").style.width= 0.35*x0+'px';
-    document.getElementById("addf_cont").style.marginLeft= 0.1*x0+'px';
-    document.getElementById("addf_cont").style.marginRight= 0.1*x0+'px';
-    document.getElementById("addf_cont").style.marginTop= 0.05*y0+'px';
-    document.getElementById("addd_titlu").style.height= 0.1*y0+'px';
-    document.getElementById("addd_text").style.height= 0.3*y0+'px';
-    document.getElementById("addd_text").style.width= 0.35*x0+'px';
-    document.getElementById("addd_cont").style.marginTop= 0.05*y0+'px';
+    document.getElementById("prop_header").style.fontSize= 0.1*100+'vh';
+    document.getElementById("prop_header").style.marginTop= 0.1*100+'vh';
+    document.getElementById("bara1").style.marginTop=0.01*100+'vh';
+    document.getElementById("addf_titlu").style.height= 0.1*100+'vh';
+    document.getElementById("addf_text").style.height= 0.3*100+'vh';
+    document.getElementById("addf_text").style.width= 0.35*100+'vw';
+    document.getElementById("addf_cont").style.marginLeft= 0.1*100+'vw';
+    document.getElementById("addf_cont").style.marginRight= 0.1*100+'vw';
+    document.getElementById("addf_cont").style.marginTop= 0.05*100+'vh';
+    document.getElementById("addd_titlu").style.height= 0.1*100+'vh';
+    document.getElementById("addd_text").style.height= 0.3*100+'vh';
+    document.getElementById("addd_text").style.width= 0.35*100+'vw';
+    document.getElementById("addd_cont").style.marginTop= 0.05*100+'vh';
     $(".resizeText2").resizeText0();
     $(".resizeText3").resizeText0();
     $(".resizeText4").resizeText0();
     $(".resizeText5").resizeText0();
     
-    document.getElementById("spec_header").style.marginTop= 0.075*y0+'px';
-    document.getElementById("spec_header").style.fontSize= 0.1*y0+'px';
+    document.getElementById("spec_header").style.marginTop= 0.075*100+'vh';
+    document.getElementById("spec_header").style.fontSize= 0.1*100+'vh';
 
-    document.getElementById("lm_cont").style.marginLeft = 0.1*x0+'px';
-    document.getElementById("lm_cont").style.marginTop= 0.05*y0+'px';
-    document.getElementById("lm_text").style.width= 0.3*x0+'px';
-    document.getElementById("lm_text").style.height= 0.33*y0+'px';
-    document.getElementById("lm_img").style.width=0.3*x0+'px';
-    document.getElementById("lm_img").style.height=0.33*y0+'px';
-    document.getElementById("lm_greutate").style.width= 0.15*x0+'px';
-    document.getElementById("lm_greutate").style.height= 0.11*y0+'px';
-    document.getElementById("lm_frecare").style.width= 0.15*x0+'px';
-    document.getElementById("lm_frecare").style.height= 0.11*y0+'px';
-    document.getElementById("lm_elastic").style.width= 0.15*x0+'px';
-    document.getElementById("lm_elastic").style.height= 0.11*y0+'px';
+    document.getElementById("lm_cont").style.marginLeft = 0.1*100+'vw';
+    document.getElementById("lm_cont").style.marginTop= 0.05*100+'vh';
+    document.getElementById("lm_text").style.width= 0.3*100+'vw';
+    document.getElementById("lm_text").style.height= 0.33*100+'vh';
+    document.getElementById("lm_img").style.width=0.3*100+'vw';
+    document.getElementById("lm_img").style.height=0.33*100+'vh';
+    document.getElementById("lm_greutate").style.width= 0.15*100+'vw';
+    document.getElementById("lm_greutate").style.height= 0.11*100+'vh';
+    document.getElementById("lm_frecare").style.width= 0.15*100+'vw';
+    document.getElementById("lm_frecare").style.height= 0.11*100+'vh';
+    document.getElementById("lm_elastic").style.width= 0.15*100+'vw';
+    document.getElementById("lm_elastic").style.height= 0.11*100+'vh';
     $(".resizeText6").resizeText0();
     $(".resizeText7").resizeText0();
     $(".resizeText8").resizeText0();
     $(".resizeText9").resizeText0();
     
-    document.getElementById("bara3").style.marginBottom= 0.05*y0+'px';
-    document.getElementById("tip_header").style.fontSize= 0.1*y0+'px';
-    document.getElementById("tip_header").style.marginTop=0.1*y0+'px';
-    document.getElementById("cons_cont").style.marginLeft= 0.1*x0+'px';
-    document.getElementById("cons_text").style.width= 0.35*x0+'px';
-    document.getElementById("cons_text").style.height= 0.25*y0+'px';
-    document.getElementById("cons_titlu").style.height= 0.1*y0+'px';
-    document.getElementById("dis_cont").style.marginLeft= 0.1*x0+'px';
-    document.getElementById("dis_text").style.width= 0.35*x0+'px';
-    document.getElementById("dis_text").style.height= 0.25*y0+'px';
-    document.getElementById("dis_titlu").style.height= 0.1*y0+'px';
+    document.getElementById("bara3").style.marginBottom= 0.05*100+'vh';
+    document.getElementById("tip_header").style.fontSize= 0.1*100+'vh';
+    document.getElementById("tip_header").style.marginTop=0.1*100+'vh';
+    document.getElementById("cons_cont").style.marginLeft= 0.1*100+'vw';
+    document.getElementById("cons_text").style.width= 0.35*100+'vw';
+    document.getElementById("cons_text").style.height= 0.25*100+'vh';
+    document.getElementById("cons_titlu").style.height= 0.1*100+'vh';
+    document.getElementById("dis_cont").style.marginLeft= 0.1*100+'vw';
+    document.getElementById("dis_text").style.width= 0.35*100+'vw';
+    document.getElementById("dis_text").style.height= 0.25*100+'vh';
+    document.getElementById("dis_titlu").style.height= 0.1*100+'vh';
     $(".resizeText10").resizeText0();
     $(".resizeText11").resizeText0();
     $(".resizeText12").resizeText0();
     $(".resizeText13").resizeText0();
     
-    document.getElementById("lm_grafic_cont").style.marginTop=0.05*y0+'px';
-    document.getElementById("grafic_header").style.marginTop= 0.1*y0+'px';
-    document.getElementById("grafic_header").style.fontSize= 0.1*y0+'px';
-    document.getElementById("bara4").style.marginTop=0.01*y0+'px';
-    document.getElementById("grafic_cont").style.marginLeft= 0.05*x0+'px';
-    document.getElementById("grafic_text").style.width= 0.4*x0+'px';
-    document.getElementById("grafic_text").style.height= 0.35*y0+'px';
-    document.getElementById("grafic_titlu").style.height= 0.1*y0+'px';
-    document.getElementById("img_cont").style.marginLeft= 0.1*x0+'px';
-    document.getElementById("img_gr").style.width= 0.4*x0+'px';
-    document.getElementById("img_gr").style.height= 0.4*x0+'px';
+    document.getElementById("lm_grafic_cont").style.marginTop=0.05*100+'vh';
+    document.getElementById("grafic_header").style.marginTop= 0.1*100+'vh';
+    document.getElementById("grafic_header").style.fontSize= 0.1*100+'vh';
+    document.getElementById("bara4").style.marginTop=0.01*100+'vh';
+    document.getElementById("grafic_cont").style.marginLeft= 0.05*100+'vw';
+    document.getElementById("grafic_text").style.width= 0.4*100+'vw';
+    document.getElementById("grafic_text").style.height= 0.35*100+'vh';
+    document.getElementById("grafic_titlu").style.height= 0.1*100+'vh';
+    document.getElementById("img_cont").style.marginLeft= 0.1*100+'vw';
+    document.getElementById("img_gr").style.width= 0.4*100+'vw';
+    document.getElementById("img_gr").style.height= 0.4*100+'vw';
     $(".resizeText14").resizeText0();
     $(".resizeText15").resizeText0();
     
-    document.getElementById("energie_mec_header").style.fontSize=0.1*y0+'px';
-    document.getElementById("energie_mec_header").style.marginTop=0.1*y0+'px';
-    document.getElementById("bara5").style.marginTop=0.01*y0+'px';
+    document.getElementById("energie_mec_header").style.fontSize=0.1*100+'vh';
+    document.getElementById("energie_mec_header").style.marginTop=0.1*100+'vh';
+    document.getElementById("bara5").style.marginTop=0.01*100+'vh';
     
-    document.getElementById("energie_mec_cont").style.marginTop=0.05*y0+'px';
-    document.getElementById("energie_desc_cont").style.marginLeft=0.05*x0+'px';
-    document.getElementById("energie_mec_titlu").style.width=0.4*x0+'px';
-    document.getElementById("energie_mec_titlu").style.height=0.1*y0+'px';
-    document.getElementById("energie_mec_text").style.width=0.4*x0+'px';
-    document.getElementById("energie_mec_text").style.height=0.2*y0+'px';
-    document.getElementById('energie_mec_formula').style.width=0.4*x0+'px';
-    document.getElementById("energie_mec_formula").style.height=0.4*y0+'px';
-    document.getElementById("energie_mec_formula").style.marginLeft=0.05*x0+'px';
+    document.getElementById("energie_mec_cont").style.marginTop=0.05*100+'vh';
+    document.getElementById("energie_desc_cont").style.marginLeft=0.05*100+'vw';
+    document.getElementById("energie_mec_titlu").style.width=0.4*100+'vw';
+    document.getElementById("energie_mec_titlu").style.height=0.1*100+'vh';
+    document.getElementById("energie_mec_text").style.width=0.4*100+'vw';
+    document.getElementById("energie_mec_text").style.height=0.2*100+'vh';
+    document.getElementById('energie_mec_formula').style.width=0.4*100+'vw';
+    document.getElementById("energie_mec_formula").style.height=0.4*100+'vh';
+    document.getElementById("energie_mec_formula").style.marginLeft=0.05*100+'vw';
     
     $(".resizeText16").resizeText0();
     $(".resizeText17").resizeText0();
     
-    document.getElementById("energie_cin_header").style.fontSize=0.1*y0+'px';
-    document.getElementById("energie_cin_header").style.marginTop=0.1*y0+'px';
-    document.getElementById("bara6").style.marginTop=0.01*y0+'px';
+    document.getElementById("energie_cin_header").style.fontSize=0.1*100+'vh';
+    document.getElementById("energie_cin_header").style.marginTop=0.1*100+'vh';
+    document.getElementById("bara6").style.marginTop=0.01*100+'vh';
     
-    document.getElementById("en_cin_cont").style.marginTop=0.1*y0+'px';
-    document.getElementById("en_cin_desc").style.marginLeft=0.07*x0+'px'
-    document.getElementById("en_cin_titlu").style.width=0.3*x0+'px';
-    document.getElementById("en_cin_titlu").style.height=0.1*y0+'px';
-    document.getElementById("en_cin_text").style.width=0.3*x0+'px';
-    document.getElementById("en_cin_text").style.height=0.3*y0+'px';
-    document.getElementById("en_cin_formula").style.width=0.3*x0+'px';
-    document.getElementById("en_cin_formula").style.height=0.2*y0+'px';
+    document.getElementById("en_cin_cont").style.marginTop=0.1*100+'vh';
+    document.getElementById("en_cin_desc").style.marginLeft=0.07*100+'vw'
+    document.getElementById("en_cin_titlu").style.width=0.3*100+'vw';
+    document.getElementById("en_cin_titlu").style.height=0.1*100+'vh';
+    document.getElementById("en_cin_text").style.width=0.3*100+'vw';
+    document.getElementById("en_cin_text").style.height=0.3*100+'vh';
+    document.getElementById("en_cin_formula").style.width=0.3*100+'vw';
+    document.getElementById("en_cin_formula").style.height=0.2*100+'vh';
     
     $(".resizeText18").resizeText0();
     $(".resizeText19").resizeText0();
     
-    document.getElementById("en_cin_var_cont").style.marginLeft=0.07*x0+'px';
-    document.getElementById("en_cin_var_titlu").style.width=0.5*x0+'px';
-    document.getElementById('en_cin_var_titlu').style.height=0.1*y0+'px';
-    document.getElementById('en_cin_var_text').style.height=0.3*y0+'px';
-    document.getElementById("en_cin_var_text").style.width=0.5*x0+"px";
-    document.getElementById("en_cin_var_img").style.width=0.5*x0+'px';
-    document.getElementById("en_cin_var_img").style.height=0.15*y0+'px';
+    document.getElementById("en_cin_var_cont").style.marginLeft=0.07*100+'vw';
+    document.getElementById("en_cin_var_titlu").style.width=0.5*100+'vw';
+    document.getElementById('en_cin_var_titlu').style.height=0.1*100+'vh';
+    document.getElementById('en_cin_var_text').style.height=0.3*100+'vh';
+    document.getElementById("en_cin_var_text").style.width=0.5*100+'vw';
+    document.getElementById("en_cin_var_img").style.width=0.5*100+'vw';
+    document.getElementById("en_cin_var_img").style.height=0.15*100+'vh';
     
     $(".resizeText20").resizeText0();
     $(".resizeText21").resizeText0();
     
-    document.getElementById("energie_pot_header").style.fontSize=0.1*y0+'px';
-    document.getElementById("energie_pot_header").style.marginTop=0.1*y0+'px';
-    document.getElementById("bara7").style.marginTop=0.01*y0+'px';
+    document.getElementById("energie_pot_header").style.fontSize=0.1*100+'vh';
+    document.getElementById("energie_pot_header").style.marginTop=0.1*100+'vh';
+    document.getElementById("bara7").style.marginTop=0.01*100+'vh';
     
-    document.getElementById("ec_pot_cont").style.marginTop=0.1*y0+'px';
-    document.getElementById("ec_pot_titlu").style.width=0.3*x0+'px';
-    document.getElementById("ec_pot_titlu").style.height=0.1*y0+'px';
-    document.getElementById("ec_pot_text").style.width=0.3*x0+'px';
-    document.getElementById("ec_pot_text").style.height=0.25*y0+'px';
-    document.getElementById("ec_pot_formula").style.height=0.15*y0+"px";
-    document.getElementById("ec_pot_formula").style.width=0.3*x0+'px';
+    document.getElementById("ec_pot_cont").style.marginTop=0.1*100+'vh';
+    document.getElementById("ec_pot_titlu").style.width=0.3*100+'vw';
+    document.getElementById("ec_pot_titlu").style.height=0.1*100+'vh';
+    document.getElementById("ec_pot_text").style.width=0.3*100+'vw';
+    document.getElementById("ec_pot_text").style.height=0.25*100+'vh';
+    document.getElementById("ec_pot_formula").style.height=0.15*100+'vh';
+    document.getElementById("ec_pot_formula").style.width=0.3*100+'vw';
     
     $(".resizeText22").resizeText0();
     $(".resizeText23").resizeText0();
     
-    document.getElementById("ec_pot_desc").style.marginLeft=0.08*x0+'px';
-    document.getElementById("ep_imag_cont").style.marginLeft=0.08*x0+'px';
+    document.getElementById("ec_pot_desc").style.marginLeft=0.08*100+'vw';
+    document.getElementById("ep_imag_cont").style.marginLeft=0.08*100+'vw';
     
-    document.getElementById("ep_g").style.width=0.25*x0+'px';
-    document.getElementById("ep_g").style.height=0.25*x0+'px';
+    document.getElementById("ep_g").style.width=0.25*100+'vw';
+    document.getElementById("ep_g").style.height=0.25*100+'vw';
     
-    document.getElementById("ep_el").style.width=0.25*x0+'px';
-    document.getElementById("ep_el").style.height=0.25*x0+'px';
+    document.getElementById("ep_el").style.width=0.25*100+'vw';
+    document.getElementById("ep_el").style.height=0.25*100+'vw';
     
-    document.getElementById("ep_el").style.marginLeft=0.25*x0+'px';
-    document.getElementById("ep_el").style.marginTop=-0.1*x0+'px';
+    document.getElementById("ep_el").style.marginLeft=0.25*100+'vw';
+    document.getElementById("ep_el").style.marginTop=-0.1*100+'vw';
     
-    document.getElementById("ec_pot_cont").style.marginBottom=0.1*y0+'px'
+    document.getElementById("ec_pot_cont").style.marginBottom=0.1*100+'vh'
 }
 
     var a=[["url('imagini/L_g_formula.png')","<red>Lucrul mecanic al greutăţii</red> este egal cu produsul dintre <green>forţa de greutate</green> si diferenţa dintre <green>înălţimea finală şi cea inițială</green>."],["url('imagini/L_fel_formula.png')", "<red>Lucrul mecanic al forţei elastice</red> este egal cu diferenţa semiproduselor dintre <green>constanta de elasticitate</green> şi <green>pătratul coordonatei</green> iniţiale, respectiv finale."],["url('imagini/L_ff_formula.png')", "<red>Lucrul mecanic al forţei de frecare</red> este egal cu produsul dintre - modulul <green>forţei de frecare</green> şi diferenţa dintre <green>coordonata finală şi cea inițială</green>"]];
